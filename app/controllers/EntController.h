@@ -11,7 +11,7 @@ private:
 	Keypad& keypad;
 	RelayBoard& relayBoard;
 public:
-	EntController(Keypad& kp, RelayBoard& rb);
+	EntController();
 	void Init();
 	void KeypadKeysPressed(const unsigned short keys, const bool keyshold);
 };

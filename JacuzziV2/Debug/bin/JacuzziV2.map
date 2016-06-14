@@ -6,6 +6,8 @@ C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7
                               C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o) (std::type_info::__is_pointer_p() const)
 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
                               C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o) (__cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const)
+C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(guard.o)
+                              ..\obj\EntController.o (__cxa_guard_acquire)
 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(del_op.o)
                               C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o) (operator delete(void*))
 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
@@ -34,10 +36,14 @@ C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7
                               C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-malloc.o) (_malloc_r)
 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-memcpy.o)
                               c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(unwind-arm.o) (memcpy)
+C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-memset.o)
+                              ..\obj\Display.o (memset)
 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mlock.o)
                               C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mallocr.o) (__malloc_lock)
 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-sbrkr.o)
                               C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mallocr.o) (_sbrk_r)
+C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-strlen.o)
+                              ..\obj\Display.o (strlen)
 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-freer.o)
                               C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-malloc.o) (_free_r)
 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-reent.o)
@@ -137,8 +143,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x20 ..\obj\u8g_com_msp430_hw_spi.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_com_msp430_hw_spi.o
- .data          0x00000000        0x0 ..\obj\u8g_com_arduino_st7920_custom.o
- .bss           0x00000000        0x0 ..\obj\u8g_com_arduino_st7920_custom.o
  .text          0x00000000      0x1cc ..\obj\u8g_pb8v1.o
  .data          0x00000000        0x0 ..\obj\u8g_pb8v1.o
  .bss           0x00000000        0x0 ..\obj\u8g_pb8v1.o
@@ -153,6 +157,8 @@ Discarded input sections
  .debug_frame   0x00000000       0xe0 ..\obj\u8g_pb8v1.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_pb8v1.o
+ .data          0x00000000        0x0 ..\obj\u8g_com_arduino_st7920_custom.o
+ .bss           0x00000000        0x0 ..\obj\u8g_com_arduino_st7920_custom.o
  .text          0x00000000        0x0 ..\obj\u8g_com_arduino_common.o
  .data          0x00000000        0x0 ..\obj\u8g_com_arduino_common.o
  .bss           0x00000000        0x0 ..\obj\u8g_com_arduino_common.o
@@ -208,7 +214,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x90 ..\obj\u8g_com_i2c.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_com_i2c.o
- .bss           0x00000000        0x0 ..\obj\printf.o
  .text          0x00000000        0x4 ..\obj\u8g_com_raspberrypi_hw_spi.o
  .data          0x00000000        0x0 ..\obj\u8g_com_raspberrypi_hw_spi.o
  .bss           0x00000000        0x0 ..\obj\u8g_com_raspberrypi_hw_spi.o
@@ -223,6 +228,7 @@ Discarded input sections
  .debug_frame   0x00000000       0x20 ..\obj\u8g_com_raspberrypi_hw_spi.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_com_raspberrypi_hw_spi.o
+ .bss           0x00000000        0x0 ..\obj\printf.o
  .text          0x00000000      0x118 ..\obj\stm32f10x_cec.o
  .data          0x00000000        0x0 ..\obj\stm32f10x_cec.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_cec.o
@@ -455,6 +461,9 @@ Discarded input sections
  .debug_frame   0x00000000       0x3c ..\obj\u8g_dev_pcd8544_84x48.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_pcd8544_84x48.o
+ .data          0x00000000        0x0 ..\obj\Display.o
+ .bss           0x00000000        0x0 ..\obj\Display.o
+ .ARM.extab     0x00000000        0x0 ..\obj\Display.o
  .data          0x00000000        0x0 ..\obj\u8g_ll_api.o
  .bss           0x00000000        0x0 ..\obj\u8g_ll_api.o
  .text          0x00000000       0xe0 ..\obj\u8g_dev_st7565_dogm132.o
@@ -473,14 +482,14 @@ Discarded input sections
  .debug_frame   0x00000000       0x3c ..\obj\u8g_dev_st7565_dogm132.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_st7565_dogm132.o
- .data          0x00000000        0x0 ..\obj\stm32f10x_gpio.o
- .bss           0x00000000        0x0 ..\obj\stm32f10x_gpio.o
  .data          0x00000000        0x0 ..\obj\u8g_page.o
  .bss           0x00000000        0x0 ..\obj\u8g_page.o
+ .data          0x00000000        0x0 ..\obj\stm32f10x_gpio.o
+ .bss           0x00000000        0x0 ..\obj\stm32f10x_gpio.o
+ .bss           0x00000000        0x0 ..\obj\stm32f10x_rcc.o
  .data          0x00000000        0x0 ..\obj\Keypad.o
  .bss           0x00000000        0x0 ..\obj\Keypad.o
  .ARM.extab     0x00000000        0x0 ..\obj\Keypad.o
- .bss           0x00000000        0x0 ..\obj\stm32f10x_rcc.o
  .text          0x00000000      0x1a8 ..\obj\u8g_pb16v2.o
  .data          0x00000000        0x0 ..\obj\u8g_pb16v2.o
  .bss           0x00000000        0x0 ..\obj\u8g_pb16v2.o
@@ -589,6 +598,14 @@ Discarded input sections
  .debug_frame   0x00000000       0x20 ..\obj\u8g_com_arduino_std_sw_spi.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_com_arduino_std_sw_spi.o
+ .text          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
+ .data          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
+ .bss           0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
+ .debug_line    0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
+ .debug_str     0x00000000       0xb7 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
+ .comment       0x00000000       0x71 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
  .text          0x00000000      0x40c ..\obj\u8g_dev_ssd1306_128x64.o
  .data          0x00000000      0x138 ..\obj\u8g_dev_ssd1306_128x64.o
  .bss           0x00000000      0x680 ..\obj\u8g_dev_ssd1306_128x64.o
@@ -605,14 +622,6 @@ Discarded input sections
  .debug_frame   0x00000000      0x104 ..\obj\u8g_dev_ssd1306_128x64.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_ssd1306_128x64.o
- .text          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
- .data          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
- .bss           0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
- .debug_line    0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
- .debug_str     0x00000000       0xb7 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
- .comment       0x00000000       0x71 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
  .text          0x00000000      0x824 ..\obj\stm32f10x_can.o
  .data          0x00000000        0x0 ..\obj\stm32f10x_can.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_can.o
@@ -677,21 +686,6 @@ Discarded input sections
  .data          0x00000000        0x0 ..\obj\RelayBoard.o
  .bss           0x00000000        0x0 ..\obj\RelayBoard.o
  .ARM.extab     0x00000000        0x0 ..\obj\RelayBoard.o
- .text          0x00000000      0x100 ..\obj\u8g_dev_lc7981_320x64.o
- .data          0x00000000       0x18 ..\obj\u8g_dev_lc7981_320x64.o
- .bss           0x00000000       0xf0 ..\obj\u8g_dev_lc7981_320x64.o
- .rodata        0x00000000       0x34 ..\obj\u8g_dev_lc7981_320x64.o
- .debug_info    0x00000000      0x8ef ..\obj\u8g_dev_lc7981_320x64.o
- .debug_abbrev  0x00000000      0x1af ..\obj\u8g_dev_lc7981_320x64.o
- .debug_loc     0x00000000      0x212 ..\obj\u8g_dev_lc7981_320x64.o
- .debug_aranges
-                0x00000000       0x20 ..\obj\u8g_dev_lc7981_320x64.o
- .debug_line    0x00000000      0x1c6 ..\obj\u8g_dev_lc7981_320x64.o
- .debug_str     0x00000000      0x505 ..\obj\u8g_dev_lc7981_320x64.o
- .comment       0x00000000       0x71 ..\obj\u8g_dev_lc7981_320x64.o
- .debug_frame   0x00000000       0x50 ..\obj\u8g_dev_lc7981_320x64.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\u8g_dev_lc7981_320x64.o
  .text          0x00000000      0x100 ..\obj\u8g_dev_lc7981_160x80.o
  .data          0x00000000       0x18 ..\obj\u8g_dev_lc7981_160x80.o
  .bss           0x00000000       0xa0 ..\obj\u8g_dev_lc7981_160x80.o
@@ -707,6 +701,21 @@ Discarded input sections
  .debug_frame   0x00000000       0x50 ..\obj\u8g_dev_lc7981_160x80.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_lc7981_160x80.o
+ .text          0x00000000      0x100 ..\obj\u8g_dev_lc7981_320x64.o
+ .data          0x00000000       0x18 ..\obj\u8g_dev_lc7981_320x64.o
+ .bss           0x00000000       0xf0 ..\obj\u8g_dev_lc7981_320x64.o
+ .rodata        0x00000000       0x34 ..\obj\u8g_dev_lc7981_320x64.o
+ .debug_info    0x00000000      0x8ef ..\obj\u8g_dev_lc7981_320x64.o
+ .debug_abbrev  0x00000000      0x1af ..\obj\u8g_dev_lc7981_320x64.o
+ .debug_loc     0x00000000      0x212 ..\obj\u8g_dev_lc7981_320x64.o
+ .debug_aranges
+                0x00000000       0x20 ..\obj\u8g_dev_lc7981_320x64.o
+ .debug_line    0x00000000      0x1c6 ..\obj\u8g_dev_lc7981_320x64.o
+ .debug_str     0x00000000      0x505 ..\obj\u8g_dev_lc7981_320x64.o
+ .comment       0x00000000       0x71 ..\obj\u8g_dev_lc7981_320x64.o
+ .debug_frame   0x00000000       0x50 ..\obj\u8g_dev_lc7981_320x64.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\u8g_dev_lc7981_320x64.o
  .text          0x00000000      0xe70 ..\obj\stm32f10x_tim.o
  .data          0x00000000        0x0 ..\obj\stm32f10x_tim.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_tim.o
@@ -741,20 +750,6 @@ Discarded input sections
  .bss           0x00000000        0x0 ..\obj\u8g_fonts.o
  .data          0x00000000        0x0 ..\obj\u8g_com_null.o
  .bss           0x00000000        0x0 ..\obj\u8g_com_null.o
- .text          0x00000000        0x4 ..\obj\u8g_com_arduino_ssd_i2c.o
- .data          0x00000000        0x0 ..\obj\u8g_com_arduino_ssd_i2c.o
- .bss           0x00000000        0x0 ..\obj\u8g_com_arduino_ssd_i2c.o
- .debug_info    0x00000000      0x42f ..\obj\u8g_com_arduino_ssd_i2c.o
- .debug_abbrev  0x00000000      0x106 ..\obj\u8g_com_arduino_ssd_i2c.o
- .debug_loc     0x00000000       0x21 ..\obj\u8g_com_arduino_ssd_i2c.o
- .debug_aranges
-                0x00000000       0x20 ..\obj\u8g_com_arduino_ssd_i2c.o
- .debug_line    0x00000000      0x14e ..\obj\u8g_com_arduino_ssd_i2c.o
- .debug_str     0x00000000      0x3b4 ..\obj\u8g_com_arduino_ssd_i2c.o
- .comment       0x00000000       0x71 ..\obj\u8g_com_arduino_ssd_i2c.o
- .debug_frame   0x00000000       0x20 ..\obj\u8g_com_arduino_ssd_i2c.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\u8g_com_arduino_ssd_i2c.o
  .text          0x00000000       0x54 ..\obj\u8g_dev_flipdisc_2x7.o
  .data          0x00000000       0x18 ..\obj\u8g_dev_flipdisc_2x7.o
  .bss           0x00000000       0x38 ..\obj\u8g_dev_flipdisc_2x7.o
@@ -770,6 +765,20 @@ Discarded input sections
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_flipdisc_2x7.o
  COMMON         0x00000000        0x4 ..\obj\u8g_dev_flipdisc_2x7.o
+ .text          0x00000000        0x4 ..\obj\u8g_com_arduino_ssd_i2c.o
+ .data          0x00000000        0x0 ..\obj\u8g_com_arduino_ssd_i2c.o
+ .bss           0x00000000        0x0 ..\obj\u8g_com_arduino_ssd_i2c.o
+ .debug_info    0x00000000      0x42f ..\obj\u8g_com_arduino_ssd_i2c.o
+ .debug_abbrev  0x00000000      0x106 ..\obj\u8g_com_arduino_ssd_i2c.o
+ .debug_loc     0x00000000       0x21 ..\obj\u8g_com_arduino_ssd_i2c.o
+ .debug_aranges
+                0x00000000       0x20 ..\obj\u8g_com_arduino_ssd_i2c.o
+ .debug_line    0x00000000      0x14e ..\obj\u8g_com_arduino_ssd_i2c.o
+ .debug_str     0x00000000      0x3b4 ..\obj\u8g_com_arduino_ssd_i2c.o
+ .comment       0x00000000       0x71 ..\obj\u8g_com_arduino_ssd_i2c.o
+ .debug_frame   0x00000000       0x20 ..\obj\u8g_com_arduino_ssd_i2c.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\u8g_com_arduino_ssd_i2c.o
  .text          0x00000000        0x4 ..\obj\u8g_com_atmega_sw_spi.o
  .data          0x00000000        0x0 ..\obj\u8g_com_atmega_sw_spi.o
  .bss           0x00000000        0x0 ..\obj\u8g_com_atmega_sw_spi.o
@@ -784,6 +793,9 @@ Discarded input sections
  .debug_frame   0x00000000       0x20 ..\obj\u8g_com_atmega_sw_spi.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_com_atmega_sw_spi.o
+ .group         0x00000000        0x8 ..\obj\EntController.o
+ .group         0x00000000        0x8 ..\obj\EntController.o
+ .group         0x00000000        0x8 ..\obj\EntController.o
  .group         0x00000000        0x8 ..\obj\EntController.o
  .group         0x00000000        0x8 ..\obj\EntController.o
  .data          0x00000000        0x0 ..\obj\EntController.o
@@ -920,20 +932,6 @@ Discarded input sections
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_delay.o
  .data          0x00000000        0x0 ..\obj\u8g_arm_uart.o
- .text          0x00000000        0x4 ..\obj\u8g_com_atxmega_hw_spi.o
- .data          0x00000000        0x0 ..\obj\u8g_com_atxmega_hw_spi.o
- .bss           0x00000000        0x0 ..\obj\u8g_com_atxmega_hw_spi.o
- .debug_info    0x00000000      0x42f ..\obj\u8g_com_atxmega_hw_spi.o
- .debug_abbrev  0x00000000      0x106 ..\obj\u8g_com_atxmega_hw_spi.o
- .debug_loc     0x00000000       0x21 ..\obj\u8g_com_atxmega_hw_spi.o
- .debug_aranges
-                0x00000000       0x20 ..\obj\u8g_com_atxmega_hw_spi.o
- .debug_line    0x00000000      0x14d ..\obj\u8g_com_atxmega_hw_spi.o
- .debug_str     0x00000000      0x3b2 ..\obj\u8g_com_atxmega_hw_spi.o
- .comment       0x00000000       0x71 ..\obj\u8g_com_atxmega_hw_spi.o
- .debug_frame   0x00000000       0x20 ..\obj\u8g_com_atxmega_hw_spi.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\u8g_com_atxmega_hw_spi.o
  .text          0x00000000      0x21c ..\obj\stm32f10x_dma.o
  .data          0x00000000        0x0 ..\obj\stm32f10x_dma.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_dma.o
@@ -948,6 +946,20 @@ Discarded input sections
  .debug_frame   0x00000000       0xd0 ..\obj\stm32f10x_dma.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\stm32f10x_dma.o
+ .text          0x00000000        0x4 ..\obj\u8g_com_atxmega_hw_spi.o
+ .data          0x00000000        0x0 ..\obj\u8g_com_atxmega_hw_spi.o
+ .bss           0x00000000        0x0 ..\obj\u8g_com_atxmega_hw_spi.o
+ .debug_info    0x00000000      0x42f ..\obj\u8g_com_atxmega_hw_spi.o
+ .debug_abbrev  0x00000000      0x106 ..\obj\u8g_com_atxmega_hw_spi.o
+ .debug_loc     0x00000000       0x21 ..\obj\u8g_com_atxmega_hw_spi.o
+ .debug_aranges
+                0x00000000       0x20 ..\obj\u8g_com_atxmega_hw_spi.o
+ .debug_line    0x00000000      0x14d ..\obj\u8g_com_atxmega_hw_spi.o
+ .debug_str     0x00000000      0x3b2 ..\obj\u8g_com_atxmega_hw_spi.o
+ .comment       0x00000000       0x71 ..\obj\u8g_com_atxmega_hw_spi.o
+ .debug_frame   0x00000000       0x20 ..\obj\u8g_com_atxmega_hw_spi.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\u8g_com_atxmega_hw_spi.o
  .text          0x00000000       0xf0 ..\obj\u8g_dev_ld7032_60x32.o
  .data          0x00000000       0x60 ..\obj\u8g_dev_ld7032_60x32.o
  .bss           0x00000000      0x100 ..\obj\u8g_dev_ld7032_60x32.o
@@ -1238,6 +1250,14 @@ Discarded input sections
  .debug_frame   0x00000000       0x20 ..\obj\u8g_com_atmega_st7920_hw_spi.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_com_atmega_st7920_hw_spi.o
+ .text          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
+ .data          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
+ .bss           0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
+ .debug_line    0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
+ .debug_str     0x00000000       0xb7 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
+ .comment       0x00000000       0x71 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
  .text          0x00000000       0xe0 ..\obj\u8g_dev_sbn1661_122x32.o
  .data          0x00000000       0x18 ..\obj\u8g_dev_sbn1661_122x32.o
  .bss           0x00000000       0x7a ..\obj\u8g_dev_sbn1661_122x32.o
@@ -1253,14 +1273,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x48 ..\obj\u8g_dev_sbn1661_122x32.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_sbn1661_122x32.o
- .text          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
- .data          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
- .bss           0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
- .debug_line    0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
- .debug_str     0x00000000       0xb7 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
- .comment       0x00000000       0x71 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
  .text          0x00000000      0x21c ..\obj\u8g_dev_st7565_64128n.o
  .data          0x00000000       0x78 ..\obj\u8g_dev_st7565_64128n.o
  .bss           0x00000000      0x280 ..\obj\u8g_dev_st7565_64128n.o
@@ -1281,9 +1293,20 @@ Discarded input sections
  .bss           0x00000000        0x0 ..\obj\u8g_pb32h1.o
  .data          0x00000000        0x0 ..\obj\u8g_pb8h1.o
  .bss           0x00000000        0x0 ..\obj\u8g_pb8h1.o
+ .group         0x00000000        0x8 ..\obj\main.o
+ .group         0x00000000        0x8 ..\obj\main.o
+ .group         0x00000000        0x8 ..\obj\main.o
+ .group         0x00000000        0x8 ..\obj\main.o
+ .group         0x00000000        0x8 ..\obj\main.o
  .data          0x00000000        0x0 ..\obj\main.o
  .ARM.extab.text.startup
                 0x00000000        0x0 ..\obj\main.o
+ .bss._ZZN6Keypad11getInstanceEvE8instance
+                0x00000000       0x60 ..\obj\main.o
+ .bss._ZZN10RelayBoard11getInstanceEvE8instance
+                0x00000000       0x20 ..\obj\main.o
+ .bss._ZGVZN6Keypad11getInstanceEvE8instance
+                0x00000000        0x4 ..\obj\main.o
  .text          0x00000000      0x170 ..\obj\stm32f10x_rtc.o
  .data          0x00000000        0x0 ..\obj\stm32f10x_rtc.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_rtc.o
@@ -1299,15 +1322,6 @@ Discarded input sections
  .debug_frame   0x00000000       0xf0 ..\obj\stm32f10x_rtc.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\stm32f10x_rtc.o
- .group         0x00000000        0x8 ..\obj\SpaController.o
- .group         0x00000000        0x8 ..\obj\SpaController.o
- .data          0x00000000        0x0 ..\obj\SpaController.o
- .bss           0x00000000        0x0 ..\obj\SpaController.o
- .ARM.extab     0x00000000        0x0 ..\obj\SpaController.o
- .rodata._ZTI15KeypadInterrupt
-                0x00000000        0x8 ..\obj\SpaController.o
- .rodata._ZTS15KeypadInterrupt
-                0x00000000       0x12 ..\obj\SpaController.o
  .text          0x00000000      0x1e8 ..\obj\u8g_dev_uc1701_mini12864.o
  .data          0x00000000       0x54 ..\obj\u8g_dev_uc1701_mini12864.o
  .bss           0x00000000      0x200 ..\obj\u8g_dev_uc1701_mini12864.o
@@ -1324,6 +1338,27 @@ Discarded input sections
  .debug_frame   0x00000000       0x8c ..\obj\u8g_dev_uc1701_mini12864.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_uc1701_mini12864.o
+ .group         0x00000000        0x8 ..\obj\SpaController.o
+ .group         0x00000000        0x8 ..\obj\SpaController.o
+ .group         0x00000000        0x8 ..\obj\SpaController.o
+ .group         0x00000000        0x8 ..\obj\SpaController.o
+ .group         0x00000000        0x8 ..\obj\SpaController.o
+ .group         0x00000000        0x8 ..\obj\SpaController.o
+ .data          0x00000000        0x0 ..\obj\SpaController.o
+ .bss           0x00000000        0x0 ..\obj\SpaController.o
+ .ARM.extab     0x00000000        0x0 ..\obj\SpaController.o
+ .bss._ZZN10RelayBoard11getInstanceEvE8instance
+                0x00000000       0x20 ..\obj\SpaController.o
+ .bss._ZZN4LEDS11getInstanceEvE8instance
+                0x00000000       0x20 ..\obj\SpaController.o
+ .bss._ZZN6Keypad11getInstanceEvE8instance
+                0x00000000       0x60 ..\obj\SpaController.o
+ .rodata._ZTI15KeypadInterrupt
+                0x00000000        0x8 ..\obj\SpaController.o
+ .rodata._ZTS15KeypadInterrupt
+                0x00000000       0x12 ..\obj\SpaController.o
+ .bss._ZGVZN6Keypad11getInstanceEvE8instance
+                0x00000000        0x4 ..\obj\SpaController.o
  .data          0x00000000        0x0 ..\obj\stm32f10x_usart.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_usart.o
  .text          0x00000000       0xe0 ..\obj\u8g_dev_ssd1309_128x64.o
@@ -1358,20 +1393,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x8c ..\obj\u8g_dev_uc1701_dogs102.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_uc1701_dogs102.o
- .text          0x00000000      0x394 ..\obj\stm32f10x_adc.o
- .data          0x00000000        0x0 ..\obj\stm32f10x_adc.o
- .bss           0x00000000        0x0 ..\obj\stm32f10x_adc.o
- .debug_info    0x00000000      0xc28 ..\obj\stm32f10x_adc.o
- .debug_abbrev  0x00000000      0x1eb ..\obj\stm32f10x_adc.o
- .debug_loc     0x00000000      0xa60 ..\obj\stm32f10x_adc.o
- .debug_aranges
-                0x00000000       0x20 ..\obj\stm32f10x_adc.o
- .debug_line    0x00000000      0x380 ..\obj\stm32f10x_adc.o
- .debug_str     0x00000000      0x72e ..\obj\stm32f10x_adc.o
- .comment       0x00000000       0x71 ..\obj\stm32f10x_adc.o
- .debug_frame   0x00000000      0x2c0 ..\obj\stm32f10x_adc.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\stm32f10x_adc.o
  .text          0x00000000      0x27c ..\obj\u8g_dev_ssd1327_96x96_gr.o
  .data          0x00000000       0x78 ..\obj\u8g_dev_ssd1327_96x96_gr.o
  .bss           0x00000000      0x1e4 ..\obj\u8g_dev_ssd1327_96x96_gr.o
@@ -1387,6 +1408,20 @@ Discarded input sections
  .debug_frame   0x00000000      0x110 ..\obj\u8g_dev_ssd1327_96x96_gr.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_ssd1327_96x96_gr.o
+ .text          0x00000000      0x394 ..\obj\stm32f10x_adc.o
+ .data          0x00000000        0x0 ..\obj\stm32f10x_adc.o
+ .bss           0x00000000        0x0 ..\obj\stm32f10x_adc.o
+ .debug_info    0x00000000      0xc28 ..\obj\stm32f10x_adc.o
+ .debug_abbrev  0x00000000      0x1eb ..\obj\stm32f10x_adc.o
+ .debug_loc     0x00000000      0xa60 ..\obj\stm32f10x_adc.o
+ .debug_aranges
+                0x00000000       0x20 ..\obj\stm32f10x_adc.o
+ .debug_line    0x00000000      0x380 ..\obj\stm32f10x_adc.o
+ .debug_str     0x00000000      0x72e ..\obj\stm32f10x_adc.o
+ .comment       0x00000000       0x71 ..\obj\stm32f10x_adc.o
+ .debug_frame   0x00000000      0x2c0 ..\obj\stm32f10x_adc.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\stm32f10x_adc.o
  .text          0x00000000        0x4 ..\obj\u8g_com_arduino_st7920_hw_spi.o
  .data          0x00000000        0x0 ..\obj\u8g_com_arduino_st7920_hw_spi.o
  .bss           0x00000000        0x0 ..\obj\u8g_com_arduino_st7920_hw_spi.o
@@ -1447,20 +1482,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x20 ..\obj\u8g_com_arduino_uc_i2c.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_com_arduino_uc_i2c.o
- .text          0x00000000      0x180 ..\obj\u8g_pb8v2.o
- .data          0x00000000        0x0 ..\obj\u8g_pb8v2.o
- .bss           0x00000000        0x0 ..\obj\u8g_pb8v2.o
- .debug_info    0x00000000      0x7f0 ..\obj\u8g_pb8v2.o
- .debug_abbrev  0x00000000      0x22a ..\obj\u8g_pb8v2.o
- .debug_loc     0x00000000      0x521 ..\obj\u8g_pb8v2.o
- .debug_aranges
-                0x00000000       0x20 ..\obj\u8g_pb8v2.o
- .debug_line    0x00000000      0x1c3 ..\obj\u8g_pb8v2.o
- .debug_str     0x00000000      0x49f ..\obj\u8g_pb8v2.o
- .comment       0x00000000       0x71 ..\obj\u8g_pb8v2.o
- .debug_frame   0x00000000       0xb8 ..\obj\u8g_pb8v2.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\u8g_pb8v2.o
  .text          0x00000000      0x1c8 ..\obj\u8g_pbxh16.o
  .data          0x00000000        0x0 ..\obj\u8g_pbxh16.o
  .bss           0x00000000        0x0 ..\obj\u8g_pbxh16.o
@@ -1476,6 +1497,23 @@ Discarded input sections
  .debug_frame   0x00000000       0xb4 ..\obj\u8g_pbxh16.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_pbxh16.o
+ .text          0x00000000      0x180 ..\obj\u8g_pb8v2.o
+ .data          0x00000000        0x0 ..\obj\u8g_pb8v2.o
+ .bss           0x00000000        0x0 ..\obj\u8g_pb8v2.o
+ .debug_info    0x00000000      0x7f0 ..\obj\u8g_pb8v2.o
+ .debug_abbrev  0x00000000      0x22a ..\obj\u8g_pb8v2.o
+ .debug_loc     0x00000000      0x521 ..\obj\u8g_pb8v2.o
+ .debug_aranges
+                0x00000000       0x20 ..\obj\u8g_pb8v2.o
+ .debug_line    0x00000000      0x1c3 ..\obj\u8g_pb8v2.o
+ .debug_str     0x00000000      0x49f ..\obj\u8g_pb8v2.o
+ .comment       0x00000000       0x71 ..\obj\u8g_pb8v2.o
+ .debug_frame   0x00000000       0xb8 ..\obj\u8g_pb8v2.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\u8g_pb8v2.o
+ .data          0x00000000        0x0 ..\obj\LEDS.o
+ .bss           0x00000000        0x0 ..\obj\LEDS.o
+ .ARM.extab     0x00000000        0x0 ..\obj\LEDS.o
  .text          0x00000000        0x0 ..\obj\u8g_com_raspberrypi_ssd_i2c.o
  .data          0x00000000        0x0 ..\obj\u8g_com_raspberrypi_ssd_i2c.o
  .bss           0x00000000        0x0 ..\obj\u8g_com_raspberrypi_ssd_i2c.o
@@ -1617,20 +1655,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x50 ..\obj\u8g_dev_t6963_128x64.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_t6963_128x64.o
- .text          0x00000000       0xe4 ..\obj\stm32f10x_bkp.o
- .data          0x00000000        0x0 ..\obj\stm32f10x_bkp.o
- .bss           0x00000000        0x0 ..\obj\stm32f10x_bkp.o
- .debug_info    0x00000000      0x7d5 ..\obj\stm32f10x_bkp.o
- .debug_abbrev  0x00000000      0x1a8 ..\obj\stm32f10x_bkp.o
- .debug_loc     0x00000000       0xee ..\obj\stm32f10x_bkp.o
- .debug_aranges
-                0x00000000       0x20 ..\obj\stm32f10x_bkp.o
- .debug_line    0x00000000      0x223 ..\obj\stm32f10x_bkp.o
- .debug_str     0x00000000      0x5e4 ..\obj\stm32f10x_bkp.o
- .comment       0x00000000       0x71 ..\obj\stm32f10x_bkp.o
- .debug_frame   0x00000000       0xec ..\obj\stm32f10x_bkp.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\stm32f10x_bkp.o
  .text          0x00000000        0x4 ..\obj\u8g_com_arduino_no_en_parallel.o
  .data          0x00000000        0x0 ..\obj\u8g_com_arduino_no_en_parallel.o
  .bss           0x00000000        0x0 ..\obj\u8g_com_arduino_no_en_parallel.o
@@ -1645,6 +1669,20 @@ Discarded input sections
  .debug_frame   0x00000000       0x20 ..\obj\u8g_com_arduino_no_en_parallel.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_com_arduino_no_en_parallel.o
+ .text          0x00000000       0xe4 ..\obj\stm32f10x_bkp.o
+ .data          0x00000000        0x0 ..\obj\stm32f10x_bkp.o
+ .bss           0x00000000        0x0 ..\obj\stm32f10x_bkp.o
+ .debug_info    0x00000000      0x7d5 ..\obj\stm32f10x_bkp.o
+ .debug_abbrev  0x00000000      0x1a8 ..\obj\stm32f10x_bkp.o
+ .debug_loc     0x00000000       0xee ..\obj\stm32f10x_bkp.o
+ .debug_aranges
+                0x00000000       0x20 ..\obj\stm32f10x_bkp.o
+ .debug_line    0x00000000      0x223 ..\obj\stm32f10x_bkp.o
+ .debug_str     0x00000000      0x5e4 ..\obj\stm32f10x_bkp.o
+ .comment       0x00000000       0x71 ..\obj\stm32f10x_bkp.o
+ .debug_frame   0x00000000       0xec ..\obj\stm32f10x_bkp.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\stm32f10x_bkp.o
  .text          0x00000000      0x580 ..\obj\stm32f10x_flash.o
  .data          0x00000000        0x0 ..\obj\stm32f10x_flash.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_flash.o
@@ -1752,21 +1790,6 @@ Discarded input sections
                 0x00000000       0x33 ..\obj\u8g_dev_uc1608_240x64.o
  .data          0x00000000        0x0 ..\obj\u8g_circle.o
  .bss           0x00000000        0x0 ..\obj\u8g_circle.o
- .text          0x00000000       0x74 ..\obj\u8g_dev_gprof.o
- .data          0x00000000       0x18 ..\obj\u8g_dev_gprof.o
- .bss           0x00000000        0x0 ..\obj\u8g_dev_gprof.o
- .debug_info    0x00000000      0x677 ..\obj\u8g_dev_gprof.o
- .debug_abbrev  0x00000000      0x18b ..\obj\u8g_dev_gprof.o
- .debug_loc     0x00000000      0x2a1 ..\obj\u8g_dev_gprof.o
- .debug_aranges
-                0x00000000       0x20 ..\obj\u8g_dev_gprof.o
- .debug_line    0x00000000      0x166 ..\obj\u8g_dev_gprof.o
- .debug_str     0x00000000      0x46e ..\obj\u8g_dev_gprof.o
- .comment       0x00000000       0x71 ..\obj\u8g_dev_gprof.o
- .debug_frame   0x00000000       0x54 ..\obj\u8g_dev_gprof.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\u8g_dev_gprof.o
- COMMON         0x00000000       0x80 ..\obj\u8g_dev_gprof.o
  .text          0x00000000       0x84 ..\obj\u8g_u16toa.o
  .data          0x00000000        0x0 ..\obj\u8g_u16toa.o
  .bss           0x00000000        0x6 ..\obj\u8g_u16toa.o
@@ -1782,6 +1805,21 @@ Discarded input sections
  .debug_frame   0x00000000       0x4c ..\obj\u8g_u16toa.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_u16toa.o
+ .text          0x00000000       0x74 ..\obj\u8g_dev_gprof.o
+ .data          0x00000000       0x18 ..\obj\u8g_dev_gprof.o
+ .bss           0x00000000        0x0 ..\obj\u8g_dev_gprof.o
+ .debug_info    0x00000000      0x677 ..\obj\u8g_dev_gprof.o
+ .debug_abbrev  0x00000000      0x18b ..\obj\u8g_dev_gprof.o
+ .debug_loc     0x00000000      0x2a1 ..\obj\u8g_dev_gprof.o
+ .debug_aranges
+                0x00000000       0x20 ..\obj\u8g_dev_gprof.o
+ .debug_line    0x00000000      0x166 ..\obj\u8g_dev_gprof.o
+ .debug_str     0x00000000      0x46e ..\obj\u8g_dev_gprof.o
+ .comment       0x00000000       0x71 ..\obj\u8g_dev_gprof.o
+ .debug_frame   0x00000000       0x54 ..\obj\u8g_dev_gprof.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\u8g_dev_gprof.o
+ COMMON         0x00000000       0x80 ..\obj\u8g_dev_gprof.o
  .text          0x00000000        0x4 ..\obj\u8g_com_arduino_parallel.o
  .data          0x00000000        0x0 ..\obj\u8g_com_arduino_parallel.o
  .bss           0x00000000        0x0 ..\obj\u8g_com_arduino_parallel.o
@@ -1840,6 +1878,21 @@ Discarded input sections
  .debug_frame   0x00000000       0x8c ..\obj\u8g_scale.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_scale.o
+ .text          0x00000000      0x21c ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .data          0x00000000       0x78 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .bss           0x00000000      0x280 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .rodata        0x00000000       0x5f ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .debug_info    0x00000000      0xc23 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .debug_abbrev  0x00000000      0x1d8 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .debug_loc     0x00000000      0x4ef ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .debug_aranges
+                0x00000000       0x20 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .debug_line    0x00000000      0x1e0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .debug_str     0x00000000      0x782 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .comment       0x00000000       0x71 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .debug_frame   0x00000000       0xbc ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
  .text          0x00000000       0xe0 ..\obj\u8g_dev_st7565_nhd_c12832.o
  .data          0x00000000       0x60 ..\obj\u8g_dev_st7565_nhd_c12832.o
  .bss           0x00000000      0x200 ..\obj\u8g_dev_st7565_nhd_c12832.o
@@ -1856,21 +1909,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x3c ..\obj\u8g_dev_st7565_nhd_c12832.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_st7565_nhd_c12832.o
- .text          0x00000000      0x21c ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .data          0x00000000       0x78 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .bss           0x00000000      0x280 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .rodata        0x00000000       0x5f ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .debug_info    0x00000000      0xc23 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .debug_abbrev  0x00000000      0x1d8 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .debug_loc     0x00000000      0x4ef ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .debug_aranges
-                0x00000000       0x20 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .debug_line    0x00000000      0x1e0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .debug_str     0x00000000      0x782 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .comment       0x00000000       0x71 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .debug_frame   0x00000000       0xbc ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
  .text          0x00000000       0xc4 ..\obj\u8g_dev_t6963_128x128.o
  .data          0x00000000       0x18 ..\obj\u8g_dev_t6963_128x128.o
  .bss           0x00000000      0x100 ..\obj\u8g_dev_t6963_128x128.o
@@ -1945,6 +1983,11 @@ Discarded input sections
  .text          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
  .data          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
  .bss           0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+ .text          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(guard.o)
+ .data          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(guard.o)
+ .bss           0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(guard.o)
+ .text.__cxa_guard_abort
+                0x00000000        0x6 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(guard.o)
  .text          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(del_op.o)
  .data          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(del_op.o)
  .bss           0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(del_op.o)
@@ -1994,12 +2037,18 @@ Discarded input sections
  .bss           0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-memcpy.o)
  .ARM.attributes
                 0x00000000       0x1b C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-memcpy.o)
+ .text          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-memset.o)
+ .data          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-memset.o)
  .text          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mlock.o)
  .data          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mlock.o)
  .bss           0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mlock.o)
  .text          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-sbrkr.o)
  .data          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-sbrkr.o)
  .bss           0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-sbrkr.o)
+ .text          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-strlen.o)
+ .data          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-strlen.o)
+ .bss           0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-strlen.o)
  .text          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-freer.o)
  .data          0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-freer.o)
  .bss           0x00000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-freer.o)
@@ -2022,7 +2071,7 @@ Linker script and memory map
 
                 0x20005000                _eram = 0x20005000
 
-.text           0x08000000     0xb02a
+.text           0x08000000     0xb522
  *(.isr_vector)
  .isr_vector    0x08000000      0x10c ..\obj\startup_stm32f10x_md.o
                 0x08000000                g_pfnVectors
@@ -2120,583 +2169,617 @@ Linker script and memory map
                 0x0800168c                u8g_state_dummy_cb
                 0x08001690                u8g_SetHardwareBackup
                 0x08001698                u8g_backup_spi
- .text          0x0800169c      0x488 ..\obj\u8g_ll_api.o
-                0x0800169c                u8g_call_dev_fn
-                0x080016a8                u8g_InitLL
-                0x080016d4                u8g_FirstPageLL
-                0x0800170c                u8g_NextPageLL
-                0x08001748                u8g_SetContrastLL
-                0x0800175c                u8g_DrawPixelLL
-                0x08001778                u8g_Draw8PixelLL
-                0x080017a0                u8g_Draw4TPixelLL
-                0x080017c8                u8g_GetWidthLL
-                0x080017e0                u8g_GetHeightLL
-                0x080017f8                u8g_GetModeLL
-                0x08001808                u8g_UpdateDimension
-                0x08001854                u8g_Begin
-                0x0800186c                u8g_Init
-                0x080018b8                u8g_InitComFn
-                0x0800190c                u8g_FirstPage
-                0x08001914                u8g_NextPage
-                0x0800192c                u8g_SetContrast
-                0x08001944                u8g_SleepOn
-                0x08001958                u8g_SleepOff
-                0x0800196c                u8g_DrawPixel
-                0x08001988                u8g_Draw8Pixel
-                0x080019b0                u8g_Draw4TPixel
-                0x080019d8                u8g_Draw8ColorPixel
-                0x08001a04                u8g_SetColorEntry
-                0x08001a2c                u8g_SetColorIndex
-                0x08001a34                u8g_SetHiColor
-                0x08001a40                u8g_SetHiColorByRGB
-                0x08001a5c                u8g_SetRGB
-                0x08001ab4                u8g_GetColorIndex
-                0x08001abc                u8g_GetDefaultForegroundColor
-                0x08001ad0                u8g_SetDefaultForegroundColor
-                0x08001afc                u8g_GetDefaultBackgroundColor
-                0x08001b00                u8g_SetDefaultBackgroundColor
-                0x08001b08                u8g_GetDefaultMidColor
-                0x08001b14                u8g_SetDefaultMidColor
- .text          0x08001b24      0x2e4 ..\obj\stm32f10x_gpio.o
-                0x08001b24                GPIO_DeInit
-                0x08001c00                GPIO_AFIODeInit
-                0x08001c18                GPIO_Init
-                0x08001cd4                GPIO_StructInit
-                0x08001ce4                GPIO_ReadInputDataBit
-                0x08001cf0                GPIO_ReadInputData
-                0x08001cf8                GPIO_ReadOutputDataBit
-                0x08001d04                GPIO_ReadOutputData
-                0x08001d0c                GPIO_SetBits
-                0x08001d10                GPIO_ResetBits
-                0x08001d14                GPIO_WriteBit
-                0x08001d20                GPIO_Write
-                0x08001d24                GPIO_PinLockConfig
-                0x08001d34                GPIO_EventOutputConfig
-                0x08001d54                GPIO_EventOutputCmd
-                0x08001d60                GPIO_PinRemapConfig
-                0x08001dcc                GPIO_EXTILineConfig
-                0x08001dfc                GPIO_ETH_MediaInterfaceConfig
- .text          0x08001e08       0x60 ..\obj\u8g_page.o
-                0x08001e08                u8g_page_First
-                0x08001e18                u8g_page_Init
-                0x08001e2c                u8g_page_Next
- .text          0x08001e68      0x21c ..\obj\Keypad.o
-                0x08001e68                Keypad::Init()
-                0x08001f00                Keypad::RegisterForCallback(KeypadInterrupt&)
-                0x08001f30                Keypad::ReadKeys()
-                0x08001f4c                Keypad::SetKeyCheckEnabled(bool)
-                0x08001f54                Keypad::CheckKeysPressed()
- .text          0x08002084      0x368 ..\obj\stm32f10x_rcc.o
-                0x08002084                RCC_DeInit
-                0x080020c4                RCC_HSEConfig
-                0x080020fc                RCC_WaitForHSEStartUp
-                0x08002130                RCC_AdjustHSICalibrationValue
-                0x08002144                RCC_HSICmd
-                0x08002150                RCC_PLLConfig
-                0x08002164                RCC_PLLCmd
-                0x08002170                RCC_SYSCLKConfig
-                0x08002184                RCC_GetSYSCLKSource
-                0x08002194                RCC_HCLKConfig
-                0x080021a8                RCC_PCLK1Config
-                0x080021bc                RCC_PCLK2Config
-                0x080021d0                RCC_ITConfig
-                0x080021e8                RCC_USBCLKConfig
-                0x080021f4                RCC_ADCCLKConfig
-                0x08002208                RCC_LSEConfig
-                0x08002228                RCC_LSICmd
-                0x08002234                RCC_RTCCLKConfig
-                0x08002244                RCC_RTCCLKCmd
-                0x08002250                RCC_GetClocksFreq
-                0x080022ec                RCC_AHBPeriphClockCmd
-                0x08002304                RCC_APB2PeriphClockCmd
-                0x0800231c                RCC_APB1PeriphClockCmd
-                0x08002334                RCC_APB2PeriphResetCmd
-                0x0800234c                RCC_APB1PeriphResetCmd
-                0x08002364                RCC_BackupResetCmd
-                0x08002370                RCC_ClockSecuritySystemCmd
-                0x0800237c                RCC_MCOConfig
-                0x08002388                RCC_GetFlagStatus
-                0x080023bc                RCC_ClearFlag
-                0x080023cc                RCC_GetITStatus
-                0x080023e0                RCC_ClearITPendingBit
- .text          0x080023ec      0x36c ..\obj\mcp23017.o
-                0x080023ec                mcp23017::I2C_init()
-                0x0800247c                mcp23017::Read(char)
-                0x08002524                mcp23017::Write(char, char)
-                0x0800259c                mcp23017::Init(I2C_TypeDef*, unsigned long, GPIO_TypeDef*, unsigned long, unsigned short, unsigned short, unsigned short, bool)
-                0x080025ec                mcp23017::Direction(mcp23017::Port, char)
-                0x08002608                mcp23017::ConfigurePullUps(mcp23017::Port, char)
-                0x08002628                mcp23017::ConfigureBanked(mcp23017::Bank)
-                0x08002658                mcp23017::InterruptEnable(mcp23017::Port, char)
-                0x08002678                mcp23017::MirrorInterrupts(bool)
-                0x080026ac                mcp23017::InterruptPolarity(mcp23017::Polarity)
-                0x080026e0                mcp23017::DefaultValue(mcp23017::Port, char)
-                0x08002700                mcp23017::InterruptControl(mcp23017::Port, char)
-                0x08002720                mcp23017::Write(mcp23017::Port, char)
-                0x08002740                mcp23017::Read(mcp23017::Port)
+ .text          0x0800169c      0x520 ..\obj\Display.o
+                0x0800169c                Display::SetDisplayState(bool)
+                0x080016ac                Display::DrawSecondScreen()
+                0x0800170c                Display::SetActiveScreen(Display::Screens)
+                0x08001714                Display::SetTemp(unsigned char, char const*)
+                0x08001740                Display::SetHeatingState(bool)
+                0x08001748                Display::SetStatusBar(char const*)
+                0x0800176c                Display::ClearStatusBar()
+                0x08001778                Display::SetAudioState(bool)
+                0x08001780                Display::SetAudioSource(char const*)
+                0x080017a4                Display::SetRadioState(bool)
+                0x080017ac                Display::SetRadioStereo(bool)
+                0x080017b4                Display::SetRadioChannel(char const*)
+                0x080017d8                Display::SetRadioSignalstrength(char)
+                0x080017e0                Display::WriteText(unsigned char, char const*)
+                0x08001810                Display::WriteHLine(unsigned char, unsigned char, unsigned char, unsigned char)
+                0x08001830                Display::WriteVLine(unsigned char, unsigned char, unsigned char, unsigned char)
+                0x08001850                Display::ClearSecondScreen()
+                0x08001898                Display::Init()
+                0x080018f0                Display::DrawWaterIcon()
+                0x0800194c                Display::DrawFrostIcon()
+                0x080019a4                Display::DrawSignalStrength()
+                0x08001a88                Display::DrawMainScreen()
+                0x08001b8c                Display::Draw()
+ .text          0x08001bbc      0x488 ..\obj\u8g_ll_api.o
+                0x08001bbc                u8g_call_dev_fn
+                0x08001bc8                u8g_InitLL
+                0x08001bf4                u8g_FirstPageLL
+                0x08001c2c                u8g_NextPageLL
+                0x08001c68                u8g_SetContrastLL
+                0x08001c7c                u8g_DrawPixelLL
+                0x08001c98                u8g_Draw8PixelLL
+                0x08001cc0                u8g_Draw4TPixelLL
+                0x08001ce8                u8g_GetWidthLL
+                0x08001d00                u8g_GetHeightLL
+                0x08001d18                u8g_GetModeLL
+                0x08001d28                u8g_UpdateDimension
+                0x08001d74                u8g_Begin
+                0x08001d8c                u8g_Init
+                0x08001dd8                u8g_InitComFn
+                0x08001e2c                u8g_FirstPage
+                0x08001e34                u8g_NextPage
+                0x08001e4c                u8g_SetContrast
+                0x08001e64                u8g_SleepOn
+                0x08001e78                u8g_SleepOff
+                0x08001e8c                u8g_DrawPixel
+                0x08001ea8                u8g_Draw8Pixel
+                0x08001ed0                u8g_Draw4TPixel
+                0x08001ef8                u8g_Draw8ColorPixel
+                0x08001f24                u8g_SetColorEntry
+                0x08001f4c                u8g_SetColorIndex
+                0x08001f54                u8g_SetHiColor
+                0x08001f60                u8g_SetHiColorByRGB
+                0x08001f7c                u8g_SetRGB
+                0x08001fd4                u8g_GetColorIndex
+                0x08001fdc                u8g_GetDefaultForegroundColor
+                0x08001ff0                u8g_SetDefaultForegroundColor
+                0x0800201c                u8g_GetDefaultBackgroundColor
+                0x08002020                u8g_SetDefaultBackgroundColor
+                0x08002028                u8g_GetDefaultMidColor
+                0x08002034                u8g_SetDefaultMidColor
+ .text          0x08002044       0x60 ..\obj\u8g_page.o
+                0x08002044                u8g_page_First
+                0x08002054                u8g_page_Init
+                0x08002068                u8g_page_Next
+ .text          0x080020a4      0x2e4 ..\obj\stm32f10x_gpio.o
+                0x080020a4                GPIO_DeInit
+                0x08002180                GPIO_AFIODeInit
+                0x08002198                GPIO_Init
+                0x08002254                GPIO_StructInit
+                0x08002264                GPIO_ReadInputDataBit
+                0x08002270                GPIO_ReadInputData
+                0x08002278                GPIO_ReadOutputDataBit
+                0x08002284                GPIO_ReadOutputData
+                0x0800228c                GPIO_SetBits
+                0x08002290                GPIO_ResetBits
+                0x08002294                GPIO_WriteBit
+                0x080022a0                GPIO_Write
+                0x080022a4                GPIO_PinLockConfig
+                0x080022b4                GPIO_EventOutputConfig
+                0x080022d4                GPIO_EventOutputCmd
+                0x080022e0                GPIO_PinRemapConfig
+                0x0800234c                GPIO_EXTILineConfig
+                0x0800237c                GPIO_ETH_MediaInterfaceConfig
+ .text          0x08002388      0x368 ..\obj\stm32f10x_rcc.o
+                0x08002388                RCC_DeInit
+                0x080023c8                RCC_HSEConfig
+                0x08002400                RCC_WaitForHSEStartUp
+                0x08002434                RCC_AdjustHSICalibrationValue
+                0x08002448                RCC_HSICmd
+                0x08002454                RCC_PLLConfig
+                0x08002468                RCC_PLLCmd
+                0x08002474                RCC_SYSCLKConfig
+                0x08002488                RCC_GetSYSCLKSource
+                0x08002498                RCC_HCLKConfig
+                0x080024ac                RCC_PCLK1Config
+                0x080024c0                RCC_PCLK2Config
+                0x080024d4                RCC_ITConfig
+                0x080024ec                RCC_USBCLKConfig
+                0x080024f8                RCC_ADCCLKConfig
+                0x0800250c                RCC_LSEConfig
+                0x0800252c                RCC_LSICmd
+                0x08002538                RCC_RTCCLKConfig
+                0x08002548                RCC_RTCCLKCmd
+                0x08002554                RCC_GetClocksFreq
+                0x080025f0                RCC_AHBPeriphClockCmd
+                0x08002608                RCC_APB2PeriphClockCmd
+                0x08002620                RCC_APB1PeriphClockCmd
+                0x08002638                RCC_APB2PeriphResetCmd
+                0x08002650                RCC_APB1PeriphResetCmd
+                0x08002668                RCC_BackupResetCmd
+                0x08002674                RCC_ClockSecuritySystemCmd
+                0x08002680                RCC_MCOConfig
+                0x0800268c                RCC_GetFlagStatus
+                0x080026c0                RCC_ClearFlag
+                0x080026d0                RCC_GetITStatus
+                0x080026e4                RCC_ClearITPendingBit
+ .text          0x080026f0      0x21c ..\obj\Keypad.o
+                0x080026f0                Keypad::Init()
+                0x08002788                Keypad::RegisterForCallback(KeypadInterrupt&)
+                0x080027b8                Keypad::ReadKeys()
+                0x080027d4                Keypad::SetKeyCheckEnabled(bool)
+                0x080027dc                Keypad::CheckKeysPressed()
+ .text          0x0800290c      0x36c ..\obj\mcp23017.o
+                0x0800290c                mcp23017::I2C_init()
+                0x0800299c                mcp23017::Read(char)
+                0x08002a44                mcp23017::Write(char, char)
+                0x08002abc                mcp23017::Init(I2C_TypeDef*, unsigned long, GPIO_TypeDef*, unsigned long, unsigned short, unsigned short, unsigned short, bool)
+                0x08002b0c                mcp23017::Direction(mcp23017::Port, char)
+                0x08002b28                mcp23017::ConfigurePullUps(mcp23017::Port, char)
+                0x08002b48                mcp23017::ConfigureBanked(mcp23017::Bank)
+                0x08002b78                mcp23017::InterruptEnable(mcp23017::Port, char)
+                0x08002b98                mcp23017::MirrorInterrupts(bool)
+                0x08002bcc                mcp23017::InterruptPolarity(mcp23017::Polarity)
+                0x08002c00                mcp23017::DefaultValue(mcp23017::Port, char)
+                0x08002c20                mcp23017::InterruptControl(mcp23017::Port, char)
+                0x08002c40                mcp23017::Write(mcp23017::Port, char)
+                0x08002c60                mcp23017::Read(mcp23017::Port)
  .text.Reset_Handler
-                0x08002758       0x44 ..\obj\startup_stm32f10x_md.o
-                0x08002758                Reset_Handler
- *fill*         0x0800279c        0x4 
+                0x08002c78       0x44 ..\obj\startup_stm32f10x_md.o
+                0x08002c78                Reset_Handler
+ *fill*         0x08002cbc        0x4 
  .text.Default_Handler
-                0x080027a0       0x14 ..\obj\startup_stm32f10x_md.o
-                0x080027a0                EXTI2_IRQHandler
-                0x080027a0                DebugMon_Handler
-                0x080027a0                TIM1_CC_IRQHandler
-                0x080027a0                HardFault_Handler
-                0x080027a0                PVD_IRQHandler
-                0x080027a0                PendSV_Handler
-                0x080027a0                NMI_Handler
-                0x080027a0                EXTI3_IRQHandler
-                0x080027a0                EXTI0_IRQHandler
-                0x080027a0                I2C2_EV_IRQHandler
-                0x080027a0                UsageFault_Handler
-                0x080027a0                ADC1_2_IRQHandler
-                0x080027a0                SPI1_IRQHandler
-                0x080027a0                TAMPER_IRQHandler
-                0x080027a0                DMA1_Channel4_IRQHandler
-                0x080027a0                USART3_IRQHandler
-                0x080027a0                RTC_IRQHandler
-                0x080027a0                DMA1_Channel7_IRQHandler
-                0x080027a0                CAN1_RX1_IRQHandler
-                0x080027a0                TIM4_IRQHandler
-                0x080027a0                I2C1_EV_IRQHandler
-                0x080027a0                DMA1_Channel6_IRQHandler
-                0x080027a0                TIM3_IRQHandler
-                0x080027a0                RCC_IRQHandler
-                0x080027a0                TIM1_TRG_COM_IRQHandler
-                0x080027a0                DMA1_Channel1_IRQHandler
-                0x080027a0                Default_Handler
-                0x080027a0                EXTI15_10_IRQHandler
-                0x080027a0                EXTI9_5_IRQHandler
-                0x080027a0                SPI2_IRQHandler
-                0x080027a0                MemManage_Handler
-                0x080027a0                SVC_Handler
-                0x080027a0                DMA1_Channel5_IRQHandler
-                0x080027a0                EXTI4_IRQHandler
-                0x080027a0                USB_LP_CAN1_RX0_IRQHandler
-                0x080027a0                USB_HP_CAN1_TX_IRQHandler
-                0x080027a0                DMA1_Channel3_IRQHandler
-                0x080027a0                TIM1_UP_IRQHandler
-                0x080027a0                WWDG_IRQHandler
-                0x080027a0                TIM2_IRQHandler
-                0x080027a0                TIM1_BRK_IRQHandler
-                0x080027a0                EXTI1_IRQHandler
-                0x080027a0                RTCAlarm_IRQHandler
-                0x080027a0                USART2_IRQHandler
-                0x080027a0                I2C2_ER_IRQHandler
-                0x080027a0                DMA1_Channel2_IRQHandler
-                0x080027a0                CAN1_SCE_IRQHandler
-                0x080027a0                FLASH_IRQHandler
-                0x080027a0                BusFault_Handler
-                0x080027a0                I2C1_ER_IRQHandler
-                0x080027a0                USBWakeUp_IRQHandler
- .text          0x080027b4      0x3fc ..\obj\u8g_rect.o
-                0x080027b4                u8g_draw_hline
-                0x08002828                u8g_draw_vline
-                0x0800289c                u8g_DrawHLine
-                0x080028c8                u8g_DrawVLine
-                0x080028f4                u8g_DrawFrame
-                0x08002954                u8g_draw_box
-                0x08002980                u8g_DrawBox
-                0x080029b4                u8g_DrawRFrame
-                0x08002ac4                u8g_DrawRBox
- .text          0x08002bb0       0xd8 ..\obj\RelayBoard.o
-                0x08002bb0                RelayBoard::Init()
-                0x08002c24                RelayBoard::SwitchRelay(RelayBoard::Relays, bool)
- .text          0x08002c88        0x4 ..\obj\u8g_com_null.o
-                0x08002c88                u8g_com_null_fn
- .text          0x08002c8c       0x38 ..\obj\EntController.o
-                0x08002c8c                EntController::KeypadKeysPressed(unsigned short, bool)
-                0x08002ca8                EntController::EntController(Keypad&, RelayBoard&)
-                0x08002ca8                EntController::EntController(Keypad&, RelayBoard&)
-                0x08002cbc                EntController::Init()
- .text          0x08002cc4      0x118 ..\obj\delay.o
-                0x08002cc4                SysTick_Init
-                0x08002d18                TimeTick_Decrement
-                0x08002d2c                delay_setSysTick
-                0x08002d38                delay_getSysTick
-                0x08002d44                delay_sys_nus
-                0x08002d48                delay_sys_1ms
-                0x08002d5c                delay_sys_nms
-                0x08002d7c                SysCtlDelay
-                0x08002d84                delay_nus
-                0x08002d98                delay_1ms
-                0x08002db0                delay_nms
- .text          0x08002ddc       0xc8 ..\obj\ovc3860.o
-                0x08002ddc                ovc3860_init
-                0x08002de4                ovc3860_playPause
-                0x08002e04                ovc3860_stop
-                0x08002e24                ovc3860_playPrevious
-                0x08002e44                ovc3860_playNext
-                0x08002e64                ovc3860_volUp
-                0x08002e84                ovc3860_volDown
- .text          0x08002ea4      0x1cc ..\obj\u8g_arm_uart.o
-                0x08002ea4                u8g_Delay
-                0x08002ee0                u8g_MicroDelay
-                0x08002ef8                u8g_10MicroDelay
-                0x08002f18                init_UART3
-                0x08002fa0                UART_write_byte
-                0x08002fbc                u8g_com_uart_fn
- .text          0x08003070      0x104 ..\obj\u8g_line.o
-                0x08003070                u8g_DrawLine
- .text          0x08003174      0x174 ..\obj\usart.o
-                0x08003174                USART1_Init
-                0x08003228                USART2_Init
-                0x080032ac                usart_string_append
-                0x080032c8                usart_clear_string
-                0x080032d4                usart_get_string
-                0x080032dc                usart_get_string_length
- .text          0x080032e8      0x210 ..\obj\u8g_pb32h1.o
-                0x080032e8                u8g_pb32h1_Clear
-                0x080032fc                u8g_pb32h1_Init
-                0x08003310                u8g_pb32h1_set_pixel
-                0x08003348                u8g_pb32h1_SetPixel
-                0x08003374                u8g_pb32h1_Set8PixelStd
-                0x080033c0                u8g_pb32h1_Set8PixelOpt2
-                0x08003424                u8g_dev_pb32h1_base_fn
- .text          0x080034f8      0x1d8 ..\obj\u8g_pb8h1.o
-                0x080034f8                u8g_pb8h1_Init
-                0x08003500                u8g_pb8h1_set_pixel
-                0x08003538                u8g_pb8h1_SetPixel
-                0x08003564                u8g_pb8h1_Set8PixelStd
-                0x080035b0                u8g_pb8h1_Set8PixelOpt2
-                0x08003614                u8g_dev_pb8h1_base_fn
- .text          0x080036d0      0x2e4 ..\obj\main.o
-                0x080036d0                drawWaterIcon()
-                0x08003730                drawFrostIcon()
-                0x08003790                drawSignalStrength(int)
-                0x08003868                draw()
-                0x08003980                SysTick_Handler
-                0x08003984                USART1_IRQHandler
- .text.startup  0x080039b4      0x324 ..\obj\main.o
-                0x080039b4                main
- .text          0x08003cd8      0x1bc ..\obj\SpaController.o
-                0x08003cd8                SpaController::KeypadKeysPressed(unsigned short, bool)
-                0x08003de4                SpaController::SpaController(Keypad&, RelayBoard&)
-                0x08003de4                SpaController::SpaController(Keypad&, RelayBoard&)
-                0x08003df8                SpaController::Init()
-                0x08003e1c                SpaController::ToggleJets()
-                0x08003e30                SpaController::ToggleGas()
-                0x08003e44                SpaController::ToggleHeat()
-                0x08003e58                SpaController::ToggleCirc()
-                0x08003e6c                SpaController::ToggleLED1()
-                0x08003e80                SpaController::ToggleLED2()
- .text          0x08003e94      0x414 ..\obj\stm32f10x_usart.o
-                0x08003e94                USART_DeInit
-                0x08003f44                USART_Init
-                0x08004000                USART_StructInit
-                0x08004018                USART_ClockInit
-                0x0800403c                USART_ClockStructInit
-                0x08004048                USART_Cmd
-                0x08004064                USART_ITConfig
-                0x080040a0                USART_DMACmd
-                0x080040b4                USART_SetAddress
-                0x080040cc                USART_WakeUpConfig
-                0x080040e4                USART_ReceiverWakeUpCmd
-                0x08004100                USART_LINBreakDetectLengthConfig
-                0x08004118                USART_LINCmd
-                0x08004134                USART_SendData
-                0x0800413c                USART_ReceiveData
-                0x08004144                USART_SendBreak
-                0x08004150                USART_SetGuardTime
-                0x08004164                USART_SetPrescaler
-                0x08004178                USART_SmartCardCmd
-                0x08004194                USART_SmartCardNACKCmd
-                0x080041b0                USART_HalfDuplexCmd
-                0x080041cc                USART_OverSampling8Cmd
-                0x080041e8                USART_OneBitMethodCmd
-                0x08004204                USART_IrDAConfig
-                0x0800421c                USART_IrDACmd
-                0x08004238                USART_GetFlagStatus
-                0x08004244                USART_ClearFlag
-                0x0800424c                USART_GetITStatus
-                0x08004298                USART_ClearITPendingBit
- .text          0x080042a8      0xcd8 ..\obj\u8g_font.o
-                0x080042b8                u8g_font_calc_vref_font
-                0x080042bc                u8g_font_calc_vref_bottom
-                0x080042c4                u8g_font_calc_vref_top
-                0x080042d0                u8g_font_calc_vref_center
-                0x080042e8                u8g_font_get_char
-                0x080042ec                u8g_font_get_charP
-                0x08004308                u8g_font_GetCapitalAHeight
-                0x0800430c                u8g_font_GetEncoding65Pos
-                0x08004310                u8g_font_GetEncoding97Pos
-                0x08004314                u8g_font_GetFontStartEncoding
-                0x08004318                u8g_font_GetFontEndEncoding
-                0x0800431c                u8g_font_GetLowerGDescent
-                0x08004324                u8g_font_GetFontAscent
-                0x0800432c                u8g_font_GetFontDescent
-                0x08004334                u8g_font_GetFontXAscent
-                0x0800433c                u8g_font_GetFontXDescent
-                0x08004344                u8g_font_GetSize
-                0x080043a0                u8g_GetFontBBXWidth
-                0x080043a8                u8g_GetFontBBXHeight
-                0x080043b0                u8g_GetFontBBXOffX
-                0x080043b8                u8g_GetFontBBXOffY
-                0x080043c0                u8g_GetFontCapitalAHeight
-                0x080043c8                u8g_GetGlyph
-                0x08004548                u8g_IsGlyph
-                0x08004558                u8g_GetGlyphDeltaX
-                0x08004568                u8g_draw_glyph
-                0x0800461c                u8g_DrawGlyph
-                0x08004640                u8g_draw_glyph90
-                0x080046fc                u8g_DrawGlyph90
-                0x08004720                u8g_draw_glyph180
-                0x080047e8                u8g_DrawGlyph180
-                0x0800480c                u8g_draw_glyph270
-                0x080048c8                u8g_DrawGlyph270
-                0x080048ec                u8g_DrawStr
-                0x08004930                u8g_DrawStr90
-                0x08004974                u8g_DrawStr180
-                0x080049b8                u8g_DrawStr270
-                0x080049fc                u8g_DrawStrDir
-                0x08004a38                u8g_DrawStrP
-                0x08004a7c                u8g_DrawStr90P
-                0x08004ac0                u8g_DrawStr180P
-                0x08004b04                u8g_DrawStr270P
-                0x08004b48                u8g_DrawStrFontBBX
-                0x08004b74                u8g_DrawGlyphFontBBX
-                0x08004ba0                u8g_UpdateRefHeight
-                0x08004bf8                u8g_SetFontRefHeightText
-                0x08004c04                u8g_SetFontRefHeightExtendedText
-                0x08004c10                u8g_SetFontRefHeightAll
-                0x08004c1c                u8g_SetFontLineSpacingFactor
-                0x08004c24                u8g_SetFontPosBaseline
-                0x08004c30                u8g_SetFontPosBottom
-                0x08004c3c                u8g_SetFontPosTop
-                0x08004c48                u8g_SetFontPosCenter
-                0x08004c54                u8g_font_calc_str_pixel_width
-                0x08004cac                u8g_GetStrPixelWidth
-                0x08004cb8                u8g_GetStrPixelWidthP
-                0x08004cc4                u8g_GetStrX
-                0x08004cd4                u8g_GetStrXP
-                0x08004ce4                u8g_GetStrWidth
-                0x08004d0c                u8g_GetStrWidthP
-                0x08004d34                u8g_font_box_min
-                0x08004d54                u8g_font_box_left_gA
-                0x08004d58                u8g_font_box_all_gA
-                0x08004d5c                u8g_GetStrMinBox
-                0x08004dbc                u8g_GetStrAMinBox
-                0x08004e34                u8g_SetFont
-                0x08004e50                u8g_draw_aa_glyph
-                0x08004f04                u8g_DrawAAGlyph
-                0x08004f28                u8g_DrawAAStr
- .text          0x08004f80       0x58 ..\obj\u8g_clip.o
-                0x08004f80                u8g_IsBBXIntersection
- .text          0x08004fd8       0xc8 ..\obj\misc.o
-                0x08004fd8                NVIC_PriorityGroupConfig
-                0x08004fec                NVIC_Init
-                0x0800505c                NVIC_SetVectorTable
-                0x08005070                NVIC_SystemLPConfig
-                0x08005088                SysTick_CLKSourceConfig
- .text          0x080050a0      0x42c ..\obj\stm32f10x_i2c.o
-                0x080050a0                I2C_DeInit
-                0x080050dc                I2C_Init
-                0x080051c0                I2C_StructInit
-                0x080051e4                I2C_Cmd
-                0x08005200                I2C_DMACmd
-                0x0800521c                I2C_DMALastTransferCmd
-                0x08005238                I2C_GenerateSTART
-                0x08005254                I2C_GenerateSTOP
-                0x08005270                I2C_AcknowledgeConfig
-                0x0800528c                I2C_OwnAddress2Config
-                0x080052a0                I2C_DualAddressCmd
-                0x080052bc                I2C_GeneralCallCmd
-                0x080052d8                I2C_ITConfig
-                0x080052ec                I2C_SendData
-                0x080052f0                I2C_ReceiveData
-                0x080052f8                I2C_Send7bitAddress
-                0x08005310                I2C_ReadRegister
-                0x08005328                I2C_SoftwareResetCmd
-                0x08005344                I2C_NACKPositionConfig
-                0x08005364                I2C_SMBusAlertConfig
-                0x08005384                I2C_TransmitPEC
-                0x080053a0                I2C_PECPositionConfig
-                0x080053c0                I2C_CalculatePEC
-                0x080053dc                I2C_GetPEC
-                0x080053e4                I2C_ARPCmd
-                0x08005400                I2C_StretchClockCmd
-                0x0800541c                I2C_FastModeDutyCycleConfig
-                0x0800543c                I2C_CheckEvent
-                0x08005458                I2C_GetLastEvent
-                0x08005468                I2C_GetFlagStatus
-                0x080054a0                I2C_ClearFlag
-                0x080054a8                I2C_GetITStatus
-                0x080054c4                I2C_ClearITPendingBit
- .text          0x080054cc      0x15c ..\obj\system_stm32f10x.o
-                0x080054cc                SystemInit
-                0x080055d0                SystemCoreClockUpdate
- .text          0x08005628      0x2e8 ..\obj\u8g_circle.o
-                0x08005798                u8g_draw_circle
-                0x0800580c                u8g_DrawCircle
-                0x08005854                u8g_draw_disc
-                0x080058c8                u8g_DrawDisc
+                0x08002cc0       0x14 ..\obj\startup_stm32f10x_md.o
+                0x08002cc0                EXTI2_IRQHandler
+                0x08002cc0                DebugMon_Handler
+                0x08002cc0                TIM1_CC_IRQHandler
+                0x08002cc0                HardFault_Handler
+                0x08002cc0                PVD_IRQHandler
+                0x08002cc0                PendSV_Handler
+                0x08002cc0                NMI_Handler
+                0x08002cc0                EXTI3_IRQHandler
+                0x08002cc0                EXTI0_IRQHandler
+                0x08002cc0                I2C2_EV_IRQHandler
+                0x08002cc0                UsageFault_Handler
+                0x08002cc0                ADC1_2_IRQHandler
+                0x08002cc0                SPI1_IRQHandler
+                0x08002cc0                TAMPER_IRQHandler
+                0x08002cc0                DMA1_Channel4_IRQHandler
+                0x08002cc0                USART3_IRQHandler
+                0x08002cc0                RTC_IRQHandler
+                0x08002cc0                DMA1_Channel7_IRQHandler
+                0x08002cc0                CAN1_RX1_IRQHandler
+                0x08002cc0                TIM4_IRQHandler
+                0x08002cc0                I2C1_EV_IRQHandler
+                0x08002cc0                DMA1_Channel6_IRQHandler
+                0x08002cc0                TIM3_IRQHandler
+                0x08002cc0                RCC_IRQHandler
+                0x08002cc0                TIM1_TRG_COM_IRQHandler
+                0x08002cc0                DMA1_Channel1_IRQHandler
+                0x08002cc0                Default_Handler
+                0x08002cc0                EXTI15_10_IRQHandler
+                0x08002cc0                EXTI9_5_IRQHandler
+                0x08002cc0                SPI2_IRQHandler
+                0x08002cc0                MemManage_Handler
+                0x08002cc0                SVC_Handler
+                0x08002cc0                DMA1_Channel5_IRQHandler
+                0x08002cc0                EXTI4_IRQHandler
+                0x08002cc0                USB_LP_CAN1_RX0_IRQHandler
+                0x08002cc0                USB_HP_CAN1_TX_IRQHandler
+                0x08002cc0                DMA1_Channel3_IRQHandler
+                0x08002cc0                TIM1_UP_IRQHandler
+                0x08002cc0                WWDG_IRQHandler
+                0x08002cc0                TIM2_IRQHandler
+                0x08002cc0                TIM1_BRK_IRQHandler
+                0x08002cc0                EXTI1_IRQHandler
+                0x08002cc0                RTCAlarm_IRQHandler
+                0x08002cc0                USART2_IRQHandler
+                0x08002cc0                I2C2_ER_IRQHandler
+                0x08002cc0                DMA1_Channel2_IRQHandler
+                0x08002cc0                CAN1_SCE_IRQHandler
+                0x08002cc0                FLASH_IRQHandler
+                0x08002cc0                BusFault_Handler
+                0x08002cc0                I2C1_ER_IRQHandler
+                0x08002cc0                USBWakeUp_IRQHandler
+ .text          0x08002cd4      0x3fc ..\obj\u8g_rect.o
+                0x08002cd4                u8g_draw_hline
+                0x08002d48                u8g_draw_vline
+                0x08002dbc                u8g_DrawHLine
+                0x08002de8                u8g_DrawVLine
+                0x08002e14                u8g_DrawFrame
+                0x08002e74                u8g_draw_box
+                0x08002ea0                u8g_DrawBox
+                0x08002ed4                u8g_DrawRFrame
+                0x08002fe4                u8g_DrawRBox
+ .text          0x080030d0       0xd8 ..\obj\RelayBoard.o
+                0x080030d0                RelayBoard::Init()
+                0x08003144                RelayBoard::SwitchRelay(RelayBoard::Relays, bool)
+ .text          0x080031a8        0x4 ..\obj\u8g_com_null.o
+                0x080031a8                u8g_com_null_fn
+ .text          0x080031ac       0x64 ..\obj\EntController.o
+                0x080031ac                EntController::KeypadKeysPressed(unsigned short, bool)
+                0x080031c8                EntController::EntController()
+                0x080031c8                EntController::EntController()
+                0x08003208                EntController::Init()
+ .text          0x08003210      0x118 ..\obj\delay.o
+                0x08003210                SysTick_Init
+                0x08003264                TimeTick_Decrement
+                0x08003278                delay_setSysTick
+                0x08003284                delay_getSysTick
+                0x08003290                delay_sys_nus
+                0x08003294                delay_sys_1ms
+                0x080032a8                delay_sys_nms
+                0x080032c8                SysCtlDelay
+                0x080032d0                delay_nus
+                0x080032e4                delay_1ms
+                0x080032fc                delay_nms
+ .text          0x08003328       0xc8 ..\obj\ovc3860.o
+                0x08003328                ovc3860_init
+                0x08003330                ovc3860_playPause
+                0x08003350                ovc3860_stop
+                0x08003370                ovc3860_playPrevious
+                0x08003390                ovc3860_playNext
+                0x080033b0                ovc3860_volUp
+                0x080033d0                ovc3860_volDown
+ .text          0x080033f0      0x1cc ..\obj\u8g_arm_uart.o
+                0x080033f0                u8g_Delay
+                0x0800342c                u8g_MicroDelay
+                0x08003444                u8g_10MicroDelay
+                0x08003464                init_UART3
+                0x080034ec                UART_write_byte
+                0x08003508                u8g_com_uart_fn
+ .text          0x080035bc      0x104 ..\obj\u8g_line.o
+                0x080035bc                u8g_DrawLine
+ .text          0x080036c0      0x174 ..\obj\usart.o
+                0x080036c0                USART1_Init
+                0x08003774                USART2_Init
+                0x080037f8                usart_string_append
+                0x08003814                usart_clear_string
+                0x08003820                usart_get_string
+                0x08003828                usart_get_string_length
+ .text          0x08003834      0x210 ..\obj\u8g_pb32h1.o
+                0x08003834                u8g_pb32h1_Clear
+                0x08003848                u8g_pb32h1_Init
+                0x0800385c                u8g_pb32h1_set_pixel
+                0x08003894                u8g_pb32h1_SetPixel
+                0x080038c0                u8g_pb32h1_Set8PixelStd
+                0x0800390c                u8g_pb32h1_Set8PixelOpt2
+                0x08003970                u8g_dev_pb32h1_base_fn
+ .text          0x08003a44      0x1d8 ..\obj\u8g_pb8h1.o
+                0x08003a44                u8g_pb8h1_Init
+                0x08003a4c                u8g_pb8h1_set_pixel
+                0x08003a84                u8g_pb8h1_SetPixel
+                0x08003ab0                u8g_pb8h1_Set8PixelStd
+                0x08003afc                u8g_pb8h1_Set8PixelOpt2
+                0x08003b60                u8g_dev_pb8h1_base_fn
+ .text          0x08003c1c       0x34 ..\obj\main.o
+                0x08003c1c                SysTick_Handler
+                0x08003c20                USART1_IRQHandler
+ .text.startup  0x08003c50      0x318 ..\obj\main.o
+                0x08003c50                main
+ .text          0x08003f68      0x220 ..\obj\SpaController.o
+                0x08003f68                SpaController::SpaController()
+                0x08003f68                SpaController::SpaController()
+                0x08003fb0                SpaController::Init()
+                0x08003fd4                SpaController::ToggleJets()
+                0x08003ffc                SpaController::ToggleGas()
+                0x08004024                SpaController::ToggleHeat()
+                0x0800404c                SpaController::ToggleCirc()
+                0x08004074                SpaController::ToggleLED1()
+                0x0800409c                SpaController::ToggleLED2()
+                0x080040c4                SpaController::KeypadKeysPressed(unsigned short, bool)
+ .text          0x08004188      0x414 ..\obj\stm32f10x_usart.o
+                0x08004188                USART_DeInit
+                0x08004238                USART_Init
+                0x080042f4                USART_StructInit
+                0x0800430c                USART_ClockInit
+                0x08004330                USART_ClockStructInit
+                0x0800433c                USART_Cmd
+                0x08004358                USART_ITConfig
+                0x08004394                USART_DMACmd
+                0x080043a8                USART_SetAddress
+                0x080043c0                USART_WakeUpConfig
+                0x080043d8                USART_ReceiverWakeUpCmd
+                0x080043f4                USART_LINBreakDetectLengthConfig
+                0x0800440c                USART_LINCmd
+                0x08004428                USART_SendData
+                0x08004430                USART_ReceiveData
+                0x08004438                USART_SendBreak
+                0x08004444                USART_SetGuardTime
+                0x08004458                USART_SetPrescaler
+                0x0800446c                USART_SmartCardCmd
+                0x08004488                USART_SmartCardNACKCmd
+                0x080044a4                USART_HalfDuplexCmd
+                0x080044c0                USART_OverSampling8Cmd
+                0x080044dc                USART_OneBitMethodCmd
+                0x080044f8                USART_IrDAConfig
+                0x08004510                USART_IrDACmd
+                0x0800452c                USART_GetFlagStatus
+                0x08004538                USART_ClearFlag
+                0x08004540                USART_GetITStatus
+                0x0800458c                USART_ClearITPendingBit
+ .text          0x0800459c      0xcd8 ..\obj\u8g_font.o
+                0x080045ac                u8g_font_calc_vref_font
+                0x080045b0                u8g_font_calc_vref_bottom
+                0x080045b8                u8g_font_calc_vref_top
+                0x080045c4                u8g_font_calc_vref_center
+                0x080045dc                u8g_font_get_char
+                0x080045e0                u8g_font_get_charP
+                0x080045fc                u8g_font_GetCapitalAHeight
+                0x08004600                u8g_font_GetEncoding65Pos
+                0x08004604                u8g_font_GetEncoding97Pos
+                0x08004608                u8g_font_GetFontStartEncoding
+                0x0800460c                u8g_font_GetFontEndEncoding
+                0x08004610                u8g_font_GetLowerGDescent
+                0x08004618                u8g_font_GetFontAscent
+                0x08004620                u8g_font_GetFontDescent
+                0x08004628                u8g_font_GetFontXAscent
+                0x08004630                u8g_font_GetFontXDescent
+                0x08004638                u8g_font_GetSize
+                0x08004694                u8g_GetFontBBXWidth
+                0x0800469c                u8g_GetFontBBXHeight
+                0x080046a4                u8g_GetFontBBXOffX
+                0x080046ac                u8g_GetFontBBXOffY
+                0x080046b4                u8g_GetFontCapitalAHeight
+                0x080046bc                u8g_GetGlyph
+                0x0800483c                u8g_IsGlyph
+                0x0800484c                u8g_GetGlyphDeltaX
+                0x0800485c                u8g_draw_glyph
+                0x08004910                u8g_DrawGlyph
+                0x08004934                u8g_draw_glyph90
+                0x080049f0                u8g_DrawGlyph90
+                0x08004a14                u8g_draw_glyph180
+                0x08004adc                u8g_DrawGlyph180
+                0x08004b00                u8g_draw_glyph270
+                0x08004bbc                u8g_DrawGlyph270
+                0x08004be0                u8g_DrawStr
+                0x08004c24                u8g_DrawStr90
+                0x08004c68                u8g_DrawStr180
+                0x08004cac                u8g_DrawStr270
+                0x08004cf0                u8g_DrawStrDir
+                0x08004d2c                u8g_DrawStrP
+                0x08004d70                u8g_DrawStr90P
+                0x08004db4                u8g_DrawStr180P
+                0x08004df8                u8g_DrawStr270P
+                0x08004e3c                u8g_DrawStrFontBBX
+                0x08004e68                u8g_DrawGlyphFontBBX
+                0x08004e94                u8g_UpdateRefHeight
+                0x08004eec                u8g_SetFontRefHeightText
+                0x08004ef8                u8g_SetFontRefHeightExtendedText
+                0x08004f04                u8g_SetFontRefHeightAll
+                0x08004f10                u8g_SetFontLineSpacingFactor
+                0x08004f18                u8g_SetFontPosBaseline
+                0x08004f24                u8g_SetFontPosBottom
+                0x08004f30                u8g_SetFontPosTop
+                0x08004f3c                u8g_SetFontPosCenter
+                0x08004f48                u8g_font_calc_str_pixel_width
+                0x08004fa0                u8g_GetStrPixelWidth
+                0x08004fac                u8g_GetStrPixelWidthP
+                0x08004fb8                u8g_GetStrX
+                0x08004fc8                u8g_GetStrXP
+                0x08004fd8                u8g_GetStrWidth
+                0x08005000                u8g_GetStrWidthP
+                0x08005028                u8g_font_box_min
+                0x08005048                u8g_font_box_left_gA
+                0x0800504c                u8g_font_box_all_gA
+                0x08005050                u8g_GetStrMinBox
+                0x080050b0                u8g_GetStrAMinBox
+                0x08005128                u8g_SetFont
+                0x08005144                u8g_draw_aa_glyph
+                0x080051f8                u8g_DrawAAGlyph
+                0x0800521c                u8g_DrawAAStr
+ .text          0x08005274       0x58 ..\obj\u8g_clip.o
+                0x08005274                u8g_IsBBXIntersection
+ .text          0x080052cc       0xd8 ..\obj\LEDS.o
+                0x080052cc                LEDS::Init()
+                0x08005340                LEDS::SwitchLed(LEDS::Leds, bool)
+ .text          0x080053a4       0xc8 ..\obj\misc.o
+                0x080053a4                NVIC_PriorityGroupConfig
+                0x080053b8                NVIC_Init
+                0x08005428                NVIC_SetVectorTable
+                0x0800543c                NVIC_SystemLPConfig
+                0x08005454                SysTick_CLKSourceConfig
+ .text          0x0800546c      0x42c ..\obj\stm32f10x_i2c.o
+                0x0800546c                I2C_DeInit
+                0x080054a8                I2C_Init
+                0x0800558c                I2C_StructInit
+                0x080055b0                I2C_Cmd
+                0x080055cc                I2C_DMACmd
+                0x080055e8                I2C_DMALastTransferCmd
+                0x08005604                I2C_GenerateSTART
+                0x08005620                I2C_GenerateSTOP
+                0x0800563c                I2C_AcknowledgeConfig
+                0x08005658                I2C_OwnAddress2Config
+                0x0800566c                I2C_DualAddressCmd
+                0x08005688                I2C_GeneralCallCmd
+                0x080056a4                I2C_ITConfig
+                0x080056b8                I2C_SendData
+                0x080056bc                I2C_ReceiveData
+                0x080056c4                I2C_Send7bitAddress
+                0x080056dc                I2C_ReadRegister
+                0x080056f4                I2C_SoftwareResetCmd
+                0x08005710                I2C_NACKPositionConfig
+                0x08005730                I2C_SMBusAlertConfig
+                0x08005750                I2C_TransmitPEC
+                0x0800576c                I2C_PECPositionConfig
+                0x0800578c                I2C_CalculatePEC
+                0x080057a8                I2C_GetPEC
+                0x080057b0                I2C_ARPCmd
+                0x080057cc                I2C_StretchClockCmd
+                0x080057e8                I2C_FastModeDutyCycleConfig
+                0x08005808                I2C_CheckEvent
+                0x08005824                I2C_GetLastEvent
+                0x08005834                I2C_GetFlagStatus
+                0x0800586c                I2C_ClearFlag
+                0x08005874                I2C_GetITStatus
+                0x08005890                I2C_ClearITPendingBit
+ .text          0x08005898      0x15c ..\obj\system_stm32f10x.o
+                0x08005898                SystemInit
+                0x0800599c                SystemCoreClockUpdate
+ .text          0x080059f4      0x2e8 ..\obj\u8g_circle.o
+                0x08005b64                u8g_draw_circle
+                0x08005bd8                u8g_DrawCircle
+                0x08005c20                u8g_draw_disc
+                0x08005c94                u8g_DrawDisc
  .text._ZN10__cxxabiv120__si_class_type_infoD2Ev
-                0x08005910       0x14 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
-                0x08005910                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
-                0x08005910                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+                0x08005cdc       0x14 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
+                0x08005cdc                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+                0x08005cdc                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
  .text._ZN10__cxxabiv120__si_class_type_infoD0Ev
-                0x08005924       0x12 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
-                0x08005924                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+                0x08005cf0       0x12 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
+                0x08005cf0                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
  .text._ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
-                0x08005936       0x38 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
-                0x08005936                __cxxabiv1::__si_class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+                0x08005d02       0x38 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
+                0x08005d02                __cxxabiv1::__si_class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
  .text._ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
-                0x0800596e       0x7c C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
-                0x0800596e                __cxxabiv1::__si_class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+                0x08005d3a       0x7c C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
+                0x08005d3a                __cxxabiv1::__si_class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
  .text._ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
-                0x080059ea       0x2a C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
-                0x080059ea                __cxxabiv1::__si_class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+                0x08005db6       0x2a C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
+                0x08005db6                __cxxabiv1::__si_class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
  .text._ZNSt9type_infoD2Ev
-                0x08005a14        0x2 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
-                0x08005a14                std::type_info::~type_info()
-                0x08005a14                std::type_info::~type_info()
+                0x08005de0        0x2 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
+                0x08005de0                std::type_info::~type_info()
+                0x08005de0                std::type_info::~type_info()
  .text._ZNKSt9type_info14__is_pointer_pEv
-                0x08005a16        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
-                0x08005a16                std::type_info::__is_pointer_p() const
+                0x08005de2        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
+                0x08005de2                std::type_info::__is_pointer_p() const
  .text._ZNKSt9type_info15__is_function_pEv
-                0x08005a1a        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
-                0x08005a1a                std::type_info::__is_function_p() const
+                0x08005de6        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
+                0x08005de6                std::type_info::__is_function_p() const
  .text._ZNKSt9type_infoeqERKS_
-                0x08005a1e       0x2c C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
-                0x08005a1e                std::type_info::operator==(std::type_info const&) const
+                0x08005dea       0x2c C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
+                0x08005dea                std::type_info::operator==(std::type_info const&) const
  .text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
-                0x08005a4a       0x34 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x08005a4a                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
+                0x08005e16       0x34 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x08005e16                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
  .text._ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
-                0x08005a7e        0xc C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x08005a7e                __cxxabiv1::__class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
- *fill*         0x08005a8a        0x2 
+                0x08005e4a        0xc C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x08005e4a                __cxxabiv1::__class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+ *fill*         0x08005e56        0x2 
  .text._ZN10__cxxabiv117__class_type_infoD2Ev
-                0x08005a8c       0x14 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x08005a8c                __cxxabiv1::__class_type_info::~__class_type_info()
-                0x08005a8c                __cxxabiv1::__class_type_info::~__class_type_info()
+                0x08005e58       0x14 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x08005e58                __cxxabiv1::__class_type_info::~__class_type_info()
+                0x08005e58                __cxxabiv1::__class_type_info::~__class_type_info()
  .text._ZN10__cxxabiv117__class_type_infoD0Ev
-                0x08005aa0       0x12 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x08005aa0                __cxxabiv1::__class_type_info::~__class_type_info()
+                0x08005e6c       0x12 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x08005e6c                __cxxabiv1::__class_type_info::~__class_type_info()
  .text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
-                0x08005ab2       0x18 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x08005ab2                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+                0x08005e7e       0x18 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x08005e7e                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
  .text._ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
-                0x08005aca       0x2a C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x08005aca                __cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
+                0x08005e96       0x2a C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x08005e96                __cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
  .text._ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
-                0x08005af4       0x38 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x08005af4                __cxxabiv1::__class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
- .text._ZdlPv   0x08005b2c        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(del_op.o)
-                0x08005b2c                operator delete(void*)
- .text          0x08005b30      0x370 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
-                0x08005b30                __aeabi_drsub
-                0x08005b38                __aeabi_dsub
-                0x08005b38                __subdf3
-                0x08005b3c                __aeabi_dadd
-                0x08005b3c                __adddf3
-                0x08005db4                __floatunsidf
-                0x08005db4                __aeabi_ui2d
-                0x08005dd4                __floatsidf
-                0x08005dd4                __aeabi_i2d
-                0x08005df8                __aeabi_f2d
-                0x08005df8                __extendsfdf2
-                0x08005e34                __floatundidf
-                0x08005e34                __aeabi_ul2d
-                0x08005e44                __floatdidf
-                0x08005e44                __aeabi_l2d
- .text          0x08005ea0      0x424 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivdf3.o)
-                0x08005ea0                __aeabi_dmul
-                0x08005ea0                __muldf3
-                0x080060f4                __divdf3
-                0x080060f4                __aeabi_ddiv
- .text          0x080062c4       0x50 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixdfsi.o)
-                0x080062c4                __aeabi_d2iz
-                0x080062c4                __fixdfsi
- .text          0x08006314       0xa0 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_truncdfsf2.o)
-                0x08006314                __truncdfsf2
-                0x08006314                __aeabi_d2f
- .text          0x080063b4      0x21c c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
-                0x080063b4                __aeabi_frsub
-                0x080063bc                __subsf3
-                0x080063bc                __aeabi_fsub
-                0x080063c0                __aeabi_fadd
-                0x080063c0                __addsf3
-                0x08006520                __aeabi_ui2f
-                0x08006520                __floatunsisf
-                0x08006528                __aeabi_i2f
-                0x08006528                __floatsisf
-                0x08006544                __aeabi_ul2f
-                0x08006544                __floatundisf
-                0x08006554                __aeabi_l2f
-                0x08006554                __floatdisf
- .text          0x080065d0      0x2a0 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
-                0x080065d0                __mulsf3
-                0x080065d0                __aeabi_fmul
-                0x08006738                __aeabi_fdiv
-                0x08006738                __divsf3
- .text          0x08006870       0x40 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixunssfsi.o)
-                0x08006870                __fixunssfsi
-                0x08006870                __aeabi_f2uiz
- .text          0x080068b0      0xa54 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(unwind-arm.o)
-                0x08006b90                _Unwind_GetCFA
-                0x08006b94                __gnu_Unwind_RaiseException
-                0x08006bf4                __gnu_Unwind_ForcedUnwind
-                0x08006c08                __gnu_Unwind_Resume
-                0x08006c4c                __gnu_Unwind_Resume_or_Rethrow
-                0x08006c60                _Unwind_Complete
-                0x08006c64                _Unwind_DeleteException
-                0x08006c70                _Unwind_VRS_Get
-                0x08006cc0                _Unwind_VRS_Set
-                0x08006d10                __gnu_Unwind_Backtrace
-                0x08007054                __aeabi_unwind_cpp_pr0
-                0x08007058                __aeabi_unwind_cpp_pr1
-                0x0800705c                __aeabi_unwind_cpp_pr2
-                0x08007060                _Unwind_VRS_Pop
- .text          0x08007304      0x1ac c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(libunwind.o)
-                0x08007304                __restore_core_regs
-                0x08007304                restore_core_regs
-                0x0800731c                __gnu_Unwind_Restore_VFP
-                0x08007324                __gnu_Unwind_Save_VFP
-                0x0800732c                __gnu_Unwind_Restore_VFP_D
-                0x08007334                __gnu_Unwind_Save_VFP_D
-                0x0800733c                __gnu_Unwind_Restore_VFP_D_16_to_31
-                0x08007344                __gnu_Unwind_Save_VFP_D_16_to_31
-                0x0800734c                __gnu_Unwind_Restore_WMMXD
-                0x08007390                __gnu_Unwind_Save_WMMXD
-                0x080073d4                __gnu_Unwind_Restore_WMMXC
-                0x080073e8                __gnu_Unwind_Save_WMMXC
-                0x080073fc                ___Unwind_RaiseException
-                0x080073fc                _Unwind_RaiseException
-                0x08007420                _Unwind_Resume
-                0x08007420                ___Unwind_Resume
-                0x08007444                _Unwind_Resume_or_Rethrow
-                0x08007444                ___Unwind_Resume_or_Rethrow
-                0x08007468                _Unwind_ForcedUnwind
-                0x08007468                ___Unwind_ForcedUnwind
-                0x0800748c                ___Unwind_Backtrace
-                0x0800748c                _Unwind_Backtrace
- .text          0x080074b0      0x37c c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(pr-support.o)
-                0x08007508                __gnu_unwind_execute
-                0x080077d4                __gnu_unwind_frame
-                0x080077fc                _Unwind_GetRegionStart
-                0x08007808                _Unwind_GetLanguageSpecificData
-                0x0800781c                _Unwind_GetDataRelBase
-                0x08007824                _Unwind_GetTextRelBase
- .text.free     0x0800782c       0x10 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-malloc.o)
-                0x0800782c                free
- .text          0x0800783c       0xec C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-memcpy.o)
-                0x0800783c                memcpy
+                0x08005ec0       0x38 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x08005ec0                __cxxabiv1::__class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+ .text.__cxa_guard_acquire
+                0x08005ef8       0x18 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(guard.o)
+                0x08005ef8                __cxa_guard_acquire
+ .text.__cxa_guard_release
+                0x08005f10        0x6 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(guard.o)
+                0x08005f10                __cxa_guard_release
+ .text._ZdlPv   0x08005f16        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(del_op.o)
+                0x08005f16                operator delete(void*)
+ *fill*         0x08005f1a        0x2 
+ .text          0x08005f1c      0x370 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
+                0x08005f1c                __aeabi_drsub
+                0x08005f24                __aeabi_dsub
+                0x08005f24                __subdf3
+                0x08005f28                __aeabi_dadd
+                0x08005f28                __adddf3
+                0x080061a0                __floatunsidf
+                0x080061a0                __aeabi_ui2d
+                0x080061c0                __floatsidf
+                0x080061c0                __aeabi_i2d
+                0x080061e4                __aeabi_f2d
+                0x080061e4                __extendsfdf2
+                0x08006220                __floatundidf
+                0x08006220                __aeabi_ul2d
+                0x08006230                __floatdidf
+                0x08006230                __aeabi_l2d
+ .text          0x0800628c      0x424 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivdf3.o)
+                0x0800628c                __aeabi_dmul
+                0x0800628c                __muldf3
+                0x080064e0                __divdf3
+                0x080064e0                __aeabi_ddiv
+ .text          0x080066b0       0x50 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixdfsi.o)
+                0x080066b0                __aeabi_d2iz
+                0x080066b0                __fixdfsi
+ .text          0x08006700       0xa0 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_truncdfsf2.o)
+                0x08006700                __truncdfsf2
+                0x08006700                __aeabi_d2f
+ .text          0x080067a0      0x21c c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                0x080067a0                __aeabi_frsub
+                0x080067a8                __subsf3
+                0x080067a8                __aeabi_fsub
+                0x080067ac                __aeabi_fadd
+                0x080067ac                __addsf3
+                0x0800690c                __aeabi_ui2f
+                0x0800690c                __floatunsisf
+                0x08006914                __aeabi_i2f
+                0x08006914                __floatsisf
+                0x08006930                __aeabi_ul2f
+                0x08006930                __floatundisf
+                0x08006940                __aeabi_l2f
+                0x08006940                __floatdisf
+ .text          0x080069bc      0x2a0 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                0x080069bc                __mulsf3
+                0x080069bc                __aeabi_fmul
+                0x08006b24                __aeabi_fdiv
+                0x08006b24                __divsf3
+ .text          0x08006c5c       0x40 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixunssfsi.o)
+                0x08006c5c                __fixunssfsi
+                0x08006c5c                __aeabi_f2uiz
+ .text          0x08006c9c      0xa54 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(unwind-arm.o)
+                0x08006f7c                _Unwind_GetCFA
+                0x08006f80                __gnu_Unwind_RaiseException
+                0x08006fe0                __gnu_Unwind_ForcedUnwind
+                0x08006ff4                __gnu_Unwind_Resume
+                0x08007038                __gnu_Unwind_Resume_or_Rethrow
+                0x0800704c                _Unwind_Complete
+                0x08007050                _Unwind_DeleteException
+                0x0800705c                _Unwind_VRS_Get
+                0x080070ac                _Unwind_VRS_Set
+                0x080070fc                __gnu_Unwind_Backtrace
+                0x08007440                __aeabi_unwind_cpp_pr0
+                0x08007444                __aeabi_unwind_cpp_pr1
+                0x08007448                __aeabi_unwind_cpp_pr2
+                0x0800744c                _Unwind_VRS_Pop
+ .text          0x080076f0      0x1ac c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(libunwind.o)
+                0x080076f0                __restore_core_regs
+                0x080076f0                restore_core_regs
+                0x08007708                __gnu_Unwind_Restore_VFP
+                0x08007710                __gnu_Unwind_Save_VFP
+                0x08007718                __gnu_Unwind_Restore_VFP_D
+                0x08007720                __gnu_Unwind_Save_VFP_D
+                0x08007728                __gnu_Unwind_Restore_VFP_D_16_to_31
+                0x08007730                __gnu_Unwind_Save_VFP_D_16_to_31
+                0x08007738                __gnu_Unwind_Restore_WMMXD
+                0x0800777c                __gnu_Unwind_Save_WMMXD
+                0x080077c0                __gnu_Unwind_Restore_WMMXC
+                0x080077d4                __gnu_Unwind_Save_WMMXC
+                0x080077e8                ___Unwind_RaiseException
+                0x080077e8                _Unwind_RaiseException
+                0x0800780c                _Unwind_Resume
+                0x0800780c                ___Unwind_Resume
+                0x08007830                _Unwind_Resume_or_Rethrow
+                0x08007830                ___Unwind_Resume_or_Rethrow
+                0x08007854                _Unwind_ForcedUnwind
+                0x08007854                ___Unwind_ForcedUnwind
+                0x08007878                ___Unwind_Backtrace
+                0x08007878                _Unwind_Backtrace
+ .text          0x0800789c      0x37c c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(pr-support.o)
+                0x080078f4                __gnu_unwind_execute
+                0x08007bc0                __gnu_unwind_frame
+                0x08007be8                _Unwind_GetRegionStart
+                0x08007bf4                _Unwind_GetLanguageSpecificData
+                0x08007c08                _Unwind_GetDataRelBase
+                0x08007c10                _Unwind_GetTextRelBase
+ .text.free     0x08007c18       0x10 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-malloc.o)
+                0x08007c18                free
+ .text          0x08007c28       0xec C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-memcpy.o)
+                0x08007c28                memcpy
+ .text.memset   0x08007d14       0x9c C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-memset.o)
+                0x08007d14                memset
  .text.__malloc_lock
-                0x08007928        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mlock.o)
-                0x08007928                __malloc_lock
+                0x08007db0        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mlock.o)
+                0x08007db0                __malloc_lock
  .text.__malloc_unlock
-                0x0800792c        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mlock.o)
-                0x0800792c                __malloc_unlock
- .text._sbrk_r  0x08007930       0x24 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-sbrkr.o)
-                0x08007930                _sbrk_r
+                0x08007db4        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mlock.o)
+                0x08007db4                __malloc_unlock
+ .text._sbrk_r  0x08007db8       0x24 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-sbrkr.o)
+                0x08007db8                _sbrk_r
+ .text.strlen   0x08007ddc       0x5c C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-strlen.o)
+                0x08007ddc                strlen
  .text._malloc_trim_r
-                0x08007954       0x9c C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-freer.o)
-                0x08007954                _malloc_trim_r
- .text._free_r  0x080079f0      0x1b0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-freer.o)
-                0x080079f0                _free_r
+                0x08007e38       0x9c C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-freer.o)
+                0x08007e38                _malloc_trim_r
+ .text._free_r  0x08007ed4      0x1b0 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-freer.o)
+                0x08007ed4                _free_r
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -2711,142 +2794,149 @@ Linker script and memory map
  *(.dtors)
  *(.rodata*)
  .rodata.str1.4
-                0x08007ba0       0x24 ..\obj\printf.o
- .rodata        0x08007bc4       0x17 ..\obj\u8g_dev_st7920_128x64.o
- *fill*         0x08007bdb        0x1 
+                0x08008084       0x24 ..\obj\printf.o
+ .rodata        0x080080a8       0x17 ..\obj\u8g_dev_st7920_128x64.o
+ *fill*         0x080080bf        0x1 
  .rodata.str1.4
-                0x08007bdc       0xba ..\obj\Keypad.o
- *fill*         0x08007c96        0x2 
- .rodata        0x08007c98       0xb0 ..\obj\mcp23017.o
-                0x08007c98                mcp23017::IOCON_AB
-                0x08007ca8                mcp23017::IODIR_AB
-                0x08007cb8                mcp23017::GPPU_AB
-                0x08007cc8                mcp23017::GPINTEN_AB
-                0x08007cd8                mcp23017::DEFVAL_AB
-                0x08007ce8                mcp23017::INTCON_AB
-                0x08007cf8                mcp23017::OLAT_AB
-                0x08007d08                mcp23017::GPIO_AB
-                0x08007d18                mcp23017::INTCAP_AB
-                0x08007d28                mcp23017::INTF_AB
-                0x08007d38                mcp23017::IPOL_AB
+                0x080080c0       0x18 ..\obj\Display.o
  .rodata.str1.4
-                0x08007d48       0xa9 ..\obj\RelayBoard.o
- *fill*         0x08007df1        0x3 
- .rodata        0x08007df4     0x2e79 ..\obj\u8g_fonts.o
-                0x08007df4                u8g_font_unifont_0_8
-                0x08008e84                u8g_font_7x13
-                0x080096f4                u8g_font_6x12
-                0x08009e84                u8g_font_6x10
-                0x0800a5d0                u8g_font_5x8
- *fill*         0x0800ac6d        0x3 
+                0x080080d8       0xba ..\obj\Keypad.o
+ *fill*         0x08008192        0x2 
+ .rodata        0x08008194       0xb0 ..\obj\mcp23017.o
+                0x08008194                mcp23017::IOCON_AB
+                0x080081a4                mcp23017::IODIR_AB
+                0x080081b4                mcp23017::GPPU_AB
+                0x080081c4                mcp23017::GPINTEN_AB
+                0x080081d4                mcp23017::DEFVAL_AB
+                0x080081e4                mcp23017::INTCON_AB
+                0x080081f4                mcp23017::OLAT_AB
+                0x08008204                mcp23017::GPIO_AB
+                0x08008214                mcp23017::INTCAP_AB
+                0x08008224                mcp23017::INTF_AB
+                0x08008234                mcp23017::IPOL_AB
+ .rodata.str1.4
+                0x08008244       0xa9 ..\obj\RelayBoard.o
+ *fill*         0x080082ed        0x3 
+ .rodata        0x080082f0     0x2e79 ..\obj\u8g_fonts.o
+                0x080082f0                u8g_font_unifont_0_8
+                0x08009380                u8g_font_7x13
+                0x08009bf0                u8g_font_6x12
+                0x0800a380                u8g_font_6x10
+                0x0800aacc                u8g_font_5x8
+ *fill*         0x0800b169        0x3 
  .rodata._ZTI15KeypadInterrupt
-                0x0800ac70        0x8 ..\obj\EntController.o
-                0x0800ac70                typeinfo for KeypadInterrupt
+                0x0800b16c        0x8 ..\obj\EntController.o
+                0x0800b16c                typeinfo for KeypadInterrupt
  .rodata._ZTS15KeypadInterrupt
-                0x0800ac78       0x12 ..\obj\EntController.o
-                0x0800ac78                typeinfo name for KeypadInterrupt
- *fill*         0x0800ac8a        0x6 
- .rodata        0x0800ac90       0x28 ..\obj\EntController.o
-                0x0800ac90                vtable for EntController
-                0x0800ac9c                typeinfo name for EntController
-                0x0800acac                typeinfo for EntController
+                0x0800b174       0x12 ..\obj\EntController.o
+                0x0800b174                typeinfo name for KeypadInterrupt
+ *fill*         0x0800b186        0x2 
+ .rodata        0x0800b188       0x28 ..\obj\EntController.o
+                0x0800b188                vtable for EntController
+                0x0800b194                typeinfo name for EntController
+                0x0800b1a4                typeinfo for EntController
  .rodata.str1.4
-                0x0800acb8       0x2b ..\obj\EntController.o
+                0x0800b1b0       0x2b ..\obj\EntController.o
                                  0x3b (size before relaxing)
- *fill*         0x0800ace3        0x1 
+ *fill*         0x0800b1db        0x1 
  .rodata.str1.4
-                0x0800ace4       0x30 ..\obj\ovc3860.o
+                0x0800b1dc       0x30 ..\obj\ovc3860.o
  .rodata.str1.4
-                0x0800ad14      0x1a2 ..\obj\main.o
-                                0x1aa (size before relaxing)
- *fill*         0x0800aeb6        0x2 
- .rodata        0x0800aeb8       0x28 ..\obj\SpaController.o
-                0x0800aeb8                vtable for SpaController
-                0x0800aec4                typeinfo name for SpaController
-                0x0800aed4                typeinfo for SpaController
+                0x0800b20c      0x136 ..\obj\main.o
+                                0x13e (size before relaxing)
+ *fill*         0x0800b342        0x6 
+ .rodata        0x0800b348       0x28 ..\obj\SpaController.o
+                0x0800b348                vtable for SpaController
+                0x0800b354                typeinfo name for SpaController
+                0x0800b364                typeinfo for SpaController
  .rodata.str1.4
-                0x0800aee0       0x74 ..\obj\SpaController.o
+                0x0800b370       0x74 ..\obj\SpaController.o
                                  0x84 (size before relaxing)
- *fill*         0x0800af54        0x4 
+ .rodata.str1.4
+                0x0800b3e4       0x6c ..\obj\LEDS.o
+                                 0x99 (size before relaxing)
  .rodata._ZTVN10__cxxabiv120__si_class_type_infoE
-                0x0800af58       0x2c C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
-                0x0800af58                vtable for __cxxabiv1::__si_class_type_info
+                0x0800b450       0x2c C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
+                0x0800b450                vtable for __cxxabiv1::__si_class_type_info
  .rodata._ZTIN10__cxxabiv120__si_class_type_infoE
-                0x0800af84        0xc C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
-                0x0800af84                typeinfo for __cxxabiv1::__si_class_type_info
+                0x0800b47c        0xc C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
+                0x0800b47c                typeinfo for __cxxabiv1::__si_class_type_info
  .rodata._ZTSN10__cxxabiv120__si_class_type_infoE
-                0x0800af90       0x25 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
-                0x0800af90                typeinfo name for __cxxabiv1::__si_class_type_info
- *fill*         0x0800afb5        0x3 
+                0x0800b488       0x25 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
+                0x0800b488                typeinfo name for __cxxabiv1::__si_class_type_info
+ *fill*         0x0800b4ad        0x3 
  .rodata._ZTISt9type_info
-                0x0800afb8        0x8 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
-                0x0800afb8                typeinfo for std::type_info
+                0x0800b4b0        0x8 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
+                0x0800b4b0                typeinfo for std::type_info
  .rodata._ZTSSt9type_info
-                0x0800afc0        0xd C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
-                0x0800afc0                typeinfo name for std::type_info
- *fill*         0x0800afcd        0x3 
+                0x0800b4b8        0xd C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
+                0x0800b4b8                typeinfo name for std::type_info
+ *fill*         0x0800b4c5        0x3 
  .rodata._ZTVN10__cxxabiv117__class_type_infoE
-                0x0800afd0       0x2c C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x0800afd0                vtable for __cxxabiv1::__class_type_info
+                0x0800b4c8       0x2c C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x0800b4c8                vtable for __cxxabiv1::__class_type_info
  .rodata._ZTIN10__cxxabiv117__class_type_infoE
-                0x0800affc        0xc C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x0800affc                typeinfo for __cxxabiv1::__class_type_info
+                0x0800b4f4        0xc C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x0800b4f4                typeinfo for __cxxabiv1::__class_type_info
  .rodata._ZTSN10__cxxabiv117__class_type_infoE
-                0x0800b008       0x22 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x0800b008                typeinfo name for __cxxabiv1::__class_type_info
+                0x0800b500       0x22 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x0800b500                typeinfo name for __cxxabiv1::__class_type_info
  *(.eh_fram e*)
 
-.glue_7         0x0800b02c        0x0
+.glue_7         0x0800b524        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x0800b02c        0x0
+.glue_7t        0x0800b524        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x0800b02c        0x0
+.vfp11_veneer   0x0800b524        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x0800b02c        0x0
+.v4_bx          0x0800b524        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x0800b02c        0x0
+.iplt           0x0800b524        0x0
  .iplt          0x00000000        0x0 ..\obj\u8g_dev_uc1611_dogxl240.o
 
-.ARM.extab      0x0800b02c       0x24
+.ARM.extab      0x0800b524       0x24
  *(.ARM.extab* .gnu.linkonce.armextab.*)
- .ARM.extab     0x0800b02c        0xc ..\obj\main.o
- .ARM.extab     0x0800b038       0x18 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(pr-support.o)
-                0x0800b050                __exidx_start = .
+ .ARM.extab     0x0800b524        0xc ..\obj\main.o
+ .ARM.extab     0x0800b530       0x18 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(pr-support.o)
+                0x0800b548                __exidx_start = .
 
-.ARM.exidx      0x0800b050      0x1f8
+.ARM.exidx      0x0800b548      0x230
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x0800b050       0x70 ..\obj\DS18B20.o
+ .ARM.exidx     0x0800b548       0x70 ..\obj\DS18B20.o
                                  0xa0 (size before relaxing)
- .ARM.exidx     0x0800b0c0       0x30 ..\obj\Keypad.o
-                                 0x28 (size before relaxing)
- .ARM.exidx     0x0800b0f0       0x48 ..\obj\mcp23017.o
+ .ARM.exidx     0x0800b5b8       0x40 ..\obj\Display.o
+                                 0xb8 (size before relaxing)
+ .ARM.exidx     0x0800b5f8       0x28 ..\obj\Keypad.o
+ .ARM.exidx     0x0800b620       0x48 ..\obj\mcp23017.o
                                  0x70 (size before relaxing)
- .ARM.exidx     0x0800b138       0x18 ..\obj\RelayBoard.o
+ .ARM.exidx     0x0800b668       0x18 ..\obj\RelayBoard.o
                                  0x10 (size before relaxing)
- .ARM.exidx     0x0800b150        0x0 ..\obj\EntController.o
+ .ARM.exidx     0x0800b680        0x0 ..\obj\EntController.o
                                  0x18 (size before relaxing)
- .ARM.exidx     0x0800b150       0x20 ..\obj\main.o
-                                 0x30 (size before relaxing)
  .ARM.exidx.text.startup
-                0x0800b170        0x8 ..\obj\main.o
- .ARM.exidx     0x0800b178       0x20 ..\obj\SpaController.o
+                0x0800b688        0x8 ..\obj\main.o
+ .ARM.exidx     0x0800b680        0x8 ..\obj\main.o
+                                 0x10 (size before relaxing)
+ .ARM.exidx     0x0800b690       0x20 ..\obj\SpaController.o
                                  0x48 (size before relaxing)
- .ARM.exidx     0x0800b198       0x78 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(unwind-arm.o)
+ .ARM.exidx     0x0800b6b0       0x18 ..\obj\LEDS.o
+                                 0x10 (size before relaxing)
+ .ARM.exidx     0x0800b6c8       0x78 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(unwind-arm.o)
                                  0xd8 (size before relaxing)
- .ARM.exidx     0x0800b210       0x38 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(pr-support.o)
+ .ARM.exidx     0x0800b740       0x38 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(pr-support.o)
                                  0x48 (size before relaxing)
-                0x0800b248                __exidx_end = .
-                0x0800b248                __etext = .
-                0x0800b248                _sidata = __etext
+                0x0800b778                __exidx_end = .
+                0x0800b778                __etext = .
+                0x0800b778                _sidata = __etext
 
-.rel.dyn        0x0800b248        0x0
+.rel.dyn        0x0800b778        0x0
  .rel.iplt      0x00000000        0x0 ..\obj\u8g_dev_uc1611_dogxl240.o
 
-.data           0x20000000      0x91c load address 0x0800b248
+.data           0x20000000      0x91c load address 0x0800b778
                 0x20000000                __data_start__ = .
                 0x20000000                _sdata = __data_start__
  *(vtable)
@@ -2908,10 +2998,10 @@ Linker script and memory map
                 0x2000091c                __data_end__ = .
                 0x2000091c                _edata = __data_end__
 
-.igot.plt       0x2000091c        0x0 load address 0x0800bb64
+.igot.plt       0x2000091c        0x0 load address 0x0800c094
  .igot.plt      0x00000000        0x0 ..\obj\u8g_dev_uc1611_dogxl240.o
 
-.bss            0x2000091c      0x79c load address 0x0800bb64
+.bss            0x2000091c      0x868 load address 0x0800c094
                 0x2000091c                . = ALIGN (0x4)
                 0x2000091c                __bss_start__ = .
                 0x2000091c                _sbss = __bss_start__
@@ -2925,57 +3015,70 @@ Linker script and memory map
                 0x20000ca0                u8g_dev_st7920_128x64_sw_spi_buf
  .bss           0x20000d20        0x4 ..\obj\DS18B20.o
                 0x20000d20                DS18B20::ulHclk
- .bss           0x20000d24        0x8 ..\obj\delay.o
- .bss           0x20000d2c        0x5 ..\obj\u8g_arm_uart.o
-                0x20000d30                control
- *fill*         0x20000d31        0x3 
- .bss           0x20000d34        0x4 ..\obj\usart.o
-                0x20000d34                received_count
- .bss           0x20000d38      0x15a ..\obj\main.o
-                0x20000d74                chTemp1
-                0x20000d7c                chTemp2
-                0x20000d84                chTempSet
-                0x20000d8a                si4703_PSNvalid
-                0x20000d8c                si4703_programServiceName
-                0x20000d96                bStereo
-                0x20000d98                chChannel
-                0x20000da0                iChannel
-                0x20000da4                temp1
-                0x20000dbc                leds
-                0x20000dd8                relayBoard
-                0x20000df8                keypad
-                0x20000e58                iStrength
-                0x20000e5c                si4703_registers
-                0x20000e7c                si4703_PSName2
-                0x20000e88                si4703_PSName1
- *fill*         0x20000e92        0x2 
+ .bss._ZZN10RelayBoard11getInstanceEvE8instance
+                0x20000d24       0x20 ..\obj\EntController.o
+                0x20000d24                RelayBoard::getInstance()::instance
+ .bss._ZZN6Keypad11getInstanceEvE8instance
+                0x20000d44       0x60 ..\obj\EntController.o
+                0x20000d44                Keypad::getInstance()::instance
+ .bss._ZGVZN6Keypad11getInstanceEvE8instance
+                0x20000da4        0x4 ..\obj\EntController.o
+                0x20000da4                guard variable for Keypad::getInstance()::instance
+ .bss           0x20000da8        0x8 ..\obj\delay.o
+ .bss           0x20000db0        0x5 ..\obj\u8g_arm_uart.o
+                0x20000db4                control
+ *fill*         0x20000db5        0x3 
+ .bss           0x20000db8        0x4 ..\obj\usart.o
+                0x20000db8                received_count
+ .bss           0x20000dbc       0x86 ..\obj\main.o
+                0x20000dbc                iChannel
+                0x20000dc0                temp1
+                0x20000dd8                chTemp1
+                0x20000de0                chTemp2
+                0x20000de8                chTempSet
+                0x20000df0                chChannel
+                0x20000df8                iStrength
+                0x20000dfc                si4703_PSNvalid
+                0x20000e00                si4703_programServiceName
+                0x20000e0a                bStereo
+                0x20000e0c                si4703_registers
+                0x20000e2c                si4703_PSName2
+                0x20000e38                si4703_PSName1
+ *fill*         0x20000e42        0x2 
+ .bss._ZZN7Display11getInstanceEvE8instance
+                0x20000e44       0xfc ..\obj\main.o
+                0x20000e44                Display::getInstance()::instance
+ .bss._ZZN4LEDS11getInstanceEvE8instance
+                0x20000f40       0x20 ..\obj\main.o
+                0x20000f40                LEDS::getInstance()::instance
  .bss.__malloc_top_pad
-                0x20000e94        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mallocr.o)
-                0x20000e94                __malloc_top_pad
+                0x20000f60        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mallocr.o)
+                0x20000f60                __malloc_top_pad
  .bss.__malloc_current_mallinfo
-                0x20000e98       0x28 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mallocr.o)
-                0x20000e98                __malloc_current_mallinfo
+                0x20000f64       0x28 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mallocr.o)
+                0x20000f64                __malloc_current_mallinfo
  *(COMMON)
- COMMON         0x20000ec0      0x1f4 ..\obj\usart.o
-                0x20000ec0                received_string
- COMMON         0x200010b4        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-reent.o)
-                0x200010b4                errno
-                0x200010b8                . = ALIGN (0x4)
-                0x200010b8                __bss_end__ = .
-                0x200010b8                _ebss = __bss_end__
+ COMMON         0x20000f8c      0x1f4 ..\obj\usart.o
+                0x20000f8c                received_string
+ COMMON         0x20001180        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-reent.o)
+                0x20001180                errno
+                0x20001184                . = ALIGN (0x4)
+                0x20001184                __bss_end__ = .
+                0x20001184                _ebss = __bss_end__
 
-.heap           0x200010b8        0x0
-                0x200010b8                __end__ = .
-                0x200010b8                _end = __end__
-                0x200010b8                end = __end__
+.heap           0x20001184        0x0
+                0x20001184                __end__ = .
+                0x20001184                _end = __end__
+                0x20001184                end = __end__
  *(.heap*)
-                0x200010b8                __HeapLimit = .
+                0x20001184                __HeapLimit = .
 
-.co_stack       0x200010b8        0x0
-                0x200010b8                . = ALIGN (0x8)
+.co_stack       0x20001184        0x4 load address 0x0800c8fc
+                0x20001188                . = ALIGN (0x8)
+ *fill*         0x20001184        0x4 
  *(.co_stack .co_stack.*)
                 0x20005000                __StackTop = (ORIGIN (ram) + 0x5000)
-                0x20005000                __StackLimit = (__StackTop - SIZEOF (.co_stack))
+                0x20004ffc                __StackLimit = (__StackTop - SIZEOF (.co_stack))
                 0x20005000                PROVIDE (__stack, __StackTop)
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region ram  overflowed with stack)
 LOAD ..\obj\u8g_dev_uc1611_dogxl240.o
@@ -2984,14 +3087,14 @@ LOAD ..\obj\u8g_com_arduino_hw_usart_spi.o
 LOAD ..\obj\u8g_pb.o
 LOAD ..\obj\u8g_com_atxmega_st7920_hw_spi.o
 LOAD ..\obj\u8g_com_msp430_hw_spi.o
-LOAD ..\obj\u8g_com_arduino_st7920_custom.o
 LOAD ..\obj\u8g_pb8v1.o
+LOAD ..\obj\u8g_com_arduino_st7920_custom.o
 LOAD ..\obj\u8g_com_arduino_common.o
 LOAD ..\obj\u8g_dev_ili9325d_320x240.o
 LOAD ..\obj\stm32f10x_pwr.o
 LOAD ..\obj\u8g_com_i2c.o
-LOAD ..\obj\printf.o
 LOAD ..\obj\u8g_com_raspberrypi_hw_spi.o
+LOAD ..\obj\printf.o
 LOAD ..\obj\stm32f10x_cec.o
 LOAD ..\obj\u8g_dev_pcf8812_96x65.o
 LOAD ..\obj\syscalls.o
@@ -3013,12 +3116,13 @@ LOAD ..\obj\u8g_state.o
 LOAD ..\obj\u8g_dev_st7565_lm6059.o
 LOAD ..\obj\u8g_com_io.o
 LOAD ..\obj\u8g_dev_pcd8544_84x48.o
+LOAD ..\obj\Display.o
 LOAD ..\obj\u8g_ll_api.o
 LOAD ..\obj\u8g_dev_st7565_dogm132.o
-LOAD ..\obj\stm32f10x_gpio.o
 LOAD ..\obj\u8g_page.o
-LOAD ..\obj\Keypad.o
+LOAD ..\obj\stm32f10x_gpio.o
 LOAD ..\obj\stm32f10x_rcc.o
+LOAD ..\obj\Keypad.o
 LOAD ..\obj\u8g_pb16v2.o
 LOAD ..\obj\u8g_com_arduino_attiny85_hw_spi.o
 LOAD ..\obj\stm32f10x_sdio.o
@@ -3028,22 +3132,22 @@ LOAD ..\obj\u8g_dev_ssd1353_160x128.o
 LOAD ..\obj\startup_stm32f10x_md.o
 LOAD ..\obj\u8g_pbxh24.o
 LOAD ..\obj\u8g_com_arduino_std_sw_spi.o
-LOAD ..\obj\u8g_dev_ssd1306_128x64.o
 LOAD ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
+LOAD ..\obj\u8g_dev_ssd1306_128x64.o
 LOAD ..\obj\stm32f10x_can.o
 LOAD ..\obj\u8g_pb14v1.o
 LOAD ..\obj\u8g_rect.o
 LOAD ..\obj\u8g_dev_st7565_nhd_c12864.o
 LOAD ..\obj\stm32f10x_iwdg.o
 LOAD ..\obj\RelayBoard.o
-LOAD ..\obj\u8g_dev_lc7981_320x64.o
 LOAD ..\obj\u8g_dev_lc7981_160x80.o
+LOAD ..\obj\u8g_dev_lc7981_320x64.o
 LOAD ..\obj\stm32f10x_tim.o
 LOAD ..\obj\u8g_com_arduino_fast_parallel.o
 LOAD ..\obj\u8g_fonts.o
 LOAD ..\obj\u8g_com_null.o
-LOAD ..\obj\u8g_com_arduino_ssd_i2c.o
 LOAD ..\obj\u8g_dev_flipdisc_2x7.o
+LOAD ..\obj\u8g_com_arduino_ssd_i2c.o
 LOAD ..\obj\u8g_com_atmega_sw_spi.o
 LOAD ..\obj\EntController.o
 LOAD ..\obj\u8g_pb16v1.o
@@ -3058,8 +3162,8 @@ LOAD ..\obj\u8g_dev_st7920_192x32.o
 LOAD ..\obj\ovc3860.o
 LOAD ..\obj\u8g_delay.o
 LOAD ..\obj\u8g_arm_uart.o
-LOAD ..\obj\u8g_com_atxmega_hw_spi.o
 LOAD ..\obj\stm32f10x_dma.o
+LOAD ..\obj\u8g_com_atxmega_hw_spi.o
 LOAD ..\obj\u8g_dev_ld7032_60x32.o
 LOAD ..\obj\u8g_com_api_16gr.o
 LOAD ..\obj\u8g_dev_ssd1322_nhd31oled_gr.o
@@ -3081,28 +3185,29 @@ LOAD ..\obj\u8g_dev_lc7981_240x128.o
 LOAD ..\obj\u8g_dev_ht1632.o
 LOAD ..\obj\u8g_u8toa.o
 LOAD ..\obj\u8g_com_atmega_st7920_hw_spi.o
-LOAD ..\obj\u8g_dev_sbn1661_122x32.o
 LOAD ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
+LOAD ..\obj\u8g_dev_sbn1661_122x32.o
 LOAD ..\obj\u8g_dev_st7565_64128n.o
 LOAD ..\obj\u8g_pb32h1.o
 LOAD ..\obj\u8g_pb8h1.o
 LOAD ..\obj\main.o
 LOAD ..\obj\stm32f10x_rtc.o
-LOAD ..\obj\SpaController.o
 LOAD ..\obj\u8g_dev_uc1701_mini12864.o
+LOAD ..\obj\SpaController.o
 LOAD ..\obj\stm32f10x_usart.o
 LOAD ..\obj\u8g_dev_ssd1309_128x64.o
 LOAD ..\obj\u8g_dev_uc1701_dogs102.o
-LOAD ..\obj\stm32f10x_adc.o
 LOAD ..\obj\u8g_dev_ssd1327_96x96_gr.o
+LOAD ..\obj\stm32f10x_adc.o
 LOAD ..\obj\u8g_com_arduino_st7920_hw_spi.o
 LOAD ..\obj\u8g_font.o
 LOAD ..\obj\u8g_clip.o
 LOAD ..\obj\u8g_pb8h2.o
 LOAD ..\obj\u8g_dev_null.o
 LOAD ..\obj\u8g_com_arduino_uc_i2c.o
-LOAD ..\obj\u8g_pb8v2.o
 LOAD ..\obj\u8g_pbxh16.o
+LOAD ..\obj\u8g_pb8v2.o
+LOAD ..\obj\LEDS.o
 LOAD ..\obj\u8g_com_raspberrypi_ssd_i2c.o
 LOAD ..\obj\u8g_polygon.o
 LOAD ..\obj\u8g_virtual_screen.o
@@ -3115,8 +3220,8 @@ LOAD ..\obj\u8g_dev_uc1608_240x128.o
 LOAD ..\obj\u8g_dev_st7687_c144mvgd.o
 LOAD ..\obj\u8g_dev_a2_micro_printer.o
 LOAD ..\obj\u8g_dev_t6963_128x64.o
-LOAD ..\obj\stm32f10x_bkp.o
 LOAD ..\obj\u8g_com_arduino_no_en_parallel.o
+LOAD ..\obj\stm32f10x_bkp.o
 LOAD ..\obj\stm32f10x_flash.o
 LOAD ..\obj\u8g_com_psoc5_ssd_hw_parallel.o
 LOAD ..\obj\u8g_dev_ssd1351_128x128.o
@@ -3125,14 +3230,14 @@ LOAD ..\obj\u8g_dev_st7565_lm6063.o
 LOAD ..\obj\u8g_dev_t6963_240x64.o
 LOAD ..\obj\u8g_dev_uc1608_240x64.o
 LOAD ..\obj\u8g_circle.o
-LOAD ..\obj\u8g_dev_gprof.o
 LOAD ..\obj\u8g_u16toa.o
+LOAD ..\obj\u8g_dev_gprof.o
 LOAD ..\obj\u8g_com_arduino_parallel.o
 LOAD ..\obj\u8g_rot.o
 LOAD ..\obj\u8g_dev_ssd1322_nhd31oled_bw.o
 LOAD ..\obj\u8g_scale.o
-LOAD ..\obj\u8g_dev_st7565_nhd_c12832.o
 LOAD ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+LOAD ..\obj\u8g_dev_st7565_nhd_c12832.o
 LOAD ..\obj\u8g_dev_t6963_128x128.o
 LOAD ..\obj\u8g_com_arduino_sw_spi.o
 LOAD ..\obj\stm32f10x_exti.o
@@ -3147,7 +3252,7 @@ LOAD C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\
 END GROUP
 OUTPUT(JacuzziV2.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x1b381
+.debug_info     0x00000000    0x1dbca
  .debug_info    0x00000000      0x890 ..\obj\u8g_pb.o
  .debug_info    0x00000890      0x434 ..\obj\u8g_com_arduino_st7920_custom.o
  .debug_info    0x00000cc4     0x1517 ..\obj\printf.o
@@ -3157,36 +3262,38 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_info    0x00003bbd      0xfa9 ..\obj\si4703.o
  .debug_info    0x00004b66     0x160d ..\obj\DS18B20.o
  .debug_info    0x00006173      0x468 ..\obj\u8g_state.o
- .debug_info    0x000065db     0x1aab ..\obj\u8g_ll_api.o
- .debug_info    0x00008086      0x887 ..\obj\stm32f10x_gpio.o
- .debug_info    0x0000890d      0x195 ..\obj\u8g_page.o
- .debug_info    0x00008aa2     0x1081 ..\obj\Keypad.o
- .debug_info    0x00009b23      0x92e ..\obj\stm32f10x_rcc.o
- .debug_info    0x0000a451     0x144f ..\obj\mcp23017.o
- .debug_info    0x0000b8a0       0xcb ..\obj\startup_stm32f10x_md.o
- .debug_info    0x0000b96b      0xd88 ..\obj\u8g_rect.o
- .debug_info    0x0000c6f3      0xc45 ..\obj\RelayBoard.o
- .debug_info    0x0000d338      0x14d ..\obj\u8g_fonts.o
- .debug_info    0x0000d485      0x42f ..\obj\u8g_com_null.o
- .debug_info    0x0000d8b4      0xf80 ..\obj\EntController.o
- .debug_info    0x0000e834      0x781 ..\obj\delay.o
- .debug_info    0x0000efb5      0x2f4 ..\obj\ovc3860.o
- .debug_info    0x0000f2a9      0xa3f ..\obj\u8g_arm_uart.o
- .debug_info    0x0000fce8      0x504 ..\obj\u8g_line.o
- .debug_info    0x000101ec      0x858 ..\obj\usart.o
- .debug_info    0x00010a44      0x8cf ..\obj\u8g_pb32h1.o
- .debug_info    0x00011313      0x80b ..\obj\u8g_pb8h1.o
- .debug_info    0x00011b1e     0x28c0 ..\obj\main.o
- .debug_info    0x000143de     0x141c ..\obj\SpaController.o
- .debug_info    0x000157fa      0xb3c ..\obj\stm32f10x_usart.o
- .debug_info    0x00016336     0x2abc ..\obj\u8g_font.o
- .debug_info    0x00018df2      0x4ee ..\obj\u8g_clip.o
- .debug_info    0x000192e0      0x543 ..\obj\misc.o
- .debug_info    0x00019823      0xb99 ..\obj\stm32f10x_i2c.o
- .debug_info    0x0001a3bc      0x4a1 ..\obj\system_stm32f10x.o
- .debug_info    0x0001a85d      0xb24 ..\obj\u8g_circle.o
+ .debug_info    0x000065db     0x1a07 ..\obj\Display.o
+ .debug_info    0x00007fe2     0x1aab ..\obj\u8g_ll_api.o
+ .debug_info    0x00009a8d      0x195 ..\obj\u8g_page.o
+ .debug_info    0x00009c22      0x887 ..\obj\stm32f10x_gpio.o
+ .debug_info    0x0000a4a9      0x92e ..\obj\stm32f10x_rcc.o
+ .debug_info    0x0000add7     0x1096 ..\obj\Keypad.o
+ .debug_info    0x0000be6d     0x144f ..\obj\mcp23017.o
+ .debug_info    0x0000d2bc       0xcb ..\obj\startup_stm32f10x_md.o
+ .debug_info    0x0000d387      0xd88 ..\obj\u8g_rect.o
+ .debug_info    0x0000e10f      0xc5c ..\obj\RelayBoard.o
+ .debug_info    0x0000ed6b      0x14d ..\obj\u8g_fonts.o
+ .debug_info    0x0000eeb8      0x42f ..\obj\u8g_com_null.o
+ .debug_info    0x0000f2e7     0x105e ..\obj\EntController.o
+ .debug_info    0x00010345      0x781 ..\obj\delay.o
+ .debug_info    0x00010ac6      0x2f4 ..\obj\ovc3860.o
+ .debug_info    0x00010dba      0xa3f ..\obj\u8g_arm_uart.o
+ .debug_info    0x000117f9      0x504 ..\obj\u8g_line.o
+ .debug_info    0x00011cfd      0x858 ..\obj\usart.o
+ .debug_info    0x00012555      0x8cf ..\obj\u8g_pb32h1.o
+ .debug_info    0x00012e24      0x80b ..\obj\u8g_pb8h1.o
+ .debug_info    0x0001362f     0x2816 ..\obj\main.o
+ .debug_info    0x00015e45     0x15ae ..\obj\SpaController.o
+ .debug_info    0x000173f3      0xb3c ..\obj\stm32f10x_usart.o
+ .debug_info    0x00017f2f     0x2abc ..\obj\u8g_font.o
+ .debug_info    0x0001a9eb      0x4ee ..\obj\u8g_clip.o
+ .debug_info    0x0001aed9      0xc50 ..\obj\LEDS.o
+ .debug_info    0x0001bb29      0x543 ..\obj\misc.o
+ .debug_info    0x0001c06c      0xb99 ..\obj\stm32f10x_i2c.o
+ .debug_info    0x0001cc05      0x4a1 ..\obj\system_stm32f10x.o
+ .debug_info    0x0001d0a6      0xb24 ..\obj\u8g_circle.o
 
-.debug_abbrev   0x00000000     0x50ed
+.debug_abbrev   0x00000000     0x5875
  .debug_abbrev  0x00000000      0x211 ..\obj\u8g_pb.o
  .debug_abbrev  0x00000211      0x106 ..\obj\u8g_com_arduino_st7920_custom.o
  .debug_abbrev  0x00000317      0x445 ..\obj\printf.o
@@ -3196,36 +3303,38 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_abbrev  0x00000bf7      0x36b ..\obj\si4703.o
  .debug_abbrev  0x00000f62      0x463 ..\obj\DS18B20.o
  .debug_abbrev  0x000013c5      0x139 ..\obj\u8g_state.o
- .debug_abbrev  0x000014fe      0x374 ..\obj\u8g_ll_api.o
- .debug_abbrev  0x00001872      0x203 ..\obj\stm32f10x_gpio.o
- .debug_abbrev  0x00001a75       0xf3 ..\obj\u8g_page.o
- .debug_abbrev  0x00001b68      0x367 ..\obj\Keypad.o
- .debug_abbrev  0x00001ecf      0x25e ..\obj\stm32f10x_rcc.o
- .debug_abbrev  0x0000212d      0x2c6 ..\obj\mcp23017.o
- .debug_abbrev  0x000023f3       0x12 ..\obj\startup_stm32f10x_md.o
- .debug_abbrev  0x00002405      0x185 ..\obj\u8g_rect.o
- .debug_abbrev  0x0000258a      0x263 ..\obj\RelayBoard.o
- .debug_abbrev  0x000027ed       0x6c ..\obj\u8g_fonts.o
- .debug_abbrev  0x00002859      0x106 ..\obj\u8g_com_null.o
- .debug_abbrev  0x0000295f      0x35c ..\obj\EntController.o
- .debug_abbrev  0x00002cbb      0x2b8 ..\obj\delay.o
- .debug_abbrev  0x00002f73       0xec ..\obj\ovc3860.o
- .debug_abbrev  0x0000305f      0x273 ..\obj\u8g_arm_uart.o
- .debug_abbrev  0x000032d2      0x157 ..\obj\u8g_line.o
- .debug_abbrev  0x00003429      0x1e3 ..\obj\usart.o
- .debug_abbrev  0x0000360c      0x239 ..\obj\u8g_pb32h1.o
- .debug_abbrev  0x00003845      0x1d3 ..\obj\u8g_pb8h1.o
- .debug_abbrev  0x00003a18      0x4e7 ..\obj\main.o
- .debug_abbrev  0x00003eff      0x3be ..\obj\SpaController.o
- .debug_abbrev  0x000042bd      0x1f8 ..\obj\stm32f10x_usart.o
- .debug_abbrev  0x000044b5      0x412 ..\obj\u8g_font.o
- .debug_abbrev  0x000048c7      0x14f ..\obj\u8g_clip.o
- .debug_abbrev  0x00004a16      0x154 ..\obj\misc.o
- .debug_abbrev  0x00004b6a      0x1ed ..\obj\stm32f10x_i2c.o
- .debug_abbrev  0x00004d57      0x16c ..\obj\system_stm32f10x.o
- .debug_abbrev  0x00004ec3      0x22a ..\obj\u8g_circle.o
+ .debug_abbrev  0x000014fe      0x38c ..\obj\Display.o
+ .debug_abbrev  0x0000188a      0x374 ..\obj\u8g_ll_api.o
+ .debug_abbrev  0x00001bfe       0xf3 ..\obj\u8g_page.o
+ .debug_abbrev  0x00001cf1      0x203 ..\obj\stm32f10x_gpio.o
+ .debug_abbrev  0x00001ef4      0x25e ..\obj\stm32f10x_rcc.o
+ .debug_abbrev  0x00002152      0x392 ..\obj\Keypad.o
+ .debug_abbrev  0x000024e4      0x2c6 ..\obj\mcp23017.o
+ .debug_abbrev  0x000027aa       0x12 ..\obj\startup_stm32f10x_md.o
+ .debug_abbrev  0x000027bc      0x185 ..\obj\u8g_rect.o
+ .debug_abbrev  0x00002941      0x26b ..\obj\RelayBoard.o
+ .debug_abbrev  0x00002bac       0x6c ..\obj\u8g_fonts.o
+ .debug_abbrev  0x00002c18      0x106 ..\obj\u8g_com_null.o
+ .debug_abbrev  0x00002d1e      0x3e5 ..\obj\EntController.o
+ .debug_abbrev  0x00003103      0x2b8 ..\obj\delay.o
+ .debug_abbrev  0x000033bb       0xec ..\obj\ovc3860.o
+ .debug_abbrev  0x000034a7      0x273 ..\obj\u8g_arm_uart.o
+ .debug_abbrev  0x0000371a      0x157 ..\obj\u8g_line.o
+ .debug_abbrev  0x00003871      0x1e3 ..\obj\usart.o
+ .debug_abbrev  0x00003a54      0x239 ..\obj\u8g_pb32h1.o
+ .debug_abbrev  0x00003c8d      0x1d3 ..\obj\u8g_pb8h1.o
+ .debug_abbrev  0x00003e60      0x541 ..\obj\main.o
+ .debug_abbrev  0x000043a1      0x42a ..\obj\SpaController.o
+ .debug_abbrev  0x000047cb      0x1f8 ..\obj\stm32f10x_usart.o
+ .debug_abbrev  0x000049c3      0x412 ..\obj\u8g_font.o
+ .debug_abbrev  0x00004dd5      0x14f ..\obj\u8g_clip.o
+ .debug_abbrev  0x00004f24      0x27a ..\obj\LEDS.o
+ .debug_abbrev  0x0000519e      0x154 ..\obj\misc.o
+ .debug_abbrev  0x000052f2      0x1ed ..\obj\stm32f10x_i2c.o
+ .debug_abbrev  0x000054df      0x16c ..\obj\system_stm32f10x.o
+ .debug_abbrev  0x0000564b      0x22a ..\obj\u8g_circle.o
 
-.debug_loc      0x00000000     0xd656
+.debug_loc      0x00000000     0xdcb7
  .debug_loc     0x00000000      0x918 ..\obj\u8g_pb.o
  .debug_loc     0x00000918       0x21 ..\obj\u8g_com_arduino_st7920_custom.o
  .debug_loc     0x00000939     0x1045 ..\obj\printf.o
@@ -3235,33 +3344,35 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_loc     0x000024b5      0x748 ..\obj\si4703.o
  .debug_loc     0x00002bfd      0xcf9 ..\obj\DS18B20.o
  .debug_loc     0x000038f6       0x42 ..\obj\u8g_state.o
- .debug_loc     0x00003938     0x1979 ..\obj\u8g_ll_api.o
- .debug_loc     0x000052b1      0x5d0 ..\obj\stm32f10x_gpio.o
- .debug_loc     0x00005881       0xd1 ..\obj\u8g_page.o
- .debug_loc     0x00005952      0x1ec ..\obj\Keypad.o
- .debug_loc     0x00005b3e      0x7fb ..\obj\stm32f10x_rcc.o
- .debug_loc     0x00006339      0x659 ..\obj\mcp23017.o
- .debug_loc     0x00006992      0xa79 ..\obj\u8g_rect.o
- .debug_loc     0x0000740b       0xed ..\obj\RelayBoard.o
- .debug_loc     0x000074f8       0x21 ..\obj\u8g_com_null.o
- .debug_loc     0x00007519       0x8f ..\obj\EntController.o
- .debug_loc     0x000075a8       0xdb ..\obj\delay.o
- .debug_loc     0x00007683      0x21a ..\obj\u8g_arm_uart.o
- .debug_loc     0x0000789d      0x32c ..\obj\u8g_line.o
- .debug_loc     0x00007bc9       0x58 ..\obj\usart.o
- .debug_loc     0x00007c21      0x6ba ..\obj\u8g_pb32h1.o
- .debug_loc     0x000082db      0x4fc ..\obj\u8g_pb8h1.o
- .debug_loc     0x000087d7       0xb7 ..\obj\main.o
- .debug_loc     0x0000888e      0x2e5 ..\obj\SpaController.o
- .debug_loc     0x00008b73      0x82e ..\obj\stm32f10x_usart.o
- .debug_loc     0x000093a1     0x2dcf ..\obj\u8g_font.o
- .debug_loc     0x0000c170      0x378 ..\obj\u8g_clip.o
- .debug_loc     0x0000c4e8      0x18e ..\obj\misc.o
- .debug_loc     0x0000c676      0x73c ..\obj\stm32f10x_i2c.o
- .debug_loc     0x0000cdb2       0xbc ..\obj\system_stm32f10x.o
- .debug_loc     0x0000ce6e      0x7e8 ..\obj\u8g_circle.o
+ .debug_loc     0x00003938      0x5bb ..\obj\Display.o
+ .debug_loc     0x00003ef3     0x1979 ..\obj\u8g_ll_api.o
+ .debug_loc     0x0000586c       0xd1 ..\obj\u8g_page.o
+ .debug_loc     0x0000593d      0x5d0 ..\obj\stm32f10x_gpio.o
+ .debug_loc     0x00005f0d      0x7fb ..\obj\stm32f10x_rcc.o
+ .debug_loc     0x00006708      0x1ec ..\obj\Keypad.o
+ .debug_loc     0x000068f4      0x659 ..\obj\mcp23017.o
+ .debug_loc     0x00006f4d      0xa79 ..\obj\u8g_rect.o
+ .debug_loc     0x000079c6       0xed ..\obj\RelayBoard.o
+ .debug_loc     0x00007ab3       0x21 ..\obj\u8g_com_null.o
+ .debug_loc     0x00007ad4       0xc3 ..\obj\EntController.o
+ .debug_loc     0x00007b97       0xdb ..\obj\delay.o
+ .debug_loc     0x00007c72      0x21a ..\obj\u8g_arm_uart.o
+ .debug_loc     0x00007e8c      0x32c ..\obj\u8g_line.o
+ .debug_loc     0x000081b8       0x58 ..\obj\usart.o
+ .debug_loc     0x00008210      0x6ba ..\obj\u8g_pb32h1.o
+ .debug_loc     0x000088ca      0x4fc ..\obj\u8g_pb8h1.o
+ .debug_loc     0x00008dc6       0x4d ..\obj\main.o
+ .debug_loc     0x00008e13      0x2d4 ..\obj\SpaController.o
+ .debug_loc     0x000090e7      0x82e ..\obj\stm32f10x_usart.o
+ .debug_loc     0x00009915     0x2dcf ..\obj\u8g_font.o
+ .debug_loc     0x0000c6e4      0x378 ..\obj\u8g_clip.o
+ .debug_loc     0x0000ca5c       0xed ..\obj\LEDS.o
+ .debug_loc     0x0000cb49      0x18e ..\obj\misc.o
+ .debug_loc     0x0000ccd7      0x73c ..\obj\stm32f10x_i2c.o
+ .debug_loc     0x0000d413       0xbc ..\obj\system_stm32f10x.o
+ .debug_loc     0x0000d4cf      0x7e8 ..\obj\u8g_circle.o
 
-.debug_aranges  0x00000000      0x4a8
+.debug_aranges  0x00000000      0x4e8
  .debug_aranges
                 0x00000000       0x20 ..\obj\u8g_pb.o
  .debug_aranges
@@ -3281,83 +3392,89 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_aranges
                 0x00000100       0x20 ..\obj\u8g_state.o
  .debug_aranges
-                0x00000120       0x20 ..\obj\u8g_ll_api.o
+                0x00000120       0x20 ..\obj\Display.o
  .debug_aranges
-                0x00000140       0x20 ..\obj\stm32f10x_gpio.o
+                0x00000140       0x20 ..\obj\u8g_ll_api.o
  .debug_aranges
                 0x00000160       0x20 ..\obj\u8g_page.o
  .debug_aranges
-                0x00000180       0x20 ..\obj\Keypad.o
+                0x00000180       0x20 ..\obj\stm32f10x_gpio.o
  .debug_aranges
                 0x000001a0       0x20 ..\obj\stm32f10x_rcc.o
  .debug_aranges
-                0x000001c0       0x20 ..\obj\mcp23017.o
+                0x000001c0       0x20 ..\obj\Keypad.o
  .debug_aranges
-                0x000001e0       0x28 ..\obj\startup_stm32f10x_md.o
+                0x000001e0       0x20 ..\obj\mcp23017.o
  .debug_aranges
-                0x00000208       0x20 ..\obj\u8g_rect.o
+                0x00000200       0x28 ..\obj\startup_stm32f10x_md.o
  .debug_aranges
-                0x00000228       0x20 ..\obj\RelayBoard.o
+                0x00000228       0x20 ..\obj\u8g_rect.o
  .debug_aranges
-                0x00000248       0x18 ..\obj\u8g_fonts.o
+                0x00000248       0x20 ..\obj\RelayBoard.o
  .debug_aranges
-                0x00000260       0x20 ..\obj\u8g_com_null.o
+                0x00000268       0x18 ..\obj\u8g_fonts.o
  .debug_aranges
-                0x00000280       0x20 ..\obj\EntController.o
+                0x00000280       0x20 ..\obj\u8g_com_null.o
  .debug_aranges
-                0x000002a0       0x20 ..\obj\delay.o
+                0x000002a0       0x20 ..\obj\EntController.o
  .debug_aranges
-                0x000002c0       0x20 ..\obj\ovc3860.o
+                0x000002c0       0x20 ..\obj\delay.o
  .debug_aranges
-                0x000002e0       0x20 ..\obj\u8g_arm_uart.o
+                0x000002e0       0x20 ..\obj\ovc3860.o
  .debug_aranges
-                0x00000300       0x20 ..\obj\u8g_line.o
+                0x00000300       0x20 ..\obj\u8g_arm_uart.o
  .debug_aranges
-                0x00000320       0x20 ..\obj\usart.o
+                0x00000320       0x20 ..\obj\u8g_line.o
  .debug_aranges
-                0x00000340       0x20 ..\obj\u8g_pb32h1.o
+                0x00000340       0x20 ..\obj\usart.o
  .debug_aranges
-                0x00000360       0x20 ..\obj\u8g_pb8h1.o
+                0x00000360       0x20 ..\obj\u8g_pb32h1.o
  .debug_aranges
-                0x00000380       0x28 ..\obj\main.o
+                0x00000380       0x20 ..\obj\u8g_pb8h1.o
  .debug_aranges
-                0x000003a8       0x20 ..\obj\SpaController.o
+                0x000003a0       0x28 ..\obj\main.o
  .debug_aranges
-                0x000003c8       0x20 ..\obj\stm32f10x_usart.o
+                0x000003c8       0x20 ..\obj\SpaController.o
  .debug_aranges
-                0x000003e8       0x20 ..\obj\u8g_font.o
+                0x000003e8       0x20 ..\obj\stm32f10x_usart.o
  .debug_aranges
-                0x00000408       0x20 ..\obj\u8g_clip.o
+                0x00000408       0x20 ..\obj\u8g_font.o
  .debug_aranges
-                0x00000428       0x20 ..\obj\misc.o
+                0x00000428       0x20 ..\obj\u8g_clip.o
  .debug_aranges
-                0x00000448       0x20 ..\obj\stm32f10x_i2c.o
+                0x00000448       0x20 ..\obj\LEDS.o
  .debug_aranges
-                0x00000468       0x20 ..\obj\system_stm32f10x.o
+                0x00000468       0x20 ..\obj\misc.o
  .debug_aranges
-                0x00000488       0x20 ..\obj\u8g_circle.o
+                0x00000488       0x20 ..\obj\stm32f10x_i2c.o
+ .debug_aranges
+                0x000004a8       0x20 ..\obj\system_stm32f10x.o
+ .debug_aranges
+                0x000004c8       0x20 ..\obj\u8g_circle.o
 
-.debug_ranges   0x00000000      0x8b8
+.debug_ranges   0x00000000      0x970
  .debug_ranges  0x00000000       0x40 ..\obj\u8g_pb.o
  .debug_ranges  0x00000040       0x80 ..\obj\printf.o
  .debug_ranges  0x000000c0       0x20 ..\obj\u8g_com_api.o
  .debug_ranges  0x000000e0       0x48 ..\obj\si4703.o
  .debug_ranges  0x00000128       0xd8 ..\obj\DS18B20.o
- .debug_ranges  0x00000200      0x198 ..\obj\u8g_ll_api.o
- .debug_ranges  0x00000398       0x78 ..\obj\Keypad.o
- .debug_ranges  0x00000410       0x20 ..\obj\stm32f10x_rcc.o
- .debug_ranges  0x00000430       0x58 ..\obj\mcp23017.o
- .debug_ranges  0x00000488       0x20 ..\obj\startup_stm32f10x_md.o
- .debug_ranges  0x000004a8       0x30 ..\obj\u8g_rect.o
- .debug_ranges  0x000004d8       0x50 ..\obj\delay.o
- .debug_ranges  0x00000528       0x48 ..\obj\main.o
- .debug_ranges  0x00000570       0x90 ..\obj\SpaController.o
- .debug_ranges  0x00000600      0x1e8 ..\obj\u8g_font.o
- .debug_ranges  0x000007e8       0x58 ..\obj\u8g_clip.o
- .debug_ranges  0x00000840       0x28 ..\obj\system_stm32f10x.o
- .debug_ranges  0x00000868       0x50 ..\obj\u8g_circle.o
+ .debug_ranges  0x00000200       0x30 ..\obj\Display.o
+ .debug_ranges  0x00000230      0x198 ..\obj\u8g_ll_api.o
+ .debug_ranges  0x000003c8       0x20 ..\obj\stm32f10x_rcc.o
+ .debug_ranges  0x000003e8       0x78 ..\obj\Keypad.o
+ .debug_ranges  0x00000460       0x58 ..\obj\mcp23017.o
+ .debug_ranges  0x000004b8       0x20 ..\obj\startup_stm32f10x_md.o
+ .debug_ranges  0x000004d8       0x30 ..\obj\u8g_rect.o
+ .debug_ranges  0x00000508       0x58 ..\obj\EntController.o
+ .debug_ranges  0x00000560       0x50 ..\obj\delay.o
+ .debug_ranges  0x000005b0       0x98 ..\obj\main.o
+ .debug_ranges  0x00000648       0x70 ..\obj\SpaController.o
+ .debug_ranges  0x000006b8      0x1e8 ..\obj\u8g_font.o
+ .debug_ranges  0x000008a0       0x58 ..\obj\u8g_clip.o
+ .debug_ranges  0x000008f8       0x28 ..\obj\system_stm32f10x.o
+ .debug_ranges  0x00000920       0x50 ..\obj\u8g_circle.o
 
-.debug_line     0x00000000     0x61da
+.debug_line     0x00000000     0x6a41
  .debug_line    0x00000000      0x1c9 ..\obj\u8g_pb.o
  .debug_line    0x000001c9      0x154 ..\obj\u8g_com_arduino_st7920_custom.o
  .debug_line    0x0000031d      0x4d1 ..\obj\printf.o
@@ -3367,36 +3484,38 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_line    0x00000cba      0x446 ..\obj\si4703.o
  .debug_line    0x00001100      0x466 ..\obj\DS18B20.o
  .debug_line    0x00001566      0x145 ..\obj\u8g_state.o
- .debug_line    0x000016ab      0x354 ..\obj\u8g_ll_api.o
- .debug_line    0x000019ff      0x314 ..\obj\stm32f10x_gpio.o
- .debug_line    0x00001d13      0x167 ..\obj\u8g_page.o
- .debug_line    0x00001e7a      0x383 ..\obj\Keypad.o
- .debug_line    0x000021fd      0x32e ..\obj\stm32f10x_rcc.o
- .debug_line    0x0000252b      0x349 ..\obj\mcp23017.o
- .debug_line    0x00002874       0xcd ..\obj\startup_stm32f10x_md.o
- .debug_line    0x00002941      0x221 ..\obj\u8g_rect.o
- .debug_line    0x00002b62      0x2bf ..\obj\RelayBoard.o
- .debug_line    0x00002e21      0x15f ..\obj\u8g_fonts.o
- .debug_line    0x00002f80      0x144 ..\obj\u8g_com_null.o
- .debug_line    0x000030c4      0x30d ..\obj\EntController.o
- .debug_line    0x000033d1      0x26b ..\obj\delay.o
- .debug_line    0x0000363c      0x24f ..\obj\ovc3860.o
- .debug_line    0x0000388b      0x341 ..\obj\u8g_arm_uart.o
- .debug_line    0x00003bcc      0x1a3 ..\obj\u8g_line.o
- .debug_line    0x00003d6f      0x2a2 ..\obj\usart.o
- .debug_line    0x00004011      0x208 ..\obj\u8g_pb32h1.o
- .debug_line    0x00004219      0x1e5 ..\obj\u8g_pb8h1.o
- .debug_line    0x000043fe      0x4a0 ..\obj\main.o
- .debug_line    0x0000489e      0x386 ..\obj\SpaController.o
- .debug_line    0x00004c24      0x363 ..\obj\stm32f10x_usart.o
- .debug_line    0x00004f87      0x706 ..\obj\u8g_font.o
- .debug_line    0x0000568d      0x17d ..\obj\u8g_clip.o
- .debug_line    0x0000580a      0x20e ..\obj\misc.o
- .debug_line    0x00005a18      0x36c ..\obj\stm32f10x_i2c.o
- .debug_line    0x00005d84      0x248 ..\obj\system_stm32f10x.o
- .debug_line    0x00005fcc      0x20e ..\obj\u8g_circle.o
+ .debug_line    0x000016ab      0x4a0 ..\obj\Display.o
+ .debug_line    0x00001b4b      0x354 ..\obj\u8g_ll_api.o
+ .debug_line    0x00001e9f      0x167 ..\obj\u8g_page.o
+ .debug_line    0x00002006      0x314 ..\obj\stm32f10x_gpio.o
+ .debug_line    0x0000231a      0x32e ..\obj\stm32f10x_rcc.o
+ .debug_line    0x00002648      0x383 ..\obj\Keypad.o
+ .debug_line    0x000029cb      0x349 ..\obj\mcp23017.o
+ .debug_line    0x00002d14       0xcd ..\obj\startup_stm32f10x_md.o
+ .debug_line    0x00002de1      0x221 ..\obj\u8g_rect.o
+ .debug_line    0x00003002      0x2bf ..\obj\RelayBoard.o
+ .debug_line    0x000032c1      0x15f ..\obj\u8g_fonts.o
+ .debug_line    0x00003420      0x144 ..\obj\u8g_com_null.o
+ .debug_line    0x00003564      0x33e ..\obj\EntController.o
+ .debug_line    0x000038a2      0x26b ..\obj\delay.o
+ .debug_line    0x00003b0d      0x24f ..\obj\ovc3860.o
+ .debug_line    0x00003d5c      0x341 ..\obj\u8g_arm_uart.o
+ .debug_line    0x0000409d      0x1a3 ..\obj\u8g_line.o
+ .debug_line    0x00004240      0x2a2 ..\obj\usart.o
+ .debug_line    0x000044e2      0x208 ..\obj\u8g_pb32h1.o
+ .debug_line    0x000046ea      0x1e5 ..\obj\u8g_pb8h1.o
+ .debug_line    0x000048cf      0x555 ..\obj\main.o
+ .debug_line    0x00004e24      0x3b3 ..\obj\SpaController.o
+ .debug_line    0x000051d7      0x363 ..\obj\stm32f10x_usart.o
+ .debug_line    0x0000553a      0x706 ..\obj\u8g_font.o
+ .debug_line    0x00005c40      0x17d ..\obj\u8g_clip.o
+ .debug_line    0x00005dbd      0x2b4 ..\obj\LEDS.o
+ .debug_line    0x00006071      0x20e ..\obj\misc.o
+ .debug_line    0x0000627f      0x36c ..\obj\stm32f10x_i2c.o
+ .debug_line    0x000065eb      0x248 ..\obj\system_stm32f10x.o
+ .debug_line    0x00006833      0x20e ..\obj\u8g_circle.o
 
-.debug_str      0x00000000     0x50b4
+.debug_str      0x00000000     0x5675
  .debug_str     0x00000000      0x3c3 ..\obj\u8g_pb.o
                                 0x49c (size before relaxing)
  .debug_str     0x000003c3       0x80 ..\obj\u8g_com_arduino_st7920_custom.o
@@ -3415,59 +3534,63 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
                                 0x908 (size before relaxing)
  .debug_str     0x00001a14       0x7d ..\obj\u8g_state.o
                                 0x3bd (size before relaxing)
- .debug_str     0x00001a91      0x2fc ..\obj\u8g_ll_api.o
+ .debug_str     0x00001a91      0x664 ..\obj\Display.o
+                                0xc36 (size before relaxing)
+ .debug_str     0x000020f5      0x2d3 ..\obj\u8g_ll_api.o
                                 0x663 (size before relaxing)
- .debug_str     0x00001d8d      0x256 ..\obj\stm32f10x_gpio.o
-                                0x54c (size before relaxing)
- .debug_str     0x00001fe3       0x65 ..\obj\u8g_page.o
+ .debug_str     0x000023c8       0x65 ..\obj\u8g_page.o
                                 0x1bd (size before relaxing)
- .debug_str     0x00002048      0x85d ..\obj\Keypad.o
-                                0xb04 (size before relaxing)
- .debug_str     0x000028a5      0x41a ..\obj\stm32f10x_rcc.o
+ .debug_str     0x0000242d      0x256 ..\obj\stm32f10x_gpio.o
+                                0x54c (size before relaxing)
+ .debug_str     0x00002683      0x41a ..\obj\stm32f10x_rcc.o
                                 0x636 (size before relaxing)
- .debug_str     0x00002cbf      0x218 ..\obj\mcp23017.o
+ .debug_str     0x00002a9d      0x851 ..\obj\Keypad.o
+                                0xb2a (size before relaxing)
+ .debug_str     0x000032ee      0x218 ..\obj\mcp23017.o
                                 0xc98 (size before relaxing)
- .debug_str     0x00002ed7       0xf0 ..\obj\u8g_rect.o
+ .debug_str     0x00003506       0xd4 ..\obj\u8g_rect.o
                                 0x43f (size before relaxing)
- .debug_str     0x00002fc7       0xe9 ..\obj\RelayBoard.o
-                                0x8f0 (size before relaxing)
- .debug_str     0x000030b0       0x9b ..\obj\u8g_fonts.o
+ .debug_str     0x000035da      0x113 ..\obj\RelayBoard.o
+                                0x91b (size before relaxing)
+ .debug_str     0x000036ed       0x6d ..\obj\u8g_fonts.o
                                 0x1a3 (size before relaxing)
- .debug_str     0x0000314b       0x4e ..\obj\u8g_com_null.o
+ .debug_str     0x0000375a       0x4e ..\obj\u8g_com_null.o
                                 0x39e (size before relaxing)
- .debug_str     0x00003199      0x156 ..\obj\EntController.o
-                                0xc7b (size before relaxing)
- .debug_str     0x000032ef      0x437 ..\obj\delay.o
+ .debug_str     0x000037a8      0x16a ..\obj\EntController.o
+                                0xcdd (size before relaxing)
+ .debug_str     0x00003912      0x437 ..\obj\delay.o
                                 0x60b (size before relaxing)
- .debug_str     0x00003726      0x123 ..\obj\ovc3860.o
+ .debug_str     0x00003d49      0x123 ..\obj\ovc3860.o
                                 0x28a (size before relaxing)
- .debug_str     0x00003849      0x12e ..\obj\u8g_arm_uart.o
+ .debug_str     0x00003e6c      0x12e ..\obj\u8g_arm_uart.o
                                 0x70b (size before relaxing)
- .debug_str     0x00003977       0x5e ..\obj\u8g_line.o
+ .debug_str     0x00003f9a       0x51 ..\obj\u8g_line.o
                                 0x3ac (size before relaxing)
- .debug_str     0x000039d5      0x16f ..\obj\usart.o
+ .debug_str     0x00003feb      0x16f ..\obj\usart.o
                                 0x815 (size before relaxing)
- .debug_str     0x00003b44       0xc3 ..\obj\u8g_pb32h1.o
+ .debug_str     0x0000415a       0xc3 ..\obj\u8g_pb32h1.o
                                 0x4de (size before relaxing)
- .debug_str     0x00003c07       0xa0 ..\obj\u8g_pb8h1.o
+ .debug_str     0x0000421d       0xa0 ..\obj\u8g_pb8h1.o
                                 0x4b7 (size before relaxing)
- .debug_str     0x00003ca7      0x1f3 ..\obj\main.o
-                               0x17de (size before relaxing)
- .debug_str     0x00003e9a      0x1f7 ..\obj\SpaController.o
-                                0xdf7 (size before relaxing)
- .debug_str     0x00004091      0x365 ..\obj\stm32f10x_usart.o
+ .debug_str     0x000042bd      0x18d ..\obj\main.o
+                               0x1c80 (size before relaxing)
+ .debug_str     0x0000444a      0x1cb ..\obj\SpaController.o
+                                0xeb8 (size before relaxing)
+ .debug_str     0x00004615      0x365 ..\obj\stm32f10x_usart.o
                                 0x6ec (size before relaxing)
- .debug_str     0x000043f6      0x71e ..\obj\u8g_font.o
+ .debug_str     0x0000497a      0x71e ..\obj\u8g_font.o
                                 0xb29 (size before relaxing)
- .debug_str     0x00004b14       0x5c ..\obj\u8g_clip.o
+ .debug_str     0x00005098       0x5c ..\obj\u8g_clip.o
                                 0x3b2 (size before relaxing)
- .debug_str     0x00004b70      0x10f ..\obj\misc.o
+ .debug_str     0x000050f4       0x3d ..\obj\LEDS.o
+                                0x8c4 (size before relaxing)
+ .debug_str     0x00005131      0x10f ..\obj\misc.o
                                 0x3da (size before relaxing)
- .debug_str     0x00004c7f      0x2c5 ..\obj\stm32f10x_i2c.o
+ .debug_str     0x00005240      0x2c5 ..\obj\stm32f10x_i2c.o
                                 0x6ab (size before relaxing)
- .debug_str     0x00004f44       0xcc ..\obj\system_stm32f10x.o
+ .debug_str     0x00005505       0xcc ..\obj\system_stm32f10x.o
                                 0x30c (size before relaxing)
- .debug_str     0x00005010       0xa4 ..\obj\u8g_circle.o
+ .debug_str     0x000055d1       0xa4 ..\obj\u8g_circle.o
                                 0x43e (size before relaxing)
 
 .comment        0x00000000       0x70
@@ -3481,11 +3604,12 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .comment       0x00000000       0x71 ..\obj\si4703.o
  .comment       0x00000000       0x71 ..\obj\DS18B20.o
  .comment       0x00000000       0x71 ..\obj\u8g_state.o
+ .comment       0x00000000       0x71 ..\obj\Display.o
  .comment       0x00000000       0x71 ..\obj\u8g_ll_api.o
- .comment       0x00000000       0x71 ..\obj\stm32f10x_gpio.o
  .comment       0x00000000       0x71 ..\obj\u8g_page.o
- .comment       0x00000000       0x71 ..\obj\Keypad.o
+ .comment       0x00000000       0x71 ..\obj\stm32f10x_gpio.o
  .comment       0x00000000       0x71 ..\obj\stm32f10x_rcc.o
+ .comment       0x00000000       0x71 ..\obj\Keypad.o
  .comment       0x00000000       0x71 ..\obj\mcp23017.o
  .comment       0x00000000       0x71 ..\obj\u8g_rect.o
  .comment       0x00000000       0x71 ..\obj\RelayBoard.o
@@ -3504,6 +3628,7 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .comment       0x00000000       0x71 ..\obj\stm32f10x_usart.o
  .comment       0x00000000       0x71 ..\obj\u8g_font.o
  .comment       0x00000000       0x71 ..\obj\u8g_clip.o
+ .comment       0x00000000       0x71 ..\obj\LEDS.o
  .comment       0x00000000       0x71 ..\obj\misc.o
  .comment       0x00000000       0x71 ..\obj\stm32f10x_i2c.o
  .comment       0x00000000       0x71 ..\obj\system_stm32f10x.o
@@ -3530,97 +3655,107 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .ARM.attributes
                 0x00000198       0x33 ..\obj\u8g_state.o
  .ARM.attributes
-                0x000001cb       0x33 ..\obj\u8g_ll_api.o
+                0x000001cb       0x33 ..\obj\Display.o
  .ARM.attributes
-                0x000001fe       0x33 ..\obj\stm32f10x_gpio.o
+                0x000001fe       0x33 ..\obj\u8g_ll_api.o
  .ARM.attributes
                 0x00000231       0x33 ..\obj\u8g_page.o
  .ARM.attributes
-                0x00000264       0x33 ..\obj\Keypad.o
+                0x00000264       0x33 ..\obj\stm32f10x_gpio.o
  .ARM.attributes
                 0x00000297       0x33 ..\obj\stm32f10x_rcc.o
  .ARM.attributes
-                0x000002ca       0x33 ..\obj\mcp23017.o
+                0x000002ca       0x33 ..\obj\Keypad.o
  .ARM.attributes
-                0x000002fd       0x21 ..\obj\startup_stm32f10x_md.o
+                0x000002fd       0x33 ..\obj\mcp23017.o
  .ARM.attributes
-                0x0000031e       0x33 ..\obj\u8g_rect.o
+                0x00000330       0x21 ..\obj\startup_stm32f10x_md.o
  .ARM.attributes
-                0x00000351       0x33 ..\obj\RelayBoard.o
+                0x00000351       0x33 ..\obj\u8g_rect.o
  .ARM.attributes
-                0x00000384       0x33 ..\obj\u8g_fonts.o
+                0x00000384       0x33 ..\obj\RelayBoard.o
  .ARM.attributes
-                0x000003b7       0x33 ..\obj\u8g_com_null.o
+                0x000003b7       0x33 ..\obj\u8g_fonts.o
  .ARM.attributes
-                0x000003ea       0x33 ..\obj\EntController.o
+                0x000003ea       0x33 ..\obj\u8g_com_null.o
  .ARM.attributes
-                0x0000041d       0x33 ..\obj\delay.o
+                0x0000041d       0x33 ..\obj\EntController.o
  .ARM.attributes
-                0x00000450       0x33 ..\obj\ovc3860.o
+                0x00000450       0x33 ..\obj\delay.o
  .ARM.attributes
-                0x00000483       0x33 ..\obj\u8g_arm_uart.o
+                0x00000483       0x33 ..\obj\ovc3860.o
  .ARM.attributes
-                0x000004b6       0x33 ..\obj\u8g_line.o
+                0x000004b6       0x33 ..\obj\u8g_arm_uart.o
  .ARM.attributes
-                0x000004e9       0x33 ..\obj\usart.o
+                0x000004e9       0x33 ..\obj\u8g_line.o
  .ARM.attributes
-                0x0000051c       0x33 ..\obj\u8g_pb32h1.o
+                0x0000051c       0x33 ..\obj\usart.o
  .ARM.attributes
-                0x0000054f       0x33 ..\obj\u8g_pb8h1.o
+                0x0000054f       0x33 ..\obj\u8g_pb32h1.o
  .ARM.attributes
-                0x00000582       0x33 ..\obj\main.o
+                0x00000582       0x33 ..\obj\u8g_pb8h1.o
  .ARM.attributes
-                0x000005b5       0x33 ..\obj\SpaController.o
+                0x000005b5       0x33 ..\obj\main.o
  .ARM.attributes
-                0x000005e8       0x33 ..\obj\stm32f10x_usart.o
+                0x000005e8       0x33 ..\obj\SpaController.o
  .ARM.attributes
-                0x0000061b       0x33 ..\obj\u8g_font.o
+                0x0000061b       0x33 ..\obj\stm32f10x_usart.o
  .ARM.attributes
-                0x0000064e       0x33 ..\obj\u8g_clip.o
+                0x0000064e       0x33 ..\obj\u8g_font.o
  .ARM.attributes
-                0x00000681       0x33 ..\obj\misc.o
+                0x00000681       0x33 ..\obj\u8g_clip.o
  .ARM.attributes
-                0x000006b4       0x33 ..\obj\stm32f10x_i2c.o
+                0x000006b4       0x33 ..\obj\LEDS.o
  .ARM.attributes
-                0x000006e7       0x33 ..\obj\system_stm32f10x.o
+                0x000006e7       0x33 ..\obj\misc.o
  .ARM.attributes
-                0x0000071a       0x33 ..\obj\u8g_circle.o
+                0x0000071a       0x33 ..\obj\stm32f10x_i2c.o
  .ARM.attributes
-                0x0000074d       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
+                0x0000074d       0x33 ..\obj\system_stm32f10x.o
  .ARM.attributes
-                0x0000077a       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
+                0x00000780       0x33 ..\obj\u8g_circle.o
  .ARM.attributes
-                0x000007a7       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x000007b3       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
  .ARM.attributes
-                0x000007d4       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(del_op.o)
+                0x000007e0       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
  .ARM.attributes
-                0x00000801       0x1d c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
+                0x0000080d       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
  .ARM.attributes
-                0x0000081e       0x1d c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivdf3.o)
+                0x0000083a       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(guard.o)
  .ARM.attributes
-                0x0000083b       0x1d c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixdfsi.o)
+                0x00000867       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(del_op.o)
  .ARM.attributes
-                0x00000858       0x1d c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_truncdfsf2.o)
+                0x00000894       0x1d c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x00000875       0x1d c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                0x000008b1       0x1d c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivdf3.o)
  .ARM.attributes
-                0x00000892       0x1d c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                0x000008ce       0x1d c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixdfsi.o)
  .ARM.attributes
-                0x000008af       0x1d c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixunssfsi.o)
+                0x000008eb       0x1d c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_truncdfsf2.o)
  .ARM.attributes
-                0x000008cc       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-malloc.o)
+                0x00000908       0x1d c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
  .ARM.attributes
-                0x000008f9       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mallocr.o)
+                0x00000925       0x1d c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
  .ARM.attributes
-                0x00000926       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mlock.o)
+                0x00000942       0x1d c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixunssfsi.o)
  .ARM.attributes
-                0x00000953       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-sbrkr.o)
+                0x0000095f       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-malloc.o)
  .ARM.attributes
-                0x00000980       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-freer.o)
+                0x0000098c       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mallocr.o)
  .ARM.attributes
-                0x000009ad       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-reent.o)
+                0x000009b9       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000009e6       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x00000a13       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x00000a40       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x00000a6d       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-freer.o)
+ .ARM.attributes
+                0x00000a9a       0x2d C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-reent.o)
 
-.debug_frame    0x00000000     0x3088
+.debug_frame    0x00000000     0x33c0
  .debug_frame   0x00000000       0xc8 ..\obj\u8g_pb.o
  .debug_frame   0x000000c8       0x20 ..\obj\u8g_com_arduino_st7920_custom.o
  .debug_frame   0x000000e8      0x26c ..\obj\printf.o
@@ -3630,39 +3765,44 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_frame   0x000005b0      0x1a0 ..\obj\si4703.o
  .debug_frame   0x00000750      0x268 ..\obj\DS18B20.o
  .debug_frame   0x000009b8       0x40 ..\obj\u8g_state.o
- .debug_frame   0x000009f8      0x3d8 ..\obj\u8g_ll_api.o
- .debug_frame   0x00000dd0      0x1b0 ..\obj\stm32f10x_gpio.o
- .debug_frame   0x00000f80       0x58 ..\obj\u8g_page.o
- .debug_frame   0x00000fd8       0xa0 ..\obj\Keypad.o
- .debug_frame   0x00001078      0x224 ..\obj\stm32f10x_rcc.o
- .debug_frame   0x0000129c      0x1c0 ..\obj\mcp23017.o
- .debug_frame   0x0000145c      0x1d8 ..\obj\u8g_rect.o
- .debug_frame   0x00001634       0x60 ..\obj\RelayBoard.o
- .debug_frame   0x00001694       0x20 ..\obj\u8g_com_null.o
- .debug_frame   0x000016b4       0x4c ..\obj\EntController.o
- .debug_frame   0x00001700       0xe0 ..\obj\delay.o
- .debug_frame   0x000017e0       0xc8 ..\obj\ovc3860.o
- .debug_frame   0x000018a8       0xcc ..\obj\u8g_arm_uart.o
- .debug_frame   0x00001974       0x3c ..\obj\u8g_line.o
- .debug_frame   0x000019b0       0xa4 ..\obj\usart.o
- .debug_frame   0x00001a54       0xf8 ..\obj\u8g_pb32h1.o
- .debug_frame   0x00001b4c       0xe0 ..\obj\u8g_pb8h1.o
- .debug_frame   0x00001c2c       0xdc ..\obj\main.o
- .debug_frame   0x00001d08      0x100 ..\obj\SpaController.o
- .debug_frame   0x00001e08      0x258 ..\obj\stm32f10x_usart.o
- .debug_frame   0x00002060      0x784 ..\obj\u8g_font.o
- .debug_frame   0x000027e4       0x44 ..\obj\u8g_clip.o
- .debug_frame   0x00002828       0x6c ..\obj\misc.o
- .debug_frame   0x00002894      0x26c ..\obj\stm32f10x_i2c.o
- .debug_frame   0x00002b00       0x48 ..\obj\system_stm32f10x.o
- .debug_frame   0x00002b48      0x138 ..\obj\u8g_circle.o
- .debug_frame   0x00002c80       0xd4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
- .debug_frame   0x00002d54       0x90 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
- .debug_frame   0x00002de4       0xd8 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
- .debug_frame   0x00002ebc       0x20 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(del_op.o)
- .debug_frame   0x00002edc       0x30 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-malloc.o)
- .debug_frame   0x00002f0c       0x54 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mallocr.o)
- .debug_frame   0x00002f60       0x30 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mlock.o)
- .debug_frame   0x00002f90       0x2c C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-sbrkr.o)
- .debug_frame   0x00002fbc       0x74 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-freer.o)
- .debug_frame   0x00003030       0x58 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-reent.o)
+ .debug_frame   0x000009f8      0x280 ..\obj\Display.o
+ .debug_frame   0x00000c78      0x3d8 ..\obj\u8g_ll_api.o
+ .debug_frame   0x00001050       0x58 ..\obj\u8g_page.o
+ .debug_frame   0x000010a8      0x1b0 ..\obj\stm32f10x_gpio.o
+ .debug_frame   0x00001258      0x224 ..\obj\stm32f10x_rcc.o
+ .debug_frame   0x0000147c       0xa0 ..\obj\Keypad.o
+ .debug_frame   0x0000151c      0x1c0 ..\obj\mcp23017.o
+ .debug_frame   0x000016dc      0x1d8 ..\obj\u8g_rect.o
+ .debug_frame   0x000018b4       0x60 ..\obj\RelayBoard.o
+ .debug_frame   0x00001914       0x20 ..\obj\u8g_com_null.o
+ .debug_frame   0x00001934       0x4c ..\obj\EntController.o
+ .debug_frame   0x00001980       0xe0 ..\obj\delay.o
+ .debug_frame   0x00001a60       0xc8 ..\obj\ovc3860.o
+ .debug_frame   0x00001b28       0xcc ..\obj\u8g_arm_uart.o
+ .debug_frame   0x00001bf4       0x3c ..\obj\u8g_line.o
+ .debug_frame   0x00001c30       0xa4 ..\obj\usart.o
+ .debug_frame   0x00001cd4       0xf8 ..\obj\u8g_pb32h1.o
+ .debug_frame   0x00001dcc       0xe0 ..\obj\u8g_pb8h1.o
+ .debug_frame   0x00001eac       0x5c ..\obj\main.o
+ .debug_frame   0x00001f08      0x144 ..\obj\SpaController.o
+ .debug_frame   0x0000204c      0x258 ..\obj\stm32f10x_usart.o
+ .debug_frame   0x000022a4      0x784 ..\obj\u8g_font.o
+ .debug_frame   0x00002a28       0x44 ..\obj\u8g_clip.o
+ .debug_frame   0x00002a6c       0x60 ..\obj\LEDS.o
+ .debug_frame   0x00002acc       0x6c ..\obj\misc.o
+ .debug_frame   0x00002b38      0x26c ..\obj\stm32f10x_i2c.o
+ .debug_frame   0x00002da4       0x48 ..\obj\system_stm32f10x.o
+ .debug_frame   0x00002dec      0x138 ..\obj\u8g_circle.o
+ .debug_frame   0x00002f24       0xd4 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
+ .debug_frame   0x00002ff8       0x90 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
+ .debug_frame   0x00003088       0xd8 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+ .debug_frame   0x00003160       0x40 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(guard.o)
+ .debug_frame   0x000031a0       0x20 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(del_op.o)
+ .debug_frame   0x000031c0       0x30 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-malloc.o)
+ .debug_frame   0x000031f0       0x54 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mallocr.o)
+ .debug_frame   0x00003244       0x34 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-memset.o)
+ .debug_frame   0x00003278       0x30 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-mlock.o)
+ .debug_frame   0x000032a8       0x2c C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-sbrkr.o)
+ .debug_frame   0x000032d4       0x20 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-strlen.o)
+ .debug_frame   0x000032f4       0x74 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-freer.o)
+ .debug_frame   0x00003368       0x58 C:\Program Files (x86)\GNU Tools ARM Embedded\4.9 2015q3\arm-none-eabi\lib\armv7-m\libg.a(lib_a-reent.o)

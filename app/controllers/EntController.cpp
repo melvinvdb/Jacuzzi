@@ -1,7 +1,7 @@
 #include "EntController.h"
 #include <stdio.h> //printf
 
-EntController::EntController(Keypad& kp, RelayBoard& rb) : keypad(kp), relayBoard(rb)
+EntController::EntController() : keypad(Keypad::getInstance()), relayBoard(RelayBoard::getInstance())
 {}
 
 void EntController::Init()

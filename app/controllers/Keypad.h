@@ -18,6 +18,11 @@ public:
 
 	typedef SingularCallBack <KeypadInterrupt, void, const unsigned short, const bool> InterruptCallback;
 
+	static Keypad& getInstance()
+	{
+		static Keypad instance;
+		return instance;
+	}
 	void Init();
 	bool RegisterForCallback(KeypadInterrupt& callback);
 	unsigned short ReadKeys();

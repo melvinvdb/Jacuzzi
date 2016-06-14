@@ -3,12 +3,14 @@
 
 #include "Keypad.h"
 #include "KeypadInterrupt.h"
+#include "LEDS.h"
 #include "RelayBoard.h"
 
 class SpaController : public KeypadInterrupt
 {
 private:
 	Keypad& keypad;
+	LEDS& leds;
 	RelayBoard& relayBoard;
 	bool stateJets;
 	bool stateGas;
@@ -17,7 +19,7 @@ private:
 	bool stateLED1;
 	bool stateLED2;
 public:
-	SpaController(Keypad& kp, RelayBoard& rb);
+	SpaController();
 	void Init();
 	void KeypadKeysPressed(const unsigned short keys, const bool keyshold);
 	void ToggleJets();

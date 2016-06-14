@@ -83,9 +83,21 @@ void USART2_Init(unsigned int speed)
 
     USART_Init(USART2, &USART_InitStructure);
 
+    // Enable interrupts
+    //USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
+
     // Enable usart
     USART_Cmd(USART2, ENABLE);
 
+}
+
+void USART2_SetTX(uint8_t high)
+{
+    GPIO_InitTypeDef GPIO_InitStructure;
+    GPIO_InitStructure.GPIO_Mode = (high == 1 ? GPIO_Mode_AF_PP : GPIO_Mode_IN_FLOATING);
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
 }
 
 void usart_string_append(char c) {

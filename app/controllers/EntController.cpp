@@ -17,6 +17,9 @@ void EntController::Init()
 	radio.setBand(RADIO_BAND_FM);
 	rdsParser.registerForCallback(*this);
 	bluetooth.Init(RCC_APB2Periph_GPIOB, GPIOB, GPIO_Pin_13);
+	//check if BT name is correct. This will only be set the first time the jacuzzi powers up.
+	bluetooth.CheckBluetoothName();
+	bluetooth.SetPower(false);
 }
 
 void EntController::RdsReceiveServiceName(char *name)
@@ -177,7 +180,7 @@ void EntController::MoveTV(const bool up)
 		DwtDelayMs(500);
 	}
 	relayBoard.SwitchRelay((up == true ? RelayBoard::TVUP : RelayBoard::TVDOWN), true);
-	leds.SwitchLed(LEDS::SOURCE, up);
+	leds.SwitchLed(LEDS::TV, up);
 	tvMoveTime = GetSysTick();
 	tvMoving = true;
 }

@@ -7,7 +7,7 @@
 class KeypadInterrupt
 {
 public:
-	virtual void KeypadKeysPressed(const unsigned short keys) = 0;
+	virtual void KeypadKeysPressed(const unsigned short keys, const bool keyshold) = 0;
 };
 
 

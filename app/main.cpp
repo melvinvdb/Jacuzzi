@@ -8,7 +8,9 @@
 #include "ovc3860.h"
 #include "mcp23017.h"
 #include "Keypad.h"
-#include "Entertainment.h"
+#include "RelayBoard.h"
+#include "EntController.h"
+#include "SpaController.h"
 
 static u8g_t u8g;
 char chTemp1[6];
@@ -19,14 +21,10 @@ char chChannel[8];
 int iStrength;
 bool bStereo;
 
-mcp23017 relais;
 DS18B20 temp1;
 mcp23017 leds;
 Keypad keypad;
-Entertainment entertainment;
-
-
-
+RelayBoard relayBoard;
 
 
 #define WATERICON_X 0
@@ -218,14 +216,6 @@ int main(void)
 	si4703_setVolume(10);
 	printf("SI4703 initialized\n");
 
-	printf("MCP Initializing C++\n");
-	relais.Init(I2C1, RCC_APB1Periph_I2C1, GPIOB, RCC_APB2Periph_GPIOB, GPIO_Pin_6, GPIO_Pin_7, 0x40, false);
-	relais.Direction(relais.PORT_A, 0x00); //all output
-	relais.Direction(relais.PORT_B, 0x00);
-	relais.Write(relais.PORT_A, 0xFF); //all high
-	relais.Write(relais.PORT_B, 0x00); //all low
-	printf("MCP initialized\n");
-
 	printf("DS18B20 Initializing C++\n");
 	temp1.Init(RCC_APB2Periph_GPIOA, GPIOA, GPIO_Pin_0);
 	temp1.Reset();
@@ -234,7 +224,6 @@ int main(void)
 	temp1.SetPrecision(0); //0 == 9 bits, 1 == 10 bits, 2 == 11 bits, 3 == 12 bits
 	temp1.Reset();
 	temp1.ROMRead();
-
 
 	/*tDS18B20Dev temp1 = { RCC_APB2Periph_GPIOA, GPIOA, GPIO_Pin_0 };
 	DS18B20Init(&temp1);
@@ -287,11 +276,13 @@ int main(void)
 	leds.Write(leds.PORT_A, 0x01); //all low except one
 	leds.Write(leds.PORT_B, 0x00); //all low
 
-	printf("Keypad initializing\n");
+	printf("Controllers and stuff initializing\n");
+	relayBoard.Init();
 	keypad.Init();
+	EntController entertainment(keypad, relayBoard);
 	entertainment.Init();
-	keypad.RegisterForCallback(entertainment);
-	//keypad.test(Keypad::InterruptCallback(&entertainment, &KeypadInterrupt::KeypadKeysPressed));
+	SpaController spa(keypad, relayBoard);
+	spa.Init();
 
 	printf("Starting main loop\n");
 	while(1)
@@ -311,7 +302,7 @@ int main(void)
 			draw();
 		} while ( u8g_NextPage(&u8g) );
 
-		keypad.GetKeysPressed();
+		keypad.CheckKeysPressed();
 		/*DS18B20Reset(&temp1);
 		DS18B20ROMSkip(&temp1);
 		DS18B20TempConvert(&temp1);*/

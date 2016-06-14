@@ -1,6 +1,5 @@
 #include "SpaController.h"
 #include <stdio.h> //printf
-
 SpaController::SpaController() : keypad(Keypad::getInstance()), leds(LEDS::getInstance()), relayBoard(RelayBoard::getInstance()), display(Display::getInstance())
 {}
 
@@ -49,9 +48,11 @@ void SpaController::Init()
 		tempOut.TempConvert();
 	}
 	if (tempBathFound == false || tempOutFound == false)
+	{
 		if (tempBathFound == false)
 			display.SetErrorText("NO SENSOR");
-		display.SetStatusBar("ERROR: Temp sensor missing!!");
+	}
+	leds.SwitchLed(LEDS::POWER, true);
 	printf("SpaController: Init() complete\r\n");
 }
 
@@ -88,23 +89,31 @@ void SpaController::Monitor()
 	if (tempBathFound)
 	{
 		if (tempBathFound != prevTempBathFound) {
+			//sensor reconnected. Reinitiate sensor
+			tempBath.Reset();
 			tempBath.ROMSkip();
 			tempBath.SetPrecision(0);
-			tempBath.Reset();
 		}
-		tempBath.ROMSkip();
-		tempBath.TempReadSimple(&sfBath);
+		else
+		{
+			tempBath.ROMSkip();
+			tempBath.TempReadSimple(&sfBath);
+		}
 	}
 	tempOutFound = tempOut.Reset();
 	if (tempOutFound)
 	{
 		if (tempOutFound != prevTempOutFound) {
+			//sensor reconnected. Reinitiate sensor
+			tempOut.Reset();
 			tempOut.ROMSkip();
 			tempOut.SetPrecision(0);
-			tempOut.Reset();
 		}
-		tempOut.ROMSkip();
-		tempOut.TempReadSimple(&sfOut);
+		else
+		{
+			tempOut.ROMSkip();
+			tempOut.TempReadSimple(&sfOut);
+		}
 	}
 	char cTemp[7];
 	if (sfBath.is_valid)

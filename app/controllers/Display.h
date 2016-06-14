@@ -76,7 +76,7 @@ public:
 	void SetAudioSource(const char * text);
 	void SetRadioState(const bool enabled);
 	void SetRadioStereo(const bool stereo);
-	void SetRadioChannel(const char * channel);
+	void SetRadioChannel(uint16_t channel);
 	void SetRadioSignalstrength(const char strength);
 	void WriteText(const unsigned char index, const char * text);
 	void WriteHLine(const unsigned char index, const uint8_t x, const uint8_t y, const uint8_t w);

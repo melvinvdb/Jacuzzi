@@ -1,8 +1,8 @@
 
 #include "u8g_arm_uart.h"
+#include "delay.h"
 
 uint8_t control = ST7920_CMD;
-static unsigned long ulHclk;
 
 /*========================================================================*/
 /*
@@ -16,19 +16,15 @@ static unsigned long ulHclk;
 
 void u8g_Delay(uint16_t val)
 {
-	unsigned int i;
-	for (i = 0; i < val; i++)
-	{
-		SysCtlDelay(ulHclk*1000/3); //2.5 - 3
-	}
+	DwtDelayMs(val);
 }
 void u8g_MicroDelay(void)
 {
-	SysCtlDelay(ulHclk*1/3); //2.5 - 3
+	DwtDelayUs(1);
 }
 void u8g_10MicroDelay(void)
 {
-	SysCtlDelay(ulHclk*10/3); //2.5 - 3
+	DwtDelayUs(10);
 }
 
 
@@ -44,7 +40,6 @@ uint8_t u8g_com_uart_fn(u8g_t *u8g, uint8_t msg, uint8_t arg_val, void *arg_ptr)
  
     case U8G_COM_MSG_INIT:
     	//INIT HARDWARE INTERFACES, TIMERS, GPIOS...
-    	ulHclk = SystemCoreClock/1000000;
     	u8g_Delay(500);
     	init_UART3();
     	//init_LCD(); //set 8 bit etc

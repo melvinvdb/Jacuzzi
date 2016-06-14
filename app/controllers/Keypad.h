@@ -1,7 +1,7 @@
 #ifndef __KEYPAD_H__
 #define __KEYPAD_H__
 
-#include "SingularCallBack.h"
+#include "VariableCallBack.h"
 #include "KeypadInterrupt.h"
 #include "mcp23017.h"
 
@@ -16,7 +16,7 @@ public:
 	typedef enum Keys : unsigned short { JET=0xFEFF, GAS=0xFDFF, HEAT=0xFBFF, CIRC=0xF7FF, POWER=0xEFFF, LED1=0xDFFF, LED2=0xBFFF, NC=0x7FFF,
 										TEMPP=0xFF7F, TEMPM=0xFFBF, SOURCE=0xFFDF, CHP=0xFFEF, CHM=0xFFF7, TV=0xFFFB, VOLP=0xFFFD, VOLM=0xFFFE} Keys;
 
-	typedef SingularCallBack <KeypadInterrupt, void, const unsigned short, const bool> InterruptCallback;
+	typedef CallBack <KeypadInterrupt, void, const unsigned short, const bool> InterruptCallback;
 
 	static Keypad& getInstance()
 	{

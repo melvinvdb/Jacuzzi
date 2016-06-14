@@ -39,45 +39,45 @@ void Display::Draw()
 
 void Display::DrawMainScreen()
 {
-	  DrawFrostIcon();
-	  DrawWaterIcon();
-	  u8g_SetFont(&u8g, u8g_font_5x8);
-	  u8g_DrawStr(&u8g, 0, 36, "set");
+	DrawFrostIcon();
+	DrawWaterIcon();
+	u8g_SetFont(&u8g, u8g_font_5x8);
+	u8g_DrawStr(&u8g, 0, 36, "set");
 
-	  u8g_SetFont(&u8g, u8g_font_7x13);
-	  for (int i = 0; i < 3; i++)
-	  {
-		  u8g_DrawStr(&u8g, 20, ((i+1)*12), temp[i]);
-	  }
+	u8g_SetFont(&u8g, u8g_font_7x13);
+	for (int i = 0; i < 3; i++)
+	{
+		u8g_DrawStr(&u8g, 20, ((i+1)*12), temp[i]);
+	}
 
-	  if (strlen(errorText) > 0)
-	  {
-		  u8g_DrawStr(&u8g, 0, 48, errorText);
-	  }
-	  else if (heatingState)
-		  u8g_DrawStr(&u8g, 0, 48, "Heating");
+	if (strlen(errorText) > 0)
+	{
+		u8g_DrawStr(&u8g, 0, 48, errorText);
+	}
+	else if (heatingState)
+		u8g_DrawStr(&u8g, 0, 48, "Heating");
 
-	  u8g_DrawStr(&u8g, 0, 64, statusBar);
+	u8g_DrawStr(&u8g, 0, 64, statusBar);
 
-	  u8g_DrawVLine(&u8g,64,0 ,52);
-	  u8g_DrawHLine(&u8g,0 ,51,64);
+	u8g_DrawVLine(&u8g,64,0 ,52);
+	u8g_DrawHLine(&u8g,0 ,51,64);
 
-	  if (radioState)
-	  {
-		  if (radioStereo)
-		  {
-			  u8g_SetFont(&u8g, u8g_font_5x8);
-			  u8g_DrawStr(&u8g, 108, 8, "st");
-			  u8g_SetFont(&u8g, u8g_font_7x13);
-		  }
-		  u8g_DrawStr(&u8g, 73, 26, radioChannel);
-		  DrawSignalStrength();
-	  }
-	  if (audioState)
-	  {
-		  u8g_DrawStr(&u8g, 81, 38, "Source:");
-		  u8g_DrawStr(&u8g, 66, 50, audioSource);
-	  }
+	if (radioState)
+	{
+		if (radioStereo)
+		{
+			u8g_SetFont(&u8g, u8g_font_5x8);
+			u8g_DrawStr(&u8g, 108, 8, "st");
+			u8g_SetFont(&u8g, u8g_font_7x13);
+		}
+		u8g_DrawStr(&u8g, 73, 26, radioChannel);
+		DrawSignalStrength();
+	}
+	if (audioState)
+	{
+		u8g_DrawStr(&u8g, 81, 38, "Source:");
+		u8g_DrawStr(&u8g, 66, 50, audioSource);
+	}
 }
 
 void Display::DrawSecondScreen()
@@ -166,11 +166,11 @@ void Display::SetRadioStereo(const bool stereo)
 	radioStereo = stereo;
 }
 
-void Display::SetRadioChannel(const char * channel)
+void Display::SetRadioChannel(uint16_t channel)
 {
-	if (strlen(channel) >= 9)
-		return;
-	snprintf(radioChannel, 9, channel); //safe, null terminated
+	uint16_t integer = channel / 100;
+	uint16_t fractional = (channel % 100) / 10;
+	snprintf(radioChannel, 9, "%3d.%1dMHz", integer, fractional);
 }
 
 void Display::SetRadioSignalstrength(const char strength)

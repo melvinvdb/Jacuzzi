@@ -1,8 +1,6 @@
 #include <stm32f10x_exti.h>
 #include "usart.h"
 #include <stdio.h>
-#include "si4703.h"
-#include "ovc3860.h"
 #include "Display.h"
 #include "Keypad.h"
 #include "RelayBoard.h"
@@ -10,11 +8,6 @@
 #include "EntController.h"
 #include "SpaController.h"
 
-
-int iChannel;
-char chChannel[8];
-int iStrength;
-bool bStereo;
 
 int main(void)
 {
@@ -25,50 +18,25 @@ int main(void)
 	   system_stm32f10x.c file
 	 */
 	USART1_Init(115200);
-	ovc3860_init();
-
-	SysTick_Init();
+	TimerInit();
 
 
-	printf("start ulong test\r\n");
-	unsigned long test2 = 4294967294;
-	unsigned long millis = 4294967295;
-	if ((unsigned long)(millis - test2) >= 1)
+	/*printf("start delay test\r\n");
+	GPIO_InitTypeDef tPORT;
+	tPORT.GPIO_Pin = GPIO_Pin_5;
+	tPORT.GPIO_Mode = GPIO_Mode_Out_PP;
+	tPORT.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA,&tPORT);
+	GPIO_WriteBit(GPIOA,GPIO_Pin_5,Bit_SET); // set high
+	while (1)
 	{
-		printf("test 1 true\r\n");
-	}
-	printf("millis: %d\r\n", millis);
-	millis++;
-	printf("millis: %d\r\n", millis);
-	if ((unsigned long)(millis - test2) >= 1)
-	{
-		printf("test 2 true\r\n");
-	}
+		GPIO_WriteBit(GPIOA,GPIO_Pin_5,Bit_SET); // set high
+		DwtDelayUs(1000);
+		GPIO_WriteBit(GPIOA,GPIO_Pin_5,Bit_RESET); // set high
+		DwtDelayUs(1000);
+	}*/
 
 
-	printf("SI4703 initializing\n");
-	si4703_init();
-	//si4703_setChannel(972); slam fm
-	si4703_setChannel(1010);
-	delay_nms(800);
-	iChannel = si4703_getChannel();
-	printf("Freq: %d\r\n", iChannel);
-	si4703_seek(Si4703_SEEK_UP,Si4703_WRAP_ON);
-	si4703_setVolume(10);
-	printf("SI4703 initialized\n");
-
-
-
-	printf("OVC3860 enabling\n");
-	GPIO_InitTypeDef PORT;
-	PORT.GPIO_Pin = GPIO_Pin_13;
-	PORT.GPIO_Mode = GPIO_Mode_Out_PP;
-	PORT.GPIO_Speed = GPIO_Speed_2MHz;
-	GPIO_Init(GPIOB,&PORT);
-	GPIO_WriteBit(GPIOB,GPIO_Pin_13,Bit_SET); // set high
-	printf("OVC3860 enabled\n");
-
-	ovc3860_playPause();
 
 
 	printf("Controllers and stuff initializing\n");
@@ -89,50 +57,33 @@ int main(void)
 
 	display.SetActiveScreen(Display::MAINSCREEN);
 	printf("Starting main loop\n");
+	unsigned long benchtest = 0;
+	unsigned long result = 0;
 	while(1)
 	{
 
-
-		display.SetAudioState(true);
-		display.SetAudioSource("Bluetooth");
-		display.SetRadioState(true);
-		iChannel = si4703_getChannel();
-		sprintf(chChannel, "%d.%dMHz", iChannel / 10, iChannel % 10);
-		display.SetRadioChannel(chChannel);
-		display.SetRadioStereo(si4703_isStereo());
-		display.SetRadioSignalstrength(si4703_getSignalStrength());
-
-
+		benchtest = DwtGet();
 		Keypad::getInstance().CheckKeysPressed();
+		result = ((DwtGet()-benchtest)/72000);
+		printf("KP %d ms\r\n", result);
+
+		benchtest = DwtGet();
 		spa.Monitor();
+		result = ((DwtGet()-benchtest)/72000);
+		printf("SPA %d ms\r\n", result);
+
+		benchtest = DwtGet();
+		entertainment.Monitor();
+		result = ((DwtGet()-benchtest)/72000);
+		printf("ENT %d ms\r\n", result);
+
+		benchtest = DwtGet();
 		Display::getInstance().Draw();
+		result = ((DwtGet()-benchtest)/72000);
+		printf("DISPLAY %d ms\r\n", result);
 
-
-		si4703_checkRDS();
-
-		/*printf("Strength: %ddBuV\r\n", iStrength);
-		printf(chChannel);
-		printf("\r\n");*/
-		if (si4703_PSNvalid)
-		{
-			display.SetStatusBar(si4703_programServiceName);
-			printf("RDS:");
-			printf(si4703_programServiceName);
-			printf(" \r\n");
-		}
 	}
 }
-/*
-#ifdef __cplusplus
-extern "C" {
-#endif
-void SysTick_Handler(void)
-{
-	TimeTick_Event();
-}
-#ifdef __cplusplus
-}
-#endif*/
 
 /**********************************************************
  * USART1 interrupt request handler: on reception of a
@@ -155,6 +106,25 @@ void USART1_IRQHandler(void)
             {
             }*/
         }
+    }
+
+    /* ------------------------------------------------------------ */
+    /* Other USART1 interrupts handler can go here ...             */
+}
+
+/**********************************************************
+ * USART1 interrupt request handler: on reception of a
+ * character 't', toggle LED and transmit a character 'T'
+ *********************************************************/
+void USART2_IRQHandler(void)
+{
+    /* RXNE handler */
+    if(USART_GetITStatus(USART2, USART_IT_RXNE) != RESET)
+    {
+        /* If received 't', toggle LED and transmit 'T' */
+        char byte = (char)USART_ReceiveData(USART2);
+		USART_SendData(USART1, (u8)byte);
+		while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
     }
 
     /* ------------------------------------------------------------ */

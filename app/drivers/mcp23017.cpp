@@ -64,7 +64,7 @@ void mcp23017::I2C_init()
 char mcp23017::Read(const char address)
 {
     char value;
-    delay_1ms(); //needed for 72mhz cpu clock
+    DwtDelay1ms(); //needed for 72mhz cpu clock
     //I2C_AcknowledgeConfig(i2c_port,ENABLE); // Enable I2C acknowledge
     I2C_GenerateSTART(i2c_port,ENABLE); // Send START condition
     while (!I2C_CheckEvent(i2c_port,I2C_EVENT_MASTER_MODE_SELECT)); // Wait for EV5
@@ -90,7 +90,7 @@ char mcp23017::Read(const char address)
 */
 void mcp23017::Write(char address, char byte)
 {
-	delay_1ms(); //needed for 72mhz cpu clock
+	DwtDelay1ms(); //needed for 72mhz cpu clock
 	//I2C_AcknowledgeConfig(i2c_port,ENABLE); // Enable I2C acknowledge
 	I2C_GenerateSTART(i2c_port,ENABLE); // Send START condition
 	while (!I2C_CheckEvent(i2c_port,I2C_EVENT_MASTER_MODE_SELECT)); // Wait for EV5

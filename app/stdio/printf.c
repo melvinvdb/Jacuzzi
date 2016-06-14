@@ -29,16 +29,16 @@ void PrintChar(char c)
 	   while(Transfer not completed);
 	   Transmit a char;
 	*/	
-	//if (outputUart == 1)
-	//{
+	if (outputUart == 1)
+	{
 		USART_SendData(USART1, (u8)c);
 		while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
-	/*}
+	}
 	else
 	{
 	    USART_SendData(USART2, (u8)c);
 	    while (USART_GetFlagStatus(USART2, USART_FLAG_TXE) != SET);
-	}*/
+	}
 }
 
 /** Maximum string size allowed (in bytes). */

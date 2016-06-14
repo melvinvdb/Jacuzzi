@@ -120,7 +120,6 @@ unsigned char ucPrecision;
 GPIO_InitTypeDef  GPIO_InitStructure;
 
 // Static variables
-static unsigned long ulHclk;
 #if (DS18B20_SEARCH_ROM_EN > 0)
 //
 // global search state
@@ -132,7 +131,6 @@ static int LastDeviceFlag;
 static unsigned char ucCrc8;
 #endif
 
-void DelayNus(unsigned long ulNus);
 unsigned char BitRead();
 unsigned char ByteRead();
 void BitWrite(unsigned char ucBit);

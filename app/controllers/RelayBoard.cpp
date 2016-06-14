@@ -4,7 +4,7 @@
 void RelayBoard::Init()
 {
 	printf("RelayBoard: Init() ........\r\n");
-	relays.Init(I2C1, RCC_APB1Periph_I2C1, GPIOB, RCC_APB2Periph_GPIOB, GPIO_Pin_6, GPIO_Pin_7, 0x40, false);
+	relays.Init(I2C1, RCC_APB1Periph_I2C1, GPIOB, RCC_APB2Periph_GPIOB, GPIO_Pin_6, GPIO_Pin_7, 0x40, true); //i'm the first one to initialize the i2c
 	relays.Direction(mcp23017::PORT_A, 0x00); //all output
 	relays.Direction(mcp23017::PORT_B, 0x00);
 	relays.Write(mcp23017::PORT_A, 0x00); //all low

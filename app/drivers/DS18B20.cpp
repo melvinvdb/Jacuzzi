@@ -43,26 +43,6 @@
 #include "delay.h"
 #include "DS18B20.h"
 
-unsigned long DS18B20::ulHclk = 0;
-
-//*****************************************************************************
-//
-//! \internal
-//! \brief Delay some time for n us.
-//!
-//! \param ulNus determines delay time.
-//!
-//! The parameter of ulNus can be: all values with ulNus > 0
-//!
-//! \return None.
-//
-//*****************************************************************************
-void DS18B20::DelayNus(unsigned long ulNus)
-{
-	//lower is faster
-    SysCtlDelay(ulHclk*ulNus/4); //2.5 - 3 //3 for C 4 for C++
-}
-
 //*****************************************************************************
 //
 //! \brief Initializes the DS18B20 device.
@@ -80,7 +60,6 @@ bool DS18B20::Init(unsigned long _ulRCCPort, GPIO_TypeDef * _ulPort, uint16_t _u
 	ulPort = _ulPort;
 	ulPin = _ulPin;
 	bool found = false;
-	ulHclk = SystemCoreClock/1000000;
 
     //
     // Enable the GPIOx port which is connected with DS18B20 
@@ -150,7 +129,7 @@ bool DS18B20::Reset()
     while (GPIO_ReadOutputDataBit(ulPort, ulPin) == 0)
     {
     	if (--retries == 0) return false;
-    	DelayNus(1);
+    	DwtDelayUs(1);
     }
 
     //
@@ -158,14 +137,14 @@ bool DS18B20::Reset()
     //
     GPIO_WriteBit(ulPort, ulPin, Bit_RESET);
 
-    DelayNus(480); //pull low min 480us default 600
+    DwtDelayUs(480); //pull low min 480us @ page 3
 
     //
     // DS18B20 dq_pin be set to high
     //
     GPIO_WriteBit(ulPort, ulPin, Bit_SET);
 
-    DelayNus(70); //wait before reading, wait between 15-60us then presence pulse 60-240us default 45
+    DwtDelayUs(70); //wait before reading, wait between 15-60us then presence pulse 60-240us @ page 3
 
     //
     // DS18B20 dq pin be set as input
@@ -181,7 +160,7 @@ bool DS18B20::Reset()
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_Init(ulPort, &GPIO_InitStructure);
     
-    DelayNus(410);
+    DwtDelayUs(410); //480us - 70us previous = 410us @ page 3
 
     if(i)
     {
@@ -215,20 +194,21 @@ unsigned char DS18B20::BitRead()
     //
     GPIO_WriteBit(ulPort, ulPin, Bit_RESET);
 
-    DelayNus(1); //initialize time slot (min 1us max 15us) default 6
+    DwtDelayUs(3); //initialize time slot (min 1us max 15us) default 6
 
     //
     // DS18B20 dq_pin be set to high
     //
-    GPIO_WriteBit(ulPort, ulPin, Bit_SET);
+    //GPIO_WriteBit(ulPort, ulPin, Bit_SET);
 
-    DelayNus(3); //DS18B20 starts pulling bus with time slot max 15us default 3
+    //DwtDelayUs(3); //DS18B20 starts pulling bus with time slot max 15us default 3
 
     //
     // DS18B20 dq pin be set as input
     //
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
     GPIO_Init(ulPort, &GPIO_InitStructure);
+    DwtDelayUs(15); //initialize time slot is 1us-15us. we waited 3 + 15 = 18us so time to read. Read time slot is 45us
 
     if(GPIO_ReadInputDataBit(ulPort, ulPin))
     {
@@ -239,7 +219,7 @@ unsigned char DS18B20::BitRead()
         ucData = 0;
     }
 
-    DelayNus(60); //save to pull up after 60us default 60
+    DwtDelayUs(45); //save to pull up after 60us
 
     return ucData;
 }
@@ -287,12 +267,12 @@ void DS18B20::BitWrite(unsigned char ucBit)
         // DS18B20 dq_pin be set to low
         //
     	GPIO_WriteBit(ulPort, ulPin, Bit_RESET);
-        DelayNus(5); //initialize time slot (min 1us max 15us) default 5
+    	DwtDelayUs(5); //initialize time slot (min 1us max 15us) default 5
         //
         // DS18B20 dq_pin be set to high
         //
         GPIO_WriteBit(ulPort, ulPin, Bit_SET);
-        DelayNus(60); //sample window between 15us - 60us
+        DwtDelayUs(60); //sample window between 15us - 60us
     }
     else
     {
@@ -300,12 +280,12 @@ void DS18B20::BitWrite(unsigned char ucBit)
         // DS18B20 dq_pin be set to low
         //
     	GPIO_WriteBit(ulPort, ulPin, Bit_RESET);
-        DelayNus(65); //sample window between 15us - 60us default 65
+    	DwtDelayUs(65); //sample window between 15us - 60us default 65
         //
 		// DS18B20 dq_pin be set to high
 		//
         GPIO_WriteBit(ulPort, ulPin, Bit_SET);
-		DelayNus(5);
+        DwtDelayUs(5);
     }
 }
 
@@ -712,7 +692,7 @@ void DS18B20::TempConvert()
 void DS18B20::ScratchpadCopy()
 {
     ByteWrite(DS18B20_COPY_SCRATCHPAD);
-    DelayNus(10);
+    DwtDelayUs(10);
 }
 
 //*****************************************************************************
@@ -823,7 +803,7 @@ void DS18B20::EEROMRecall()
     // DS18B20 dq_pin be set to high
     //
     GPIO_WriteBit(ulPort, ulPin, Bit_SET);
-    DelayNus(5);
+    DwtDelayUs(5);
     //
     // Wait utill the recall is done.
     //

@@ -7,8 +7,9 @@ extern "C"
 {
 #endif
 
+static volatile unsigned long sysTickCounter = 0;
+
 void SysTick_Init();
-void TimeTick_Decrement(void);
 void delay_setSysTick(unsigned long tick);
 unsigned long delay_getSysTick();
 void delay_sys_nus(unsigned int n);

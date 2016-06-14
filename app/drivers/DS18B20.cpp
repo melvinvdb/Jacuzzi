@@ -71,10 +71,10 @@ void DS18B20::DelayNus(unsigned long ulNus)
 //! \param _ulPort Port to use example GPIOA
 //! \param _ulPin Pin to use example GPIO_Pin_0
 //!
-//! \return None.
+//! \return boolean indicating if a DS18B20 device has been found.
 //
 //*****************************************************************************
-void DS18B20::Init(unsigned long _ulRCCPort, GPIO_TypeDef * _ulPort, uint16_t _ulPin)
+bool DS18B20::Init(unsigned long _ulRCCPort, GPIO_TypeDef * _ulPort, uint16_t _ulPin)
 {
 	ulRCCPort = _ulRCCPort;
 	ulPort = _ulPort;
@@ -114,7 +114,7 @@ void DS18B20::Init(unsigned long _ulRCCPort, GPIO_TypeDef * _ulPort, uint16_t _u
     //
     // check
     //
-    while(found == false)
+    for (int i = 0; i < 3; i++)
     {
     	found = Reset();
     }
@@ -127,6 +127,7 @@ void DS18B20::Init(unsigned long _ulRCCPort, GPIO_TypeDef * _ulPort, uint16_t _u
     LastDeviceFlag = 0;
     LastFamilyDiscrepancy = 0;
 #endif
+    return found;
 }
 
 //*****************************************************************************
@@ -697,7 +698,7 @@ void DS18B20::ROMSkip()
 void DS18B20::TempConvert()
 {
     ByteWrite(DS18B20_CONVERT);
-    DelayNus(750000);
+    //DelayNus(750000);
 }
 
 //*****************************************************************************

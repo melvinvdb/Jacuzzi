@@ -30,6 +30,22 @@ int main(void)
 	SysTick_Init();
 
 
+	printf("start ulong test\r\n");
+	unsigned long test2 = 4294967294;
+	unsigned long millis = 4294967295;
+	if ((unsigned long)(millis - test2) >= 1)
+	{
+		printf("test 1 true\r\n");
+	}
+	printf("millis: %d\r\n", millis);
+	millis++;
+	printf("millis: %d\r\n", millis);
+	if ((unsigned long)(millis - test2) >= 1)
+	{
+		printf("test 2 true\r\n");
+	}
+
+
 	printf("SI4703 initializing\n");
 	si4703_init();
 	//si4703_setChannel(972); slam fm
@@ -51,8 +67,6 @@ int main(void)
 	GPIO_Init(GPIOB,&PORT);
 	GPIO_WriteBit(GPIOB,GPIO_Pin_13,Bit_SET); // set high
 	printf("OVC3860 enabled\n");
-
-
 
 	ovc3860_playPause();
 
@@ -108,17 +122,17 @@ int main(void)
 		}
 	}
 }
-
+/*
 #ifdef __cplusplus
 extern "C" {
 #endif
 void SysTick_Handler(void)
 {
-	TimeTick_Decrement();
+	TimeTick_Event();
 }
 #ifdef __cplusplus
 }
-#endif
+#endif*/
 
 /**********************************************************
  * USART1 interrupt request handler: on reception of a

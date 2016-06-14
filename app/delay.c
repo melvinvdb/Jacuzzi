@@ -1,6 +1,5 @@
 #include "delay.h"
 
-static volatile unsigned int sysTickCounter = 0;
 static unsigned long ulHclk = 0;
 
 void SysTick_Init() {
@@ -11,14 +10,12 @@ void SysTick_Init() {
 	 *SystemFrequency/1000000   1us         *
 	 *****************************************/
 	ulHclk = SystemCoreClock / 1000000;
-	while (SysTick_Config(SystemCoreClock / 1000) != 0) {
+	while (SysTick_Config(SystemCoreClock / 1000) != 0) { //every 1ms
 	}
 }
 
-/**
- * This method needs to be called in the SysTick_Handler
- */
-void TimeTick_Decrement(void) {
+void SysTick_Handler(void)
+{
 	if (sysTickCounter != 0x00) {
 		sysTickCounter--;
 	}
@@ -66,7 +63,7 @@ inline void delay_nus(unsigned int n) {
 }
 
 void delay_1ms(void) {
-	delay_nus(1000);
+	delay_nus(1000); //6 instructions
 }
 
 void delay_nms(unsigned int n) {

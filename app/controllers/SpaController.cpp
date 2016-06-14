@@ -84,15 +84,25 @@ void SpaController::Monitor()
 	//check temperature
 	DS18B20::simple_float sfBath = { 0, 0, false};
 	DS18B20::simple_float sfOut = {0, 0, false};
-	bool bathSensorCurrentlyFound = tempBath.Reset();
-	if (bathSensorCurrentlyFound)
+	tempBathFound = tempBath.Reset();
+	if (tempBathFound)
 	{
+		if (tempBathFound != prevTempBathFound) {
+			tempBath.ROMSkip();
+			tempBath.SetPrecision(0);
+			tempBath.Reset();
+		}
 		tempBath.ROMSkip();
 		tempBath.TempReadSimple(&sfBath);
 	}
 	tempOutFound = tempOut.Reset();
 	if (tempOutFound)
 	{
+		if (tempOutFound != prevTempOutFound) {
+			tempOut.ROMSkip();
+			tempOut.SetPrecision(0);
+			tempOut.Reset();
+		}
 		tempOut.ROMSkip();
 		tempOut.TempReadSimple(&sfOut);
 	}
@@ -121,16 +131,17 @@ void SpaController::Monitor()
 		}
 		waterDetected = water;
 	}
-	if (bathSensorCurrentlyFound != tempBathFound) //a change in temp sensor state
+	if (prevTempBathFound != tempBathFound) //a change in temp sensor state
 	{
 		display.ClearErrorText();
-		if (bathSensorCurrentlyFound == false)
+		if (tempBathFound == false)
 		{
 			SwitchOff();
 			display.SetErrorText("NO SENSOR");
 		}
-		tempBathFound = bathSensorCurrentlyFound;
+		prevTempBathFound = tempBathFound;
 	}
+	prevTempOutFound = tempOutFound;
 
 	if (water && sfBath.is_valid)
 	{

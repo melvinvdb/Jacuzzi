@@ -22,7 +22,9 @@ private:
 	Display& display;
 	DS18B20 tempBath;
 	DS18B20 tempOut;
+	bool prevTempBathFound;
 	bool tempBathFound;
+	bool prevTempOutFound;
 	bool tempOutFound;
 	float targetTemp;
 	bool waterDetected;

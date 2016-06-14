@@ -34,3 +34,10 @@ void RelayBoard::ResetToSafety()
 	relays.Write(mcp23017::PORT_A, (state >> 8));
 	relays.Write(mcp23017::PORT_B, (state & 0xFF));
 }
+
+void RelayBoard::ResetAudio()
+{
+	state = state & ~audioReset; //reset all audio relays and entertainment power
+	relays.Write(mcp23017::PORT_A, (state >> 8));
+	relays.Write(mcp23017::PORT_B, (state & 0xFF));
+}

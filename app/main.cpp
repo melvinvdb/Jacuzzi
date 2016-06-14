@@ -116,21 +116,15 @@ void USART1_IRQHandler(void)
  * USART1 interrupt request handler: on reception of a
  * character 't', toggle LED and transmit a character 'T'
  *********************************************************/
-void USART2_IRQHandler(void)
+/*void USART2_IRQHandler(void)
 {
-    /* RXNE handler */
     if(USART_GetITStatus(USART2, USART_IT_RXNE) != RESET)
     {
-        /* If received 't', toggle LED and transmit 'T' */
         char byte = (char)USART_ReceiveData(USART2);
-		USART_SendData(USART1, (u8)byte);
-		while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
+        printf("IT %02x\r\n", byte);
     }
-
-    /* ------------------------------------------------------------ */
-    /* Other USART1 interrupts handler can go here ...             */
 }
-
+*/
 /*
 void EXTI0_IRQHandler(void)
 {

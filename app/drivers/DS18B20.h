@@ -143,7 +143,7 @@ public:
 //
 unsigned char ucROM[8];
 
-void Init(uint32_t _ulRCCPort, GPIO_TypeDef * _ulPort, uint16_t _ulPin);
+bool Init(uint32_t _ulRCCPort, GPIO_TypeDef * _ulPort, uint16_t _ulPin);
 bool Reset();
 void ROMRead();
 void ROMMatch();

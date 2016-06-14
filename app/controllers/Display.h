@@ -16,10 +16,13 @@ private:
 	u8g_t u8g;
 	char activeScreen;
 	static const uint16_t ENABLE_PIN = GPIO_Pin_14;
+	static const uint16_t RW_PIN = GPIO_Pin_1;
+	#define DISPLAY_ERROR_TEXT_LENGTH 10
 	#define DISPLAY_STATUS_BAR_LENGTH 20
 	#define DISPLAY_AUDIO_SOURCE_LENGTH 10
 	char temp[3][7]; //3 temperatures 7 characters: 99.9°C\0
 	bool heatingState; //heating state if is heating
+	char errorText[DISPLAY_ERROR_TEXT_LENGTH]; //error text
 	char statusBar[DISPLAY_STATUS_BAR_LENGTH]; //status bar bottom of screen
 	//*******RADIO PART*******
 	bool radioState; //if draw radio is enabled
@@ -65,6 +68,8 @@ public:
 	void SetActiveScreen(const Screens s);
 	void SetTemp(const unsigned char tempNr, const char * text);
 	void SetHeatingState(const bool state);
+	void SetErrorText(const char * text);
+	void ClearErrorText();
 	void SetStatusBar(const char * text);
 	void ClearStatusBar();
 	void SetAudioState(const bool enabled);

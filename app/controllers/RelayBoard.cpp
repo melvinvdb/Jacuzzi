@@ -27,3 +27,10 @@ void RelayBoard::SwitchRelay(RelayBoard::Relays relay, bool enabled)
 
 	}
 }
+
+void RelayBoard::ResetToSafety()
+{
+	state = state & ~safetyReset; //reset all relays to low except entertainment
+	relays.Write(mcp23017::PORT_A, (state >> 8));
+	relays.Write(mcp23017::PORT_B, (state & 0xFF));
+}

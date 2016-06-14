@@ -10,7 +10,11 @@ void Display::Init()
 	PORT.GPIO_Mode = GPIO_Mode_Out_PP;
 	PORT.GPIO_Speed = GPIO_Speed_2MHz;
 	GPIO_Init(GPIOB,&PORT);
-	GPIO_WriteBit(GPIOB,ENABLE_PIN,Bit_RESET); // set high
+	GPIO_WriteBit(GPIOB,ENABLE_PIN,Bit_RESET); // set low for off
+	PORT.GPIO_Pin = RW_PIN;
+	GPIO_Init(GPIOB,&PORT);
+	GPIO_WriteBit(GPIOB,RW_PIN,Bit_SET); // set high for write
+	ClearErrorText();
 	ClearStatusBar();
 	ClearSecondScreen();
 }
@@ -46,7 +50,11 @@ void Display::DrawMainScreen()
 		  u8g_DrawStr(&u8g, 20, ((i+1)*12), temp[i]);
 	  }
 
-	  if (heatingState)
+	  if (strlen(errorText) > 0)
+	  {
+		  u8g_DrawStr(&u8g, 0, 48, errorText);
+	  }
+	  else if (heatingState)
 		  u8g_DrawStr(&u8g, 0, 48, "Heating");
 
 	  u8g_DrawStr(&u8g, 0, 64, statusBar);
@@ -110,6 +118,19 @@ void Display::SetHeatingState(const bool state)
 {
 	heatingState = state;
 }
+
+void Display::SetErrorText(const char * text)
+{
+	if (strlen(text) >= DISPLAY_ERROR_TEXT_LENGTH)
+		return;
+	snprintf(errorText, DISPLAY_ERROR_TEXT_LENGTH, text); //safe, null terminated
+}
+
+void Display::ClearErrorText()
+{
+	memset(errorText, 0, DISPLAY_ERROR_TEXT_LENGTH);
+}
+
 
 void Display::SetStatusBar(const char * text)
 {

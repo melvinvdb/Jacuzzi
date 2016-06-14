@@ -59,20 +59,20 @@ bool Keypad::CheckKeysPressed()
 	{
 		//increment if readed is key press
 		++solidTickCount;
-		printf("Keypad DBG: incremented counter %i\r\n", solidTickCount);
+		//printf("Keypad DBG: incremented counter %i\r\n", solidTickCount);
 	}
 	else
 	{
 		//reset if readed is NO key press
 		solidTickCount = 0;
-		printf("Keypad DBG: reset counter 0\r\n");
+		//printf("Keypad DBG: reset counter 0\r\n");
 	}
 	if (solidTickCount == LONG_KEY_PRESS_INTERVAL)
 	{
 		//LONG_KEY_PRESS_INTERVAL times key press fire event.
 		for (int i = 0; i < interruptListIndex; i++)
 		{
-			printf("Keypad DBG: Calling interrupt for INDEX  %i\r\n", i);
+			//printf("Keypad DBG: Calling interrupt for INDEX  %i\r\n", i);
 			interruptList[i].execute(readed, true);
 		}
 		while (ReadKeys() != 0xFFFF)
@@ -85,7 +85,7 @@ bool Keypad::CheckKeysPressed()
 		//on change from key press to NO key press fire event.
 		for (int i = 0; i < interruptListIndex; i++)
 		{
-			printf("Keypad DBG: Calling interrupt for CHANGE %i\r\n", i);
+			//printf("Keypad DBG: Calling interrupt for CHANGE %i\r\n", i);
 			interruptList[i].execute(lastRead, false);
 		}
 		solidTickCount = 0;

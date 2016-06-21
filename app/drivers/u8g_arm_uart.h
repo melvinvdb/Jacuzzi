@@ -22,7 +22,7 @@ extern "C"
 #define ST7920_TX_PORT			GPIO_Pin_10
 #define ST7920_RX_PORT			GPIO_Pin_11
 #define ST7920_GPIO_PORT		GPIOB
-#define ST7920_UART_BAUDRATE	38400
+#define ST7920_UART_BAUDRATE	115200 //38400 max for 8MHz, 115200 for 7.3728
 
 #define ST7920_CMD				0
 #define ST7920_DATA				1

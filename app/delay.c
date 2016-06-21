@@ -49,10 +49,6 @@ void SysTickDelayMs(unsigned int n) {
 	}
 }
 #endif
-uint32_t DwtGet(void)
-{
-  return DWT->CYCCNT;
-}
 
 void DwtDelayUs(uint32_t us) // microseconds
 {

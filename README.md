@@ -1,5 +1,6 @@
 
-Jacuzzi (hot tub) main relay board
+Project {#index}
 ===================
 
-STM32F103C8T6 microcontroller, controlling everything including display through UART.
+
+This is an example project.

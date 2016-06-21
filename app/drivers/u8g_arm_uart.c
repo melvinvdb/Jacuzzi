@@ -67,7 +67,8 @@ uint8_t u8g_com_uart_fn(u8g_t *u8g, uint8_t msg, uint8_t arg_val, void *arg_ptr)
     	//WRITE BYTE TO DEVICE
     	UART_write_byte(control << 1); //shift RS left, RW == 0 == write
     	UART_write_byte(arg_val);
-    	u8g_MicroDelay();
+    	DwtDelayUs(110); //required min 100us
+    	//u8g_MicroDelay();
     	break;
  
     case U8G_COM_MSG_WRITE_SEQ:
@@ -80,6 +81,7 @@ uint8_t u8g_com_uart_fn(u8g_t *u8g, uint8_t msg, uint8_t arg_val, void *arg_ptr)
     		{
     			UART_write_byte(control << 1); //shift RS left, RW == 0 == write
     			UART_write_byte( *ptr);
+    			DwtDelayUs(110); //required min 100us
     			ptr++;
     			arg_val--;
     		}

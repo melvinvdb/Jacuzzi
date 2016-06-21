@@ -25,7 +25,7 @@ static volatile unsigned long sysTickCounter = 0;
 void TimerInit();
 void SetSysTick(unsigned long tick);
 unsigned long GetSysTick();
-extern inline unsigned long SysTickFormatMs(unsigned long timeInMs)
+static inline unsigned long SysTickFormatMs(unsigned long timeInMs)
 {
 	return timeInMs / SYSTICKFORMAT;
 }
@@ -33,8 +33,11 @@ extern inline unsigned long SysTickFormatMs(unsigned long timeInMs)
 void SysTickDelay1ms(void);
 void SysTickDelayMs(unsigned int n);
 #endif
-uint32_t DwtGet(void);
-extern inline uint8_t DwtCompare(int32_t tp)
+static inline uint32_t DwtGet(void)
+{
+  return DWT->CYCCNT;
+}
+static inline uint8_t DwtCompare(int32_t tp)
 {
   return (((int32_t)DwtGet() - tp) < 0);
 }

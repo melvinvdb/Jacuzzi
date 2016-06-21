@@ -23,6 +23,8 @@ private:
 	char temp[3][7]; //3 temperatures 7 characters: 99.9°C\0
 	bool heatingState; //heating state if is heating
 	char errorText[DISPLAY_ERROR_TEXT_LENGTH]; //error text
+	bool waterState;
+	bool tempState;
 	char statusBar[DISPLAY_STATUS_BAR_LENGTH]; //status bar bottom of screen
 	//*******RADIO PART*******
 	bool radioState; //if draw radio is enabled
@@ -70,6 +72,8 @@ public:
 	void SetHeatingState(const bool state);
 	void SetErrorText(const char * text);
 	void ClearErrorText();
+	void SetNoWaterAvailable(const bool state);
+	void SetNoTempAvailable(const bool state);
 	void SetStatusBar(const char * text);
 	void ClearStatusBar();
 	void SetAudioState(const bool enabled);

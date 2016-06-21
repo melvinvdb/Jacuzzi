@@ -8,7 +8,6 @@ void SpaController::Init()
 	printf("SpaController: Init() ........\r\n");
 	keypad.RegisterForCallback(*this);
 	targetTemp = 35.0;
-	waterDetected = 2; //set to non false or true to force a change in water state
 	stateCirc = false;
 	stateHeat = false;
 	statePower = true;
@@ -25,33 +24,9 @@ void SpaController::Init()
 	PORT.GPIO_Mode = GPIO_Mode_IN_FLOATING;
 	PORT.GPIO_Speed = GPIO_Speed_2MHz;
 	GPIO_Init(SPA_WATER_PORT,&PORT);
-	tempBathFound = tempBath.Init(RCC_APB2Periph_GPIOA, GPIOA, GPIO_Pin_0);
-	if (tempBathFound)
-	{
-		tempBath.Reset();
-		tempBath.Reset();
-		tempBath.ROMSkip();
-		tempBath.SetPrecision(0); //0 == 9 bits, 1 == 10 bits, 2 == 11 bits, 3 == 12 bits
-		tempBath.Reset();
-		tempBath.ROMSkip();
-		tempBath.TempConvert();
-	}
-	tempOutFound = tempOut.Init(RCC_APB2Periph_GPIOA, GPIOA, GPIO_Pin_1);
-	if (tempOutFound)
-	{
-		tempOut.Reset();
-		tempOut.Reset();
-		tempOut.ROMSkip();
-		tempOut.SetPrecision(0); //0 == 9 bits, 1 == 10 bits, 2 == 11 bits, 3 == 12 bits
-		tempOut.Reset();
-		tempOut.ROMSkip();
-		tempOut.TempConvert();
-	}
-	if (tempBathFound == false || tempOutFound == false)
-	{
-		if (tempBathFound == false)
-			display.SetErrorText("NO SENSOR");
-	}
+	tempBath.Init(RCC_APB2Periph_GPIOA, GPIOA, GPIO_Pin_0);
+	tempOut.Init(RCC_APB2Periph_GPIOA, GPIOA, GPIO_Pin_1);
+	tempReadTime = GetSysTick();
 	leds.SwitchLed(LEDS::POWER, true);
 	printf("SpaController: Init() complete\r\n");
 }
@@ -82,92 +57,42 @@ void SpaController::KeypadKeysPressed(const unsigned short keys, const bool keys
 
 void SpaController::Monitor()
 {
-	//check temperature
-	DS18B20::simple_float sfBath = { 0, 0, false};
-	DS18B20::simple_float sfOut = {0, 0, false};
-	tempBathFound = tempBath.Reset();
-	if (tempBathFound)
-	{
-		if (tempBathFound != prevTempBathFound) {
-			//sensor reconnected. Reinitiate sensor
-			tempBath.Reset();
-			tempBath.ROMSkip();
-			tempBath.SetPrecision(0);
-		}
-		else
-		{
-			tempBath.ROMSkip();
-			tempBath.TempReadSimple(&sfBath);
-		}
-	}
-	tempOutFound = tempOut.Reset();
-	if (tempOutFound)
-	{
-		if (tempOutFound != prevTempOutFound) {
-			//sensor reconnected. Reinitiate sensor
-			tempOut.Reset();
-			tempOut.ROMSkip();
-			tempOut.SetPrecision(0);
-		}
-		else
-		{
-			tempOut.ROMSkip();
-			tempOut.TempReadSimple(&sfOut);
-		}
-	}
-	char cTemp[7];
-	if (sfBath.is_valid)
-		sprintf(cTemp, "%d.%d°C", sfBath.integer, sfBath.fractional);
-	else
-		sprintf(cTemp, "NC");
-	//printf("Bath: %d.%d°C\r\n", sfBath.integer, sfBath.fractional);
-	display.SetTemp(1, cTemp);
-	if (sfOut.is_valid)
-		sprintf(cTemp, "%d.%d°C", sfOut.integer, sfOut.fractional);
-	else
-		sprintf(cTemp, "NC");
-	//printf("Out: %d.%d°C\r\n", sfOut.integer, sfOut.fractional);
-	display.SetTemp(0, cTemp);
-	float fBath = sfBath.integer + ((float)sfBath.fractional / 10);
 	bool water = IsWater();
-	if (water != waterDetected) //a change in water state
+	//check temperature
+	if ((unsigned long)(GetSysTick() - tempReadTime) >= SysTickFormatMs(tempReadInterval))
 	{
-		display.ClearErrorText();
-		if (water == false)
-		{
-			SwitchOff();
-			display.SetErrorText("NO WATER");
-		}
-		waterDetected = water;
-	}
-	if (prevTempBathFound != tempBathFound) //a change in temp sensor state
-	{
-		display.ClearErrorText();
-		if (tempBathFound == false)
-		{
-			SwitchOff();
-			display.SetErrorText("NO SENSOR");
-		}
-		prevTempBathFound = tempBathFound;
-	}
-	prevTempOutFound = tempOutFound;
+		printf("Checking temperature\r\n");
+		bool tempBathFound = tempBath.ReadTemperature();
+		bool tempOutFound = tempOut.ReadTemperature();
+		char cTemp[7];
+		bool converted = tempBath.GetTemperature(cTemp);
+		if (converted || !tempBathFound)
+			display.SetTemp(1, cTemp);
+		converted = tempOut.GetTemperature(cTemp);
+		if (converted || !tempOutFound)
+			display.SetTemp(0, cTemp);
 
-	if (water && sfBath.is_valid)
-	{
-		CheckTemp(fBath);
+		display.SetNoTempAvailable(!tempBathFound);
+		if (tempBathFound == false) //a change in temp sensor state
+		{
+			SwitchOff();
+		}
+		float tempf = tempBath.GetTemperature();
+		if (water && tempBath.TempIsValid())
+		{
+			CheckTemp(tempf);
+		}
+		tempBath.StartConversion();
+		tempOut.StartConversion();
+		tempReadTime = GetSysTick();
 	}
-	if (tempBathFound)
+
+	display.SetNoWaterAvailable(!water);
+	if (water == false) //no water state
 	{
-		tempBath.Reset();
-		tempBath.ROMSkip();
-		tempBath.TempConvert();
+		SwitchOff();
 	}
-	if (tempOutFound)
-	{
-		tempOut.Reset();
-		tempOut.ROMSkip();
-		tempOut.TempConvert();
-	}
+
 }
 
 void SpaController::CheckTemp(const float bath)
@@ -299,14 +224,17 @@ void SpaController::ToggleLED2()
 
 void SpaController::SwitchOff()
 {
-	stateHeat = false;
-	stateCirc = false;
-	relayJets = false;
-	relayGas  = false;
-	relayHeat = false;
-	relayCirc = false;
-	relayBoard.ResetToSafety();
-	display.SetHeatingState(relayHeat);
+	if (stateHeat || stateCirc || relayJets || relayGas || relayHeat || relayCirc)
+	{
+		stateHeat = false;
+		stateCirc = false;
+		relayJets = false;
+		relayGas  = false;
+		relayHeat = false;
+		relayCirc = false;
+		relayBoard.ResetToSafety();
+		display.SetHeatingState(relayHeat);
+	}
 }
 
 void SpaController::TogglePower()

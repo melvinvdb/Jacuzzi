@@ -125,6 +125,7 @@ bool DS18B20::Reset()
     //
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_Init(ulPort, &GPIO_InitStructure);
+    GPIO_WriteBit(ulPort, ulPin, Bit_SET);
 
     while (GPIO_ReadOutputDataBit(ulPort, ulPin) == 0)
     {

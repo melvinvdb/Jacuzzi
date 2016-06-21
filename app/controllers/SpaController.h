@@ -6,7 +6,7 @@
 #include "LEDS.h"
 #include "RelayBoard.h"
 #include "Display.h"
-#include "DS18B20.h"
+#include "TemperatureSensor.h"
 
 class SpaController : public KeypadInterrupt
 {
@@ -20,14 +20,11 @@ private:
 	LEDS& leds;
 	RelayBoard& relayBoard;
 	Display& display;
-	DS18B20 tempBath;
-	DS18B20 tempOut;
-	bool prevTempBathFound;
-	bool tempBathFound;
-	bool prevTempOutFound;
-	bool tempOutFound;
+	TemperatureSensor tempBath;
+	TemperatureSensor tempOut;
+	unsigned long tempReadTime;
+	const unsigned long tempReadInterval = 1000; //ms read interval
 	float targetTemp;
-	bool waterDetected;
 	bool stateHeat; 		//heat state
 	bool stateCirc; 		//circulation state
 	bool statePower;		//power state

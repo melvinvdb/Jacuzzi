@@ -15,6 +15,8 @@ void Display::Init()
 	GPIO_Init(GPIOB,&PORT);
 	GPIO_WriteBit(GPIOB,RW_PIN,Bit_SET); // set high for write
 	ClearErrorText();
+	waterState = false;
+	tempState = false;
 	ClearStatusBar();
 	ClearSecondScreen();
 }
@@ -50,7 +52,15 @@ void Display::DrawMainScreen()
 		u8g_DrawStr(&u8g, 20, ((i+1)*12), temp[i]);
 	}
 
-	if (strlen(errorText) > 0)
+	if (waterState == true)
+	{
+		u8g_DrawStr(&u8g, 0, 48, "NO WATER");
+	}
+	else if (tempState == true)
+	{
+		u8g_DrawStr(&u8g, 0, 48, "NO SENSOR");
+	}
+	else if (strlen(errorText) > 0)
 	{
 		u8g_DrawStr(&u8g, 0, 48, errorText);
 	}
@@ -131,6 +141,15 @@ void Display::ClearErrorText()
 	memset(errorText, 0, DISPLAY_ERROR_TEXT_LENGTH);
 }
 
+void Display::SetNoWaterAvailable(const bool state)
+{
+	waterState = state;
+}
+
+void Display::SetNoTempAvailable(const bool state)
+{
+	tempState = state;
+}
 
 void Display::SetStatusBar(const char * text)
 {

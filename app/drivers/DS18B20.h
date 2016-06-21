@@ -41,6 +41,9 @@
 #ifndef __DS18B20_H__
 #define __DS18B20_H__
 
+#include <stdio.h>
+#include "stm32f10x_gpio.h"
+
 #define DS18B20_SEARCH_ROM_EN   0
 
 class DS18B20

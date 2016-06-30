@@ -1,12 +1,13 @@
 #ifndef __SPACONTROLLER_H__
 #define __SPACONTROLLER_H__
 
-#include "Keypad.h"
 #include "Keys.h"
-#include "LEDS.h"
-#include "RelayBoard.h"
-#include "Display.h"
 #include "TemperatureSensor.h"
+
+class Keypad;
+class LEDS;
+class RelayBoard;
+class Display;
 
 class SpaController : public Keys
 {

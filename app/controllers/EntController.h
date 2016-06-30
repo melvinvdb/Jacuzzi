@@ -1,21 +1,19 @@
 #ifndef __ENTCONTROLLER_H__
 #define __ENTCONTROLLER_H__
 
-#include "Keypad.h"
 #include "Keys.h"
-#include "LEDS.h"
-#include "RelayBoard.h"
-#include "Display.h"
-#include "delay.h"
 #include "SI4703.h"
 #include "RDSParser.h"
 #include "RDSParserInterrupt.h"
 #include "OVC3860.h"
 
+class LEDS; //forward declare
+class RelayBoard;
+class Display;
+
 class EntController : public Keys, public RDSParserInterrupt
 {
 private:
-	Keypad& keypad;
 	LEDS& leds;
 	RelayBoard& relayBoard;
 	Display& display;

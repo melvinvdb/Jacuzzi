@@ -1,4 +1,8 @@
 #include "SpaController.h"
+#include "Keypad.h"
+#include "LEDS.h"
+#include "RelayBoard.h"
+#include "Display.h"
 #include <stdio.h> //printf
 SpaController::SpaController() : keypad(Keypad::getInstance()), leds(LEDS::getInstance()), relayBoard(RelayBoard::getInstance()), display(Display::getInstance())
 {}

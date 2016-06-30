@@ -1,7 +1,12 @@
 #include "EntController.h"
+#include "LEDS.h"
+#include "RelayBoard.h"
+#include "Display.h"
+#include "delay.h"
+
 #include <stdio.h> //printf
 
-EntController::EntController() : keypad(Keypad::getInstance()), leds(LEDS::getInstance()), relayBoard(RelayBoard::getInstance()), display(Display::getInstance())
+EntController::EntController() : leds(LEDS::getInstance()), relayBoard(RelayBoard::getInstance()), display(Display::getInstance())
 {}
 
 void EntController::Init()

@@ -4,24 +4,44 @@
 void Keypad::Init()
 {
 	//addressing MCP
-	pad.Init( I2C1, RCC_APB1Periph_I2C1, GPIOB, RCC_APB2Periph_GPIOB, GPIO_Pin_6, GPIO_Pin_7, 0x42, false);
-
-	pad.Direction(mcp23017::PORT_A, 0xFF); //all input
-	pad.Direction(mcp23017::PORT_B, 0xFF);
-
-	pad.ConfigurePullUps(mcp23017::PORT_A, 0xFF); //all pull up
-	pad.ConfigurePullUps(mcp23017::PORT_B, 0xFF);
-
-	pad.MirrorInterrupts(true);
-	pad.InterruptEnable(mcp23017::PORT_A, 0xFF); //all interrupt enabled
-	pad.InterruptEnable(mcp23017::PORT_B, 0xFF); //all interrupt enabled
-
-	pad.Read(mcp23017::PORT_A); //clear interrupt flag
-	pad.Read(mcp23017::PORT_B);
+	McpInit();
 
 	lastRead = 0xFFFF;
 	solidTickCount = 0;
 	enableKeyCheck = true;
+}
+
+void Keypad::McpInit()
+{
+	bool mcpWorking[10];
+	int mcpIndex = 0;
+	mcpWorking[mcpIndex++] = pad.Init( I2C1, RCC_APB1Periph_I2C1, GPIOB, RCC_APB2Periph_GPIOB, GPIO_Pin_6, GPIO_Pin_7, 0x42, false);
+
+	mcpWorking[mcpIndex++] = pad.Direction(mcp23017::PORT_A, 0xFF); //all input
+	mcpWorking[mcpIndex++] = pad.Direction(mcp23017::PORT_B, 0xFF);
+
+	mcpWorking[mcpIndex++] = pad.ConfigurePullUps(mcp23017::PORT_A, 0xFF); //all pull up
+	mcpWorking[mcpIndex++] = pad.ConfigurePullUps(mcp23017::PORT_B, 0xFF);
+
+	mcpWorking[mcpIndex++] = pad.MirrorInterrupts(true);
+	mcpWorking[mcpIndex++] = pad.InterruptEnable(mcp23017::PORT_A, 0xFF); //all interrupt enabled
+	mcpWorking[mcpIndex++] = pad.InterruptEnable(mcp23017::PORT_B, 0xFF); //all interrupt enabled
+
+	char data;
+	mcpWorking[mcpIndex++] = pad.Read(mcp23017::PORT_A, data); //clear interrupt flag
+	mcpWorking[mcpIndex++] = pad.Read(mcp23017::PORT_B, data);
+
+	keypadWorking = true;
+	for (int i = 0; i < mcpIndex; i++)
+	{
+		if (mcpWorking[i] == false)
+			keypadWorking = false;
+	}
+}
+
+bool Keypad::IsKeypadWorking()
+{
+	return keypadWorking;
 }
 
 bool Keypad::RegisterForCallback(KeypadInterrupt& callback)
@@ -37,8 +57,24 @@ bool Keypad::RegisterForCallback(KeypadInterrupt& callback)
 
 unsigned short Keypad::ReadKeys()
 {
-	unsigned char port1 = pad.Read(mcp23017::PORT_B);
-	unsigned char port0 = pad.Read(mcp23017::PORT_A);
+	if (keypadWorking == false)
+	{
+		McpInit();
+		if (keypadWorking == false)
+			return 0xFFFF;
+	}
+	char port1;
+	char port0;
+	if (!pad.Read(mcp23017::PORT_B, port1))
+	{
+		keypadWorking = false;
+		return 0xFFFF;
+	}
+	if (!pad.Read(mcp23017::PORT_A, port0))
+	{
+		keypadWorking = false;
+		return 0xFFFF;
+	}
 	return (port0 << 8) | (port1 & 0xFF);
 }
 
@@ -53,10 +89,9 @@ bool Keypad::CheckKeysPressed()
 		return false;
 	unsigned short readed = ReadKeys();
 
-	printf("Keypad DBG: %X\r\n", readed);
-
 	if (readed != 0xFFFF)
 	{
+		printf("Keypad DBG: %X\r\n", readed);
 		//increment if readed is key press
 		++solidTickCount;
 		//printf("Keypad DBG: incremented counter %i\r\n", solidTickCount);

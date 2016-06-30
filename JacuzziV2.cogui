@@ -12,29 +12,49 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="delay.h" partName="delay.h" path="C:/Users/melvin/Documents/Git/Jacuzzi/app/delay.h" title="delay.h" tooltip="C:/Users/melvin/Documents/Git/Jacuzzi/app/delay.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JacuzziV2/delay.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="662" selectionTopPixel="164"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="TemperatureSensor.cpp" partName="TemperatureSensor.cpp" path="C:/Users/melvin/Documents/Git/Jacuzzi/app/controllers/TemperatureSensor.cpp" title="TemperatureSensor.cpp" tooltip="C:/Users/melvin/Documents/Git/Jacuzzi/app/controllers/TemperatureSensor.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JacuzziV2/controllers/TemperatureSensor.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="189" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="delay.c" partName="delay.c" path="C:/Users/melvin/Documents/Git/Jacuzzi/app/delay.c" title="delay.c" tooltip="C:/Users/melvin/Documents/Git/Jacuzzi/app/delay.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JacuzziV2/delay.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1136" selectionTopPixel="439"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="TemperatureSensor.h" partName="TemperatureSensor.h" path="C:/Users/melvin/Documents/Git/Jacuzzi/app/controllers/TemperatureSensor.h" title="TemperatureSensor.h" tooltip="C:/Users/melvin/Documents/Git/Jacuzzi/app/controllers/TemperatureSensor.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JacuzziV2/controllers/TemperatureSensor.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="379" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="SpaController.cpp" partName="SpaController.cpp" path="C:/Users/melvin/Documents/Git/Jacuzzi/app/controllers/SpaController.cpp" title="SpaController.cpp" tooltip="C:/Users/melvin/Documents/Git/Jacuzzi/app/controllers/SpaController.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JacuzziV2/controllers/SpaController.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2480" selectionTopPixel="1170"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SpaController.h" partName="SpaController.h" path="C:/Users/melvin/Documents/Git/Jacuzzi/app/controllers/SpaController.h" title="SpaController.h" tooltip="C:/Users/melvin/Documents/Git/Jacuzzi/app/controllers/SpaController.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JacuzziV2/controllers/SpaController.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="630" selectionTopPixel="180"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="DS18B20.cpp" partName="DS18B20.cpp" path="C:/Users/melvin/Documents/Git/Jacuzzi/app/drivers/DS18B20.cpp" title="DS18B20.cpp" tooltip="C:/Users/melvin/Documents/Git/Jacuzzi/app/drivers/DS18B20.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JacuzziV2/drivers/DS18B20.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4240" selectionTopPixel="1920"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="C:/Users/melvin/Documents/Git/Jacuzzi/app/main.cpp" title="main.cpp" tooltip="C:/Users/melvin/Documents/Git/Jacuzzi/app/main.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JacuzziV2/main.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="540"/>
 </editor>
 </editors>
 <views>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="8">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="10">
 <expanded>
 <element path="/JacuzziV2"/>
 <element path="/JacuzziV2/controllers"/>
 <element path="/JacuzziV2/drivers"/>
 </expanded>
 <selection>
-<element path="/JacuzziV2/delay.c"/>
+<element path="/JacuzziV2/main.cpp"/>
 </selection>
 </viewState>
 </view>
@@ -87,8 +107,8 @@
 <hide_menu_item_id id="org.coocox.codebugger.configuration.showMemoryBrowserAction"/>
 <hide_menu_item_id id="org.coocox.codebugger.configuration.showVariablesAction"/>
 <hide_menu_item_id id="org.coocox.builder.ui.openProjectExplorerAction"/>
-<hide_menu_item_id id="org.coocox.codebugger.trace.actions.ShowTraceControlAction"/>
 <hide_menu_item_id id="org.eclipse.debug.ui.commands.TerminateAndRelaunch"/>
+<hide_menu_item_id id="org.coocox.codebugger.trace.actions.ShowTraceControlAction"/>
 <hide_menu_item_id id="org.coocox.codebugger.configuration.showRegistersAction"/>
 <hide_toolbar_item_id id="org.eclipse.cdt.debug.internal.ui.actions.ToggleInstructionStepModeAction"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
@@ -177,52 +197,68 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <hide_toolbar_item_id id="org.coocox.builder.ui.build"/>
 <hide_toolbar_item_id id="org.coocox.welcome.ui.action.welcome"/>
-<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <hide_toolbar_item_id id="org.coocox.codebugger.configuration.coideProgramDownloadAction"/>
+<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.coocox.codebugger.trace.ui.traceview"/>
 <view id="org.eclipse.debug.ui.VariableView"/>
 <view id="org.eclipse.search.ui.views.SearchView"/>
 <view id="org.coocox.builder.ui.views.ProjectView"/>
-<view id="org.eclipse.cdt.dsf.debug.ui.disassembly.view"/>
 <view id="org.eclipse.debug.ui.RegisterView"/>
+<view id="org.eclipse.cdt.dsf.debug.ui.disassembly.view"/>
 <fastViewBars/>
 <viewLayoutRec closeable="false" id="org.eclipse.debug.ui.DebugView"/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@d19440">&#x0A;<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">&#x0A;<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@d19440">
+<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
+<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.internal.ViewStack@d19440">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.internal.ViewStack@d19440">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@15fb084" ratio="0.69957536" ratioLeft="659" ratioRight="283" relationship="4" relative="org.eclipse.ui.internal.ViewStack@d19440">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@15fb084" ratio="0.84648186" ratioLeft="794" ratioRight="144" relationship="4" relative="org.eclipse.ui.internal.ViewStack@d19440">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@13dbe4d" ratio="0.5" ratioLeft="956" ratioRight="956" relationship="2" relative="org.eclipse.ui.internal.ViewStack@15fb084">&#x0A;<folder activePageID="org.eclipse.search.ui.views.SearchView" appearance="2" expanded="2">&#x0A;<page content="org.coocox.codebugger.trace.ui.traceview" label="Semihosting"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@13dbe4d" ratio="0.5" ratioLeft="956" ratioRight="956" relationship="2" relative="org.eclipse.ui.internal.ViewStack@15fb084">
+<folder activePageID="org.eclipse.search.ui.views.SearchView" appearance="2" expanded="2">
+<page content="org.coocox.codebugger.trace.ui.traceview" label="Semihosting"/>
 <page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@98f071" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.internal.ViewStack@d19440">&#x0A;<folder activePageID="org.eclipse.debug.ui.RegisterView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.RegisterView" label="Registers"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@98f071" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.internal.ViewStack@d19440">
+<folder activePageID="org.eclipse.debug.ui.RegisterView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.RegisterView" label="Registers"/>
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="Disassembly"/>
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.coocox.coassistant.view.CoAssistantView_debug" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
@@ -235,47 +271,162 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/JacuzziV2/delay.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/JacuzziV2/delay.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/JacuzziV2/controllers/SpaController.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/JacuzziV2/controllers/TemperatureSensor.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/JacuzziV2/drivers/DS18B20.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/JacuzziV2/controllers/TemperatureSensor.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/JacuzziV2/controllers/SpaController.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/JacuzziV2/main.cpp"/>
 </editors>
-<item historyLabel="delay.h" index="0">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="DS18B20.cpp" index="2">
+<position info="not_deleted" x="4249" y="0"/>
 </item>
-<item historyLabel="delay.c" index="1">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="DS18B20.cpp" index="2">
+<position info="not_deleted" x="4312" y="0"/>
 </item>
-<item historyLabel="delay.h" index="0">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="DS18B20.cpp" index="2">
+<position info="not_deleted" x="4352" y="0"/>
 </item>
-<item historyLabel="delay.c" index="1">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="DS18B20.cpp" index="2">
+<position info="not_deleted" x="4312" y="0"/>
 </item>
-<item historyLabel="delay.h" index="0">
-<position info="not_deleted" x="848" y="0"/>
+<item historyLabel="DS18B20.cpp" index="2">
+<position info="not_deleted" x="4352" y="0"/>
 </item>
-<item historyLabel="delay.c" index="1">
-<position info="not_deleted" x="1260" y="7"/>
+<item historyLabel="DS18B20.cpp" index="2">
+<position info="not_deleted" x="4441" y="0"/>
 </item>
-<item historyLabel="delay.h" index="0">
-<position info="not_deleted" x="735" y="0"/>
+<item historyLabel="TemperatureSensor.cpp" index="1">
+<position info="not_deleted" x="1256" y="0"/>
 </item>
-<item historyLabel="delay.c" index="1">
+<item historyLabel="DS18B20.cpp" index="2">
+<position info="not_deleted" x="4201" y="0"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
 <position/>
 </item>
-<item historyLabel="delay.h" index="0">
-<position info="not_deleted" x="783" y="0"/>
+<item historyLabel="TemperatureSensor.cpp" index="1">
+<position info="not_deleted" x="2130" y="14"/>
 </item>
-<item historyLabel="delay.c" index="1">
-<position info="not_deleted" x="1136" y="0"/>
+<item historyLabel="DS18B20.cpp" index="2">
+<position info="not_deleted" x="4328" y="0"/>
 </item>
-<item historyLabel="delay.h" index="0">
-<position info="not_deleted" x="725" y="0"/>
+<item historyLabel="SpaController.cpp" index="0">
+<position/>
 </item>
-<item historyLabel="delay.c" index="1">
-<position info="not_deleted" x="1136" y="0"/>
+<item historyLabel="TemperatureSensor.cpp" index="1">
+<position info="not_deleted" x="2130" y="14"/>
 </item>
-<item active="true" historyLabel="delay.h" index="0">
-<position info="not_deleted" x="725" y="0"/>
+<item historyLabel="DS18B20.cpp" index="2">
+<position info="not_deleted" x="4240" y="0"/>
+</item>
+<item historyLabel="TemperatureSensor.cpp" index="1">
+<position info="not_deleted" x="2130" y="14"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="TemperatureSensor.cpp" index="1">
+<position info="not_deleted" x="2130" y="14"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="TemperatureSensor.cpp" index="1">
+<position info="not_deleted" x="2130" y="14"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="TemperatureSensor.cpp" index="1">
+<position info="not_deleted" x="2130" y="14"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="TemperatureSensor.cpp" index="1">
+<position info="not_deleted" x="2130" y="14"/>
+</item>
+<item historyLabel="TemperatureSensor.h" index="3">
+<position info="not_deleted" x="577" y="0"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="TemperatureSensor.cpp" index="1">
+<position info="not_deleted" x="2130" y="14"/>
+</item>
+<item historyLabel="TemperatureSensor.h" index="3">
+<position info="not_deleted" x="278" y="0"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position info="not_deleted" x="2785" y="0"/>
+</item>
+<item historyLabel="SpaController.h" index="4">
+<position info="not_deleted" x="565" y="12"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position info="not_deleted" x="2785" y="0"/>
+</item>
+<item historyLabel="SpaController.h" index="4">
+<position info="not_deleted" x="565" y="12"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position info="not_deleted" x="931" y="0"/>
+</item>
+<item historyLabel="SpaController.h" index="4">
+<position info="not_deleted" x="565" y="12"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="TemperatureSensor.cpp" index="1">
+<position info="not_deleted" x="2338" y="0"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position info="not_deleted" x="2036" y="0"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position info="not_deleted" x="1998" y="0"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position info="not_deleted" x="2080" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position info="not_deleted" x="2043" y="37"/>
+</item>
+<item historyLabel="SpaController.h" index="4">
+<position info="not_deleted" x="630" y="0"/>
+</item>
+<item historyLabel="SpaController.cpp" index="0">
+<position info="not_deleted" x="2043" y="37"/>
+</item>
+<item historyLabel="TemperatureSensor.cpp" index="1">
+<position info="not_deleted" x="2338" y="0"/>
+</item>
+<item historyLabel="TemperatureSensor.h" index="3">
+<position info="not_deleted" x="149" y="48"/>
+</item>
+<item historyLabel="TemperatureSensor.cpp" index="1">
+<position info="not_deleted" x="2214" y="0"/>
+</item>
+<item historyLabel="TemperatureSensor.h" index="3">
+<position info="not_deleted" x="336" y="0"/>
+</item>
+<item historyLabel="TemperatureSensor.cpp" index="1">
+<position info="not_deleted" x="189" y="0"/>
+</item>
+<item historyLabel="TemperatureSensor.h" index="3">
+<position info="not_deleted" x="379" y="0"/>
+</item>
+<item active="true" historyLabel="SpaController.cpp" index="0">
+<position info="not_deleted" x="2043" y="37"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -284,16 +435,35 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="JacuzziV2/main.cpp">
+<persistable path="/JacuzziV2/main.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="startup_stm32f10x_md.s" tooltip="JacuzziV2/components/STM32F10x_MD_STDLIB/startup_stm32f10x_md.s">
+<persistable path="/JacuzziV2/components/STM32F10x_MD_STDLIB/startup_stm32f10x_md.s"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SpaController.h" tooltip="JacuzziV2/controllers/SpaController.h">
+<persistable path="/JacuzziV2/controllers/SpaController.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Display.h" tooltip="JacuzziV2/controllers/Display.h">
+<persistable path="/JacuzziV2/controllers/Display.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Display.cpp" tooltip="JacuzziV2/controllers/Display.cpp">
+<persistable path="/JacuzziV2/controllers/Display.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SpaController.cpp" tooltip="JacuzziV2/controllers/SpaController.cpp">
+<persistable path="/JacuzziV2/controllers/SpaController.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TemperatureSensor.h" tooltip="JacuzziV2/controllers/TemperatureSensor.h">
+<persistable path="/JacuzziV2/controllers/TemperatureSensor.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="TemperatureSensor.cpp" tooltip="JacuzziV2/controllers/TemperatureSensor.cpp">
+<persistable path="/JacuzziV2/controllers/TemperatureSensor.cpp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="delay.c" tooltip="JacuzziV2/delay.c">
 <persistable path="/JacuzziV2/delay.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="delay.h" tooltip="JacuzziV2/delay.h">
 <persistable path="/JacuzziV2/delay.h"/>
-</file>
-<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.welcome.ui.WelcomePage" name="" tooltip="">
-<persistable>
-<org.coocox.welcome.ui.WelcomePage/>
-</persistable>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ovc3860.c" tooltip="JacuzziV2/drivers/ovc3860.c">
 <persistable path="/JacuzziV2/drivers/ovc3860.c"/>
@@ -306,12 +476,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Derived.h" tooltip="test/Derived.h">
 <persistable path="/test/Derived.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Abstract.h" tooltip="test/Abstract.h">
-<persistable path="/test/Abstract.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="test/main.cpp">
-<persistable path="/test/main.cpp"/>
 </file>
 </mruList>
 </workbench>

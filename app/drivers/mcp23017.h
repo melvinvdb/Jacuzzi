@@ -135,8 +135,9 @@ uint16_t SDA;
 uint16_t deviceaddress;
 
 void I2C_init();
-char Read(const char address);
-void Write(const char address, const char byte);
+bool Read(const char address, char& data);
+bool Write(const char address, const char byte);
+bool WaitWithTimeout(const uint32_t I2C_EVENT);
 
 public:
 /* Init MCP23017
@@ -145,53 +146,53 @@ public:
 * @returns 
 *
 */
-void Init(I2C_TypeDef * _i2c_port, uint32_t _i2c_clock, GPIO_TypeDef * _gpio_port, uint32_t _gpio_clock, uint16_t _SCK, uint16_t _SDA, uint16_t _deviceaddress, bool i2cinit);
+bool Init(I2C_TypeDef * _i2c_port, uint32_t _i2c_clock, GPIO_TypeDef * _gpio_port, uint32_t _gpio_clock, uint16_t _SCK, uint16_t _SDA, uint16_t _deviceaddress, bool i2cinit);
 
 /** Set I/O direction of specified MCP23017 Port
 *
 * @param Port Port address (Port_A or Port_B)
 * @param char direction pin direction (0 = output, 1 = input)
 */
-void Direction(const Port port, const char direction);
+bool Direction(const Port port, const char direction);
 
 /** Set Pull-Up Resistors on specified MCP23017 Port
 *
 * @param Port Port address (Port_A or Port_B)
 * @param char offOrOn per pin (0 = off, 1 = on)
 */
-void ConfigurePullUps(const Port port, const char offOrOn);
+bool ConfigurePullUps(const Port port, const char offOrOn);
 
 /** Configere the Banked or Non-Banked mode
 *
 * @param Bank bankMode
 * @param char offOrOn per pin (0 = off, 1 = on)
 */
-void ConfigureBanked(const Bank bankMode);
+bool ConfigureBanked(const Bank bankMode);
 
 
-void InterruptEnable(const Port port, const char interruptsEnabledMask);
+bool InterruptEnable(const Port port, const char interruptsEnabledMask);
 
-void MirrorInterrupts(const bool mirror);
+bool MirrorInterrupts(const bool mirror);
 
-void InterruptPolarity(const Polarity polarity);
+bool InterruptPolarity(const Polarity polarity);
 
-void DefaultValue(const Port port, const char valuesToCompare);
+bool DefaultValue(const Port port, const char valuesToCompare);
 
-void InterruptControl(const Port port, const char interruptControlBits);
+bool InterruptControl(const Port port, const char interruptControlBits);
 
 /** Write to specified MCP23017 Port
 *
 * @param Port Port address (Port_A or Port_B)
 * @param char byte data to write
 */
-void Write(const Port port, const char byte);
+bool Write(const Port port, const char byte);
     
 /** Read from specified MCP23017 Port
 *
 * @param Port Port address (Port_A or Port_B)
 * @returns data from Port 
 */
-char Read(const Port port);
+bool Read(const Port port, char& data);
 
 };
 

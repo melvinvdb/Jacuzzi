@@ -40,6 +40,7 @@ int main(void)
 
 
 	printf("Controllers and stuff initializing\n");
+	RelayBoard::getInstance().Init();
 	Display& display = Display::getInstance();
 	display.Init();
 	display.SetActiveScreen(Display::SECONDSCREEN);
@@ -47,7 +48,6 @@ int main(void)
 	display.Draw();
 	display.SetDisplayState(true);
 
-	RelayBoard::getInstance().Init();
 	Keypad::getInstance().Init();
 	LEDS::getInstance().Init();
 	EntController entertainment;
@@ -62,20 +62,20 @@ int main(void)
 	while(1)
 	{
 
-		benchtest = DwtGet();
+		//benchtest = DwtGet();
 		Keypad::getInstance().CheckKeysPressed();
-		result = ((DwtGet()-benchtest)/72000);
-		printf("KP %d ms\r\n", result);
+		//result = ((DwtGet()-benchtest)/72000);
+		//printf("KP %d ms\r\n", result);
 
-		benchtest = DwtGet();
+		//benchtest = DwtGet();
 		spa.Monitor();
-		result = ((DwtGet()-benchtest)/72000);
-		printf("SPA %d ms\r\n", result);
+		//result = ((DwtGet()-benchtest)/72000);
+		//printf("SPA %d ms\r\n", result);
 
-		benchtest = DwtGet();
+		//benchtest = DwtGet();
 		entertainment.Monitor();
-		result = ((DwtGet()-benchtest)/72000);
-		printf("ENT %d ms\r\n", result);
+		//result = ((DwtGet()-benchtest)/72000);
+		//printf("ENT %d ms\r\n", result);
 
 		benchtest = DwtGet();
 		Display::getInstance().Draw();

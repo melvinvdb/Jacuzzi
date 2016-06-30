@@ -61,49 +61,71 @@ void mcp23017::I2C_init()
 * @param char address the internal registeraddress of the MCP23017
 * @returns data from register 
 */
-char mcp23017::Read(const char address)
+bool mcp23017::Read(const char address, char& data)
 {
-    char value;
     DwtDelay1ms(); //needed for 72mhz cpu clock
     //I2C_AcknowledgeConfig(i2c_port,ENABLE); // Enable I2C acknowledge
     I2C_GenerateSTART(i2c_port,ENABLE); // Send START condition
-    while (!I2C_CheckEvent(i2c_port,I2C_EVENT_MASTER_MODE_SELECT)); // Wait for EV5
+	if (!WaitWithTimeout(I2C_EVENT_MASTER_MODE_SELECT))// Wait for EV5
+		return false;
     I2C_Send7bitAddress(i2c_port,deviceaddress,I2C_Direction_Transmitter); // Send slave address for READ
-	while (!I2C_CheckEvent(i2c_port,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)); // Wait for EV6
+	if (!WaitWithTimeout(I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))// Wait for EV6
+		return false;
 	I2C_SendData(i2c_port,address); // send data
-	while (!I2C_CheckEvent(i2c_port,I2C_EVENT_MASTER_BYTE_TRANSMITTED)); // Wait for EV8
+	if (!WaitWithTimeout(I2C_EVENT_MASTER_BYTE_TRANSMITTED))// Wait for EV8
+		return false;
 
 	I2C_GenerateSTART(i2c_port,ENABLE); // Send START condition
-	while (!I2C_CheckEvent(i2c_port,I2C_EVENT_MASTER_MODE_SELECT)); // Wait for EV5
+	if (!WaitWithTimeout(I2C_EVENT_MASTER_MODE_SELECT))// Wait for EV5
+		return false;
 	I2C_Send7bitAddress(i2c_port,deviceaddress,I2C_Direction_Receiver); // Send slave address for READ
-    while (!I2C_CheckEvent(i2c_port,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED)); // Wait for EV6
-    while (!I2C_CheckEvent(i2c_port,I2C_EVENT_MASTER_BYTE_RECEIVED)); // Wait for EV7 (Byte received from slave)
-    value = I2C_ReceiveData(i2c_port); // Receive byte
+	if (!WaitWithTimeout(I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED))// Wait for EV6
+		return false;
+	if (!WaitWithTimeout(I2C_EVENT_MASTER_BYTE_RECEIVED))// Wait for EV7 (Byte received from slave)
+		return false;
+    data = I2C_ReceiveData(i2c_port); // Receive byte
     //I2C_AcknowledgeConfig(i2c_port,DISABLE); // Disable I2C acknowledgment
     I2C_GenerateSTOP(i2c_port,ENABLE); // Send STOP condition
-    return value;
+    return true;
 }
 
 /** Write to specified MCP23017 register
 *
 * @param char address the internal registeraddress of the MCP23017
 */
-void mcp23017::Write(char address, char byte)
+bool mcp23017::Write(char address, char byte)
 {
 	DwtDelay1ms(); //needed for 72mhz cpu clock
 	//I2C_AcknowledgeConfig(i2c_port,ENABLE); // Enable I2C acknowledge
 	I2C_GenerateSTART(i2c_port,ENABLE); // Send START condition
-	while (!I2C_CheckEvent(i2c_port,I2C_EVENT_MASTER_MODE_SELECT)); // Wait for EV5
+	if (!WaitWithTimeout(I2C_EVENT_MASTER_MODE_SELECT))// Wait for EV5
+		return false;
 	I2C_Send7bitAddress(i2c_port,deviceaddress,I2C_Direction_Transmitter); // Send slave address
-	while (!I2C_CheckEvent(i2c_port,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)); // Wait for EV6
-
+	if (!WaitWithTimeout(I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))// Wait for EV6
+		return false;
 	I2C_SendData(i2c_port,address); // send data
-	while (!I2C_CheckEvent(i2c_port,I2C_EVENT_MASTER_BYTE_TRANSMITTED)); // Wait for EV8
+	if (!WaitWithTimeout(I2C_EVENT_MASTER_BYTE_TRANSMITTED))// Wait for EV8
+		return false;
 	I2C_SendData(i2c_port,byte); 	// send data
-	while (!I2C_CheckEvent(i2c_port,I2C_EVENT_MASTER_BYTE_TRANSMITTED)); // Wait for EV8
+	if (!WaitWithTimeout(I2C_EVENT_MASTER_BYTE_TRANSMITTED))// Wait for EV8
+		return false;
 
 	//I2C_AcknowledgeConfig(i2c_port,DISABLE); // Disable I2C acknowledgment
 	I2C_GenerateSTOP(i2c_port,ENABLE); // Send STOP condition
+	return true;
+}
+
+bool mcp23017::WaitWithTimeout(const uint32_t I2C_EVENT)
+{
+	unsigned long time = GetSysTick();
+	while (!I2C_CheckEvent(i2c_port,I2C_EVENT))
+	{
+		if ((unsigned long)(GetSysTick() - time) > SysTickFormatMs(200))
+		{
+			return false;
+		}
+	}
+	return true;
 }
 
 /* Init MCP23017
@@ -112,7 +134,7 @@ void mcp23017::Write(char address, char byte)
 * @returns 
 *
 */
-void mcp23017::Init(I2C_TypeDef * _i2c_port, uint32_t _i2c_clock, GPIO_TypeDef * _gpio_port, uint32_t _gpio_clock, uint16_t _SCK, uint16_t _SDA, uint16_t _deviceaddress, bool i2cinit)
+bool mcp23017::Init(I2C_TypeDef * _i2c_port, uint32_t _i2c_clock, GPIO_TypeDef * _gpio_port, uint32_t _gpio_clock, uint16_t _SCK, uint16_t _SDA, uint16_t _deviceaddress, bool i2cinit)
 {
   _bankMode = NOT_BNK;  // This may not be true after software reset without hardware reset !!!
   i2c_port = _i2c_port;
@@ -130,7 +152,7 @@ void mcp23017::Init(I2C_TypeDef * _i2c_port, uint32_t _i2c_clock, GPIO_TypeDef *
   }
 
   // Hardware addressing on, no-autoincrement, 16 bit mode (operations toggle between A and B registers)
-  Write(IOCON_AB[_bankMode][PORT_A], (IOCON_BYTE_MODE | IOCON_HAEN ));
+  return Write(IOCON_AB[_bankMode][PORT_A], (IOCON_BYTE_MODE | IOCON_HAEN ));
 
 }
 
@@ -139,9 +161,9 @@ void mcp23017::Init(I2C_TypeDef * _i2c_port, uint32_t _i2c_clock, GPIO_TypeDef *
 * @param Port Port address (Port_A or Port_B)
 * @param char direction pin direction (0 = output, 1 = input)
 */
-void mcp23017::Direction(const Port port, const char direction)
+bool mcp23017::Direction(const Port port, const char direction)
 {
-    Write(IODIR_AB[_bankMode][port], direction);
+    return Write(IODIR_AB[_bankMode][port], direction);
 }
 
 /** Set Pull-Up Resistors on specified MCP23017 Port
@@ -149,9 +171,9 @@ void mcp23017::Direction(const Port port, const char direction)
 * @param Port Port address (Port_A or Port_B)
 * @param char offOrOn per pin (0 = off, 1 = on)
 */
-void mcp23017::ConfigurePullUps(const Port port, const char offOrOn)
+bool mcp23017::ConfigurePullUps(const Port port, const char offOrOn)
 {
-  Write(GPPU_AB[_bankMode][port], offOrOn);
+  return Write(GPPU_AB[_bankMode][port], offOrOn);
 }
 
 /** Configere the Banked or Non-Banked mode
@@ -159,35 +181,37 @@ void mcp23017::ConfigurePullUps(const Port port, const char offOrOn)
 * @param Bank bankMode
 * @param char offOrOn per pin (0 = off, 1 = on)
 */
-void mcp23017::ConfigureBanked(const Bank bankMode)
+bool mcp23017::ConfigureBanked(const Bank bankMode)
 {
+	bool result;
     if (bankMode == NOT_BNK)
     {
       // Non-Banked sequential registers (default POR)
       // Hardware addressing on, , no-autoincrement, 16 bit mode (operations do toggle between A and B registers)          
-      Write(IOCON_AB[_bankMode][PORT_A], (IOCON_BYTE_MODE | IOCON_HAEN ));
+      result = Write(IOCON_AB[_bankMode][PORT_A], (IOCON_BYTE_MODE | IOCON_HAEN ));
       _bankMode = NOT_BNK;
     }  
     else
     {
       // Banked registers
       // Hardware addressing on, no-autoincrement, 8 bit mode           
-      Write(IOCON_AB[_bankMode][PORT_A], (IOCON_BANK | IOCON_BYTE_MODE | IOCON_HAEN ));
+      result = Write(IOCON_AB[_bankMode][PORT_A], (IOCON_BANK | IOCON_BYTE_MODE | IOCON_HAEN ));
       _bankMode = BNK;
     }
+    return result;
 }
 
 
-void mcp23017::InterruptEnable(const Port port, const char interruptsEnabledMask)
+bool mcp23017::InterruptEnable(const Port port, const char interruptsEnabledMask)
 {
-  
-  Write(GPINTEN_AB[_bankMode][port], interruptsEnabledMask);
-   
+  return Write(GPINTEN_AB[_bankMode][port], interruptsEnabledMask);
 }
 
-void mcp23017::MirrorInterrupts(const bool mirror)
+bool mcp23017::MirrorInterrupts(const bool mirror)
 {
-  char iocon = Read(IOCON_AB[_bankMode][PORT_A]);
+  char iocon;
+  if (!Read(IOCON_AB[_bankMode][PORT_A], iocon))
+	  return false;
 
   if (mirror)
   {
@@ -198,14 +222,16 @@ void mcp23017::MirrorInterrupts(const bool mirror)
     iocon = iocon & ~INTERRUPT_MIRROR_BIT;
   }
 
-  Write(IOCON_AB[_bankMode][PORT_A], iocon);
+  return Write(IOCON_AB[_bankMode][PORT_A], iocon);
 
 }
 
-void mcp23017::InterruptPolarity(const Polarity polarity)
+bool mcp23017::InterruptPolarity(const Polarity polarity)
 {
-    char iocon = Read(IOCON_AB[_bankMode][PORT_A]);
-    
+	char iocon;
+	if (!Read(IOCON_AB[_bankMode][PORT_A], iocon))
+	  return false;
+
     if (polarity == ACTIVE_LOW)
     {
         iocon = iocon & ~INTERRUPT_POLARITY_BIT;
@@ -213,20 +239,20 @@ void mcp23017::InterruptPolarity(const Polarity polarity)
     {
         iocon = iocon | INTERRUPT_POLARITY_BIT;
     }
-    Write(IOCON_AB[_bankMode][PORT_A], iocon);
+    return Write(IOCON_AB[_bankMode][PORT_A], iocon);
 }
 
-void mcp23017::DefaultValue(const Port port, const char valuesToCompare)
+bool mcp23017::DefaultValue(const Port port, const char valuesToCompare)
 {
     
-  Write(DEFVAL_AB[_bankMode][port], valuesToCompare);
+  return Write(DEFVAL_AB[_bankMode][port], valuesToCompare);
     
 }
 
-void mcp23017::InterruptControl(const Port port, const char interruptControlBits)
+bool mcp23017::InterruptControl(const Port port, const char interruptControlBits)
 {
     
-  Write(INTCON_AB[_bankMode][port], interruptControlBits);
+  return Write(INTCON_AB[_bankMode][port], interruptControlBits);
     
 }
 
@@ -235,17 +261,17 @@ void mcp23017::InterruptControl(const Port port, const char interruptControlBits
 * @param Port Port address (Port_A or Port_B)
 * @param char byte data to write
 */
-void mcp23017::Write(const Port port, const char byte)
+bool mcp23017::Write(const Port port, const char byte)
 {
-    Write(OLAT_AB[_bankMode][port], byte);
+    return Write(OLAT_AB[_bankMode][port], byte);
 }
     
 /** Read from specified MCP23017 Port
 *
 * @param Port Port address (Port_A or Port_B)
-* @returns data from Port 
+* @param data Data from Port
 */
-char mcp23017::Read(const Port port)
+bool mcp23017::Read(const Port port, char& data )
 {
-    return Read(GPIO_AB[_bankMode][port]);
+    return Read(GPIO_AB[_bankMode][port], data);
 }

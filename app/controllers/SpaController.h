@@ -35,6 +35,7 @@ private:
 	bool relayCirc;
 	bool relayLED1;
 	bool relayLED2;
+	bool prevKeypadWorking;
 
 	void WriteFloatToDisplay(const float f, const char index);
 	void CheckTemp(const float bath);

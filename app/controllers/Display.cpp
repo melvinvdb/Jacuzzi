@@ -67,7 +67,7 @@ void Display::DrawMainScreen()
 	else if (heatingState)
 		u8g_DrawStr(&u8g, 0, 48, "Heating");
 
-	u8g_DrawStr(&u8g, 0, 64, statusBar);
+	u8g_DrawStr(&u8g, 0, 62, statusBar);
 
 	u8g_DrawVLine(&u8g,64,0 ,52);
 	u8g_DrawHLine(&u8g,0 ,51,64);

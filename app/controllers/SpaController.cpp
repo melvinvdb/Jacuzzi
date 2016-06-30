@@ -17,6 +17,9 @@ void SpaController::Init()
 	relayCirc = false;
 	relayLED1 = false;
 	relayLED2 = false;
+	prevKeypadWorking = keypad.IsKeypadWorking();
+	if (prevKeypadWorking == false)
+		display.SetStatusBar("Controlpanel fault");
 	WriteFloatToDisplay(targetTemp, 2);
 	GPIO_InitTypeDef PORT;
 	// Set LCDEN as output
@@ -91,6 +94,15 @@ void SpaController::Monitor()
 	if (water == false) //no water state
 	{
 		SwitchOff();
+	}
+
+	if (keypad.IsKeypadWorking() != prevKeypadWorking)
+	{
+		if (keypad.IsKeypadWorking() == false)
+			display.SetStatusBar("Controlpanel fault");
+		else
+			display.ClearStatusBar();
+		prevKeypadWorking = keypad.IsKeypadWorking();
 	}
 
 }

@@ -4,6 +4,16 @@
 void RelayBoard::Init()
 {
 	printf("RelayBoard: Init() ........\r\n");
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	GPIO_InitTypeDef tPORT;
+	tPORT.GPIO_Pin = GPIO_Pin_8;
+	tPORT.GPIO_Mode = GPIO_Mode_Out_PP;
+	tPORT.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA,&tPORT);
+	GPIO_WriteBit(GPIOA,GPIO_Pin_8,Bit_RESET); // set low to reset every device
+	SysTickDelayMs(200); //resetting
+	GPIO_WriteBit(GPIOA,GPIO_Pin_8,Bit_SET); // set high
+	SysTickDelayMs(1);	 //startup time
 	relays.Init(I2C1, RCC_APB1Periph_I2C1, GPIOB, RCC_APB2Periph_GPIOB, GPIO_Pin_6, GPIO_Pin_7, 0x40, true); //i'm the first one to initialize the i2c
 	relays.Direction(mcp23017::PORT_A, 0x00); //all output
 	relays.Direction(mcp23017::PORT_B, 0x00);

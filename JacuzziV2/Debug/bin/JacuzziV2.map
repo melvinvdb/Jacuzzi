@@ -81,6 +81,22 @@ received_string     0x1f4             ..\obj\usart.o
 
 Discarded input sections
 
+ .text          0x00000000       0x34 ..\obj\Computer.o
+ .data          0x00000000        0x0 ..\obj\Computer.o
+ .bss           0x00000000        0x0 ..\obj\Computer.o
+ .ARM.extab     0x00000000        0x0 ..\obj\Computer.o
+ .ARM.exidx     0x00000000       0x18 ..\obj\Computer.o
+ .debug_info    0x00000000      0x362 ..\obj\Computer.o
+ .debug_abbrev  0x00000000      0x1de ..\obj\Computer.o
+ .debug_loc     0x00000000       0x37 ..\obj\Computer.o
+ .debug_aranges
+                0x00000000       0x20 ..\obj\Computer.o
+ .debug_line    0x00000000       0xae ..\obj\Computer.o
+ .debug_str     0x00000000      0x42e ..\obj\Computer.o
+ .comment       0x00000000       0x6f ..\obj\Computer.o
+ .debug_frame   0x00000000       0x4c ..\obj\Computer.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\Computer.o
  .text          0x00000000      0x470 ..\obj\stm32f10x_fsmc.o
  .data          0x00000000        0x0 ..\obj\stm32f10x_fsmc.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_fsmc.o
@@ -227,7 +243,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x90 ..\obj\u8g_com_i2c.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_com_i2c.o
- .bss           0x00000000        0x0 ..\obj\printf.o
  .text          0x00000000        0x4 ..\obj\u8g_com_raspberrypi_hw_spi.o
  .data          0x00000000        0x0 ..\obj\u8g_com_raspberrypi_hw_spi.o
  .bss           0x00000000        0x0 ..\obj\u8g_com_raspberrypi_hw_spi.o
@@ -242,6 +257,7 @@ Discarded input sections
  .debug_frame   0x00000000       0x20 ..\obj\u8g_com_raspberrypi_hw_spi.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_com_raspberrypi_hw_spi.o
+ .bss           0x00000000        0x0 ..\obj\printf.o
  .text          0x00000000      0x118 ..\obj\stm32f10x_cec.o
  .data          0x00000000        0x0 ..\obj\stm32f10x_cec.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_cec.o
@@ -380,9 +396,6 @@ Discarded input sections
  .debug_frame   0x00000000       0xdc ..\obj\u8g_bitmap.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_bitmap.o
- .data          0x00000000        0x0 ..\obj\radio.o
- .bss           0x00000000        0x0 ..\obj\radio.o
- .ARM.extab     0x00000000        0x0 ..\obj\radio.o
  .text          0x00000000       0x58 ..\obj\stm32f10x_crc.o
  .data          0x00000000        0x0 ..\obj\stm32f10x_crc.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_crc.o
@@ -397,6 +410,9 @@ Discarded input sections
  .debug_frame   0x00000000       0x70 ..\obj\stm32f10x_crc.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\stm32f10x_crc.o
+ .data          0x00000000        0x0 ..\obj\radio.o
+ .bss           0x00000000        0x0 ..\obj\radio.o
+ .ARM.extab     0x00000000        0x0 ..\obj\radio.o
  .text          0x00000000      0x18c ..\obj\stm32f10x_dac.o
  .data          0x00000000        0x0 ..\obj\stm32f10x_dac.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_dac.o
@@ -429,6 +445,8 @@ Discarded input sections
  .debug_frame   0x00000000       0x50 ..\obj\u8g_dev_t6963_240x128.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_t6963_240x128.o
+ .data          0x00000000        0x0 ..\obj\u8g_state.o
+ .bss           0x00000000        0x0 ..\obj\u8g_state.o
  .text          0x00000000      0x21c ..\obj\u8g_dev_st7565_lm6059.o
  .data          0x00000000       0x54 ..\obj\u8g_dev_st7565_lm6059.o
  .bss           0x00000000      0x200 ..\obj\u8g_dev_st7565_lm6059.o
@@ -445,8 +463,21 @@ Discarded input sections
  .debug_frame   0x00000000       0x74 ..\obj\u8g_dev_st7565_lm6059.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_st7565_lm6059.o
- .data          0x00000000        0x0 ..\obj\u8g_state.o
- .bss           0x00000000        0x0 ..\obj\u8g_state.o
+ .text          0x00000000       0x20 ..\obj\u8g_com_io.o
+ .data          0x00000000        0x0 ..\obj\u8g_com_io.o
+ .bss           0x00000000        0x0 ..\obj\u8g_com_io.o
+ .debug_info    0x00000000      0x524 ..\obj\u8g_com_io.o
+ .debug_abbrev  0x00000000      0x175 ..\obj\u8g_com_io.o
+ .debug_loc     0x00000000       0x49 ..\obj\u8g_com_io.o
+ .debug_aranges
+                0x00000000       0x20 ..\obj\u8g_com_io.o
+ .debug_ranges  0x00000000       0x10 ..\obj\u8g_com_io.o
+ .debug_line    0x00000000      0x14c ..\obj\u8g_com_io.o
+ .debug_str     0x00000000      0x407 ..\obj\u8g_com_io.o
+ .comment       0x00000000       0x6f ..\obj\u8g_com_io.o
+ .debug_frame   0x00000000       0x80 ..\obj\u8g_com_io.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\u8g_com_io.o
  .text          0x00000000      0x100 ..\obj\u8g_dev_pcd8544_84x48.o
  .data          0x00000000       0x30 ..\obj\u8g_dev_pcd8544_84x48.o
  .bss           0x00000000       0xa8 ..\obj\u8g_dev_pcd8544_84x48.o
@@ -463,21 +494,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x3c ..\obj\u8g_dev_pcd8544_84x48.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_pcd8544_84x48.o
- .text          0x00000000       0x20 ..\obj\u8g_com_io.o
- .data          0x00000000        0x0 ..\obj\u8g_com_io.o
- .bss           0x00000000        0x0 ..\obj\u8g_com_io.o
- .debug_info    0x00000000      0x524 ..\obj\u8g_com_io.o
- .debug_abbrev  0x00000000      0x175 ..\obj\u8g_com_io.o
- .debug_loc     0x00000000       0x49 ..\obj\u8g_com_io.o
- .debug_aranges
-                0x00000000       0x20 ..\obj\u8g_com_io.o
- .debug_ranges  0x00000000       0x10 ..\obj\u8g_com_io.o
- .debug_line    0x00000000      0x14c ..\obj\u8g_com_io.o
- .debug_str     0x00000000      0x407 ..\obj\u8g_com_io.o
- .comment       0x00000000       0x6f ..\obj\u8g_com_io.o
- .debug_frame   0x00000000       0x80 ..\obj\u8g_com_io.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\u8g_com_io.o
  .data          0x00000000        0x0 ..\obj\Display.o
  .bss           0x00000000        0x4 ..\obj\Display.o
  .ARM.extab     0x00000000        0x0 ..\obj\Display.o
@@ -499,10 +515,10 @@ Discarded input sections
  .debug_frame   0x00000000       0x3c ..\obj\u8g_dev_st7565_dogm132.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_st7565_dogm132.o
- .data          0x00000000        0x0 ..\obj\u8g_page.o
- .bss           0x00000000        0x0 ..\obj\u8g_page.o
  .data          0x00000000        0x0 ..\obj\stm32f10x_gpio.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_gpio.o
+ .data          0x00000000        0x0 ..\obj\u8g_page.o
+ .bss           0x00000000        0x0 ..\obj\u8g_page.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_rcc.o
  .data          0x00000000        0x0 ..\obj\Keypad.o
  .bss           0x00000000        0x4 ..\obj\Keypad.o
@@ -536,20 +552,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x20 ..\obj\u8g_com_arduino_attiny85_hw_spi.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_com_arduino_attiny85_hw_spi.o
- .text          0x00000000      0x22c ..\obj\stm32f10x_sdio.o
- .data          0x00000000        0x0 ..\obj\stm32f10x_sdio.o
- .bss           0x00000000        0x0 ..\obj\stm32f10x_sdio.o
- .debug_info    0x00000000      0x795 ..\obj\stm32f10x_sdio.o
- .debug_abbrev  0x00000000      0x1fb ..\obj\stm32f10x_sdio.o
- .debug_loc     0x00000000      0x1b2 ..\obj\stm32f10x_sdio.o
- .debug_aranges
-                0x00000000       0x20 ..\obj\stm32f10x_sdio.o
- .debug_line    0x00000000      0x2b1 ..\obj\stm32f10x_sdio.o
- .debug_str     0x00000000      0x617 ..\obj\stm32f10x_sdio.o
- .comment       0x00000000       0x6f ..\obj\stm32f10x_sdio.o
- .debug_frame   0x00000000      0x21c ..\obj\stm32f10x_sdio.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\stm32f10x_sdio.o
  .text          0x00000000      0x21c ..\obj\u8g_dev_uc1601_c128032.o
  .data          0x00000000       0x54 ..\obj\u8g_dev_uc1601_c128032.o
  .bss           0x00000000      0x200 ..\obj\u8g_dev_uc1601_c128032.o
@@ -566,6 +568,20 @@ Discarded input sections
  .debug_frame   0x00000000       0x74 ..\obj\u8g_dev_uc1601_c128032.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_uc1601_c128032.o
+ .text          0x00000000      0x22c ..\obj\stm32f10x_sdio.o
+ .data          0x00000000        0x0 ..\obj\stm32f10x_sdio.o
+ .bss           0x00000000        0x0 ..\obj\stm32f10x_sdio.o
+ .debug_info    0x00000000      0x795 ..\obj\stm32f10x_sdio.o
+ .debug_abbrev  0x00000000      0x1fb ..\obj\stm32f10x_sdio.o
+ .debug_loc     0x00000000      0x1b2 ..\obj\stm32f10x_sdio.o
+ .debug_aranges
+                0x00000000       0x20 ..\obj\stm32f10x_sdio.o
+ .debug_line    0x00000000      0x2b1 ..\obj\stm32f10x_sdio.o
+ .debug_str     0x00000000      0x617 ..\obj\stm32f10x_sdio.o
+ .comment       0x00000000       0x6f ..\obj\stm32f10x_sdio.o
+ .debug_frame   0x00000000      0x21c ..\obj\stm32f10x_sdio.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\stm32f10x_sdio.o
  .data          0x00000000        0x0 ..\obj\mcp23017.o
  .bss           0x00000000        0x4 ..\obj\mcp23017.o
  .ARM.extab     0x00000000        0x0 ..\obj\mcp23017.o
@@ -620,14 +636,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x20 ..\obj\u8g_com_arduino_std_sw_spi.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_com_arduino_std_sw_spi.o
- .text          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
- .data          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
- .bss           0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
- .debug_line    0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
- .debug_str     0x00000000       0xb9 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
- .comment       0x00000000       0x6f ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
  .text          0x00000000      0x414 ..\obj\u8g_dev_ssd1306_128x64.o
  .data          0x00000000      0x138 ..\obj\u8g_dev_ssd1306_128x64.o
  .bss           0x00000000      0x680 ..\obj\u8g_dev_ssd1306_128x64.o
@@ -644,6 +652,14 @@ Discarded input sections
  .debug_frame   0x00000000      0x104 ..\obj\u8g_dev_ssd1306_128x64.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_ssd1306_128x64.o
+ .text          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
+ .data          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
+ .bss           0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
+ .debug_line    0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
+ .debug_str     0x00000000       0xb9 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
+ .comment       0x00000000       0x6f ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
  .text          0x00000000      0x800 ..\obj\stm32f10x_can.o
  .data          0x00000000        0x0 ..\obj\stm32f10x_can.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_can.o
@@ -1031,20 +1047,6 @@ Discarded input sections
  .debug_frame   0x00000000       0xbc ..\obj\u8g_dev_ssd1322_nhd31oled_gr.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_ssd1322_nhd31oled_gr.o
- .text          0x00000000        0x4 ..\obj\u8g_com_atmega_parallel.o
- .data          0x00000000        0x0 ..\obj\u8g_com_atmega_parallel.o
- .bss           0x00000000        0x0 ..\obj\u8g_com_atmega_parallel.o
- .debug_info    0x00000000      0x436 ..\obj\u8g_com_atmega_parallel.o
- .debug_abbrev  0x00000000      0x106 ..\obj\u8g_com_atmega_parallel.o
- .debug_loc     0x00000000       0x21 ..\obj\u8g_com_atmega_parallel.o
- .debug_aranges
-                0x00000000       0x20 ..\obj\u8g_com_atmega_parallel.o
- .debug_line    0x00000000      0x150 ..\obj\u8g_com_atmega_parallel.o
- .debug_str     0x00000000      0x3c2 ..\obj\u8g_com_atmega_parallel.o
- .comment       0x00000000       0x6f ..\obj\u8g_com_atmega_parallel.o
- .debug_frame   0x00000000       0x20 ..\obj\u8g_com_atmega_parallel.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\u8g_com_atmega_parallel.o
  .text          0x00000000      0x22c ..\obj\u8g_dev_ssd1325_nhd27oled_gr_new.o
  .data          0x00000000       0x6c ..\obj\u8g_dev_ssd1325_nhd27oled_gr_new.o
  .bss           0x00000000      0x280 ..\obj\u8g_dev_ssd1325_nhd27oled_gr_new.o
@@ -1060,6 +1062,22 @@ Discarded input sections
  .debug_frame   0x00000000       0xcc ..\obj\u8g_dev_ssd1325_nhd27oled_gr_new.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_ssd1325_nhd27oled_gr_new.o
+ .text          0x00000000        0x4 ..\obj\u8g_com_atmega_parallel.o
+ .data          0x00000000        0x0 ..\obj\u8g_com_atmega_parallel.o
+ .bss           0x00000000        0x0 ..\obj\u8g_com_atmega_parallel.o
+ .debug_info    0x00000000      0x436 ..\obj\u8g_com_atmega_parallel.o
+ .debug_abbrev  0x00000000      0x106 ..\obj\u8g_com_atmega_parallel.o
+ .debug_loc     0x00000000       0x21 ..\obj\u8g_com_atmega_parallel.o
+ .debug_aranges
+                0x00000000       0x20 ..\obj\u8g_com_atmega_parallel.o
+ .debug_line    0x00000000      0x150 ..\obj\u8g_com_atmega_parallel.o
+ .debug_str     0x00000000      0x3c2 ..\obj\u8g_com_atmega_parallel.o
+ .comment       0x00000000       0x6f ..\obj\u8g_com_atmega_parallel.o
+ .debug_frame   0x00000000       0x20 ..\obj\u8g_com_atmega_parallel.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\u8g_com_atmega_parallel.o
+ .data          0x00000000        0x0 ..\obj\u8g_line.o
+ .bss           0x00000000        0x0 ..\obj\u8g_line.o
  .text          0x00000000       0x38 ..\obj\stm32f10x_dbgmcu.o
  .data          0x00000000        0x0 ..\obj\stm32f10x_dbgmcu.o
  .bss           0x00000000        0x0 ..\obj\stm32f10x_dbgmcu.o
@@ -1074,8 +1092,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x40 ..\obj\stm32f10x_dbgmcu.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\stm32f10x_dbgmcu.o
- .data          0x00000000        0x0 ..\obj\u8g_line.o
- .bss           0x00000000        0x0 ..\obj\u8g_line.o
  .text          0x00000000     0x1668 ..\obj\chessengine.o
  .data          0x00000000       0x30 ..\obj\chessengine.o
  .bss           0x00000000        0xb ..\obj\chessengine.o
@@ -1275,14 +1291,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x54 ..\obj\u8g_u8toa.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_u8toa.o
- .text          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
- .data          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
- .bss           0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
- .debug_line    0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
- .debug_str     0x00000000       0xb9 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
- .comment       0x00000000       0x6f ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
  .text          0x00000000       0xe0 ..\obj\u8g_dev_sbn1661_122x32.o
  .data          0x00000000       0x18 ..\obj\u8g_dev_sbn1661_122x32.o
  .bss           0x00000000       0x7a ..\obj\u8g_dev_sbn1661_122x32.o
@@ -1298,6 +1306,14 @@ Discarded input sections
  .debug_frame   0x00000000       0x48 ..\obj\u8g_dev_sbn1661_122x32.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_sbn1661_122x32.o
+ .text          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
+ .data          0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
+ .bss           0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
+ .debug_line    0x00000000        0x0 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
+ .debug_str     0x00000000       0xb9 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
+ .comment       0x00000000       0x6f ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
  .text          0x00000000      0x21c ..\obj\u8g_dev_st7565_64128n.o
  .data          0x00000000       0x78 ..\obj\u8g_dev_st7565_64128n.o
  .bss           0x00000000      0x280 ..\obj\u8g_dev_st7565_64128n.o
@@ -1377,9 +1393,9 @@ Discarded input sections
  .group         0x00000000        0x8 ..\obj\SpaController.o
  .data          0x00000000        0x0 ..\obj\SpaController.o
  .bss           0x00000000        0x4 ..\obj\SpaController.o
- .rodata._ZTS15KeypadInterrupt
-                0x00000000       0x12 ..\obj\SpaController.o
- .rodata._ZTI15KeypadInterrupt
+ .rodata._ZTS4Keys
+                0x00000000        0x6 ..\obj\SpaController.o
+ .rodata._ZTI4Keys
                 0x00000000        0x8 ..\obj\SpaController.o
  .bss._ZZN7Display11getInstanceEvE8instance
                 0x00000000      0x108 ..\obj\SpaController.o
@@ -1914,6 +1930,21 @@ Discarded input sections
  .debug_frame   0x00000000       0x8c ..\obj\u8g_scale.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_scale.o
+ .text          0x00000000      0x21c ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .data          0x00000000       0x78 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .bss           0x00000000      0x280 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .rodata        0x00000000       0x5f ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .debug_info    0x00000000      0xb81 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .debug_abbrev  0x00000000      0x1ae ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .debug_loc     0x00000000      0x4ef ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .debug_aranges
+                0x00000000       0x20 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .debug_line    0x00000000      0x1e2 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .debug_str     0x00000000      0x790 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .comment       0x00000000       0x6f ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .debug_frame   0x00000000       0xbc ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
  .text          0x00000000       0xe0 ..\obj\u8g_dev_st7565_nhd_c12832.o
  .data          0x00000000       0x60 ..\obj\u8g_dev_st7565_nhd_c12832.o
  .bss           0x00000000      0x200 ..\obj\u8g_dev_st7565_nhd_c12832.o
@@ -1930,21 +1961,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x3c ..\obj\u8g_dev_st7565_nhd_c12832.o
  .ARM.attributes
                 0x00000000       0x33 ..\obj\u8g_dev_st7565_nhd_c12832.o
- .text          0x00000000      0x21c ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .data          0x00000000       0x78 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .bss           0x00000000      0x280 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .rodata        0x00000000       0x5f ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .debug_info    0x00000000      0xb81 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .debug_abbrev  0x00000000      0x1ae ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .debug_loc     0x00000000      0x4ef ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .debug_aranges
-                0x00000000       0x20 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .debug_line    0x00000000      0x1e2 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .debug_str     0x00000000      0x790 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .comment       0x00000000       0x6f ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .debug_frame   0x00000000       0xbc ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
- .ARM.attributes
-                0x00000000       0x33 ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
  .text          0x00000000       0xc0 ..\obj\u8g_dev_t6963_128x128.o
  .data          0x00000000       0x18 ..\obj\u8g_dev_t6963_128x128.o
  .bss           0x00000000      0x100 ..\obj\u8g_dev_t6963_128x128.o
@@ -2123,7 +2139,7 @@ Linker script and memory map
 
                 0x20005000                _eram = 0x20005000
 
-.text           0x08000000     0xd236
+.text           0x08000000     0xd22a
  *(.isr_vector)
  .isr_vector    0x08000000      0x10c ..\obj\startup_stm32f10x_md.o
                 0x08000000                g_pfnVectors
@@ -2308,29 +2324,29 @@ Linker script and memory map
                 0x08001d30                u8g_SetDefaultBackgroundColor
                 0x08001d38                u8g_GetDefaultMidColor
                 0x08001d44                u8g_SetDefaultMidColor
- .text          0x08001d54       0x5c ..\obj\u8g_page.o
-                0x08001d54                u8g_page_First
-                0x08001d64                u8g_page_Init
-                0x08001d74                u8g_page_Next
- .text          0x08001db0      0x2d8 ..\obj\stm32f10x_gpio.o
-                0x08001db0                GPIO_DeInit
-                0x08001e8c                GPIO_AFIODeInit
-                0x08001ea4                GPIO_Init
-                0x08001f5c                GPIO_StructInit
-                0x08001f6c                GPIO_ReadInputDataBit
-                0x08001f78                GPIO_ReadInputData
-                0x08001f80                GPIO_ReadOutputDataBit
-                0x08001f8c                GPIO_ReadOutputData
-                0x08001f94                GPIO_SetBits
-                0x08001f98                GPIO_ResetBits
-                0x08001f9c                GPIO_WriteBit
-                0x08001fa8                GPIO_Write
-                0x08001fac                GPIO_PinLockConfig
-                0x08001fbc                GPIO_EventOutputConfig
-                0x08001fd8                GPIO_EventOutputCmd
-                0x08001fe4                GPIO_PinRemapConfig
-                0x08002050                GPIO_EXTILineConfig
-                0x0800207c                GPIO_ETH_MediaInterfaceConfig
+ .text          0x08001d54      0x2d8 ..\obj\stm32f10x_gpio.o
+                0x08001d54                GPIO_DeInit
+                0x08001e30                GPIO_AFIODeInit
+                0x08001e48                GPIO_Init
+                0x08001f00                GPIO_StructInit
+                0x08001f10                GPIO_ReadInputDataBit
+                0x08001f1c                GPIO_ReadInputData
+                0x08001f24                GPIO_ReadOutputDataBit
+                0x08001f30                GPIO_ReadOutputData
+                0x08001f38                GPIO_SetBits
+                0x08001f3c                GPIO_ResetBits
+                0x08001f40                GPIO_WriteBit
+                0x08001f4c                GPIO_Write
+                0x08001f50                GPIO_PinLockConfig
+                0x08001f60                GPIO_EventOutputConfig
+                0x08001f7c                GPIO_EventOutputCmd
+                0x08001f88                GPIO_PinRemapConfig
+                0x08001ff4                GPIO_EXTILineConfig
+                0x08002020                GPIO_ETH_MediaInterfaceConfig
+ .text          0x0800202c       0x5c ..\obj\u8g_page.o
+                0x0800202c                u8g_page_First
+                0x0800203c                u8g_page_Init
+                0x0800204c                u8g_page_Next
  .text          0x08002088      0x37c ..\obj\stm32f10x_rcc.o
                 0x08002088                RCC_DeInit
                 0x080020c8                RCC_HSEConfig
@@ -2368,7 +2384,7 @@ Linker script and memory map
                 0x08002404                Keypad::McpInit()
                 0x080024d4                Keypad::Init()
                 0x080024f4                Keypad::IsKeypadWorking()
-                0x080024f8                Keypad::RegisterForCallback(KeypadInterrupt&)
+                0x080024f8                Keypad::RegisterForCallback(Keys&)
                 0x08002524                Keypad::ReadKeys()
                 0x08002570                Keypad::SetKeyCheckEnabled(bool)
                 0x08002578                Keypad::CheckKeysPressed()
@@ -2483,7 +2499,7 @@ Linker script and memory map
                 0x08003588                RelayBoard::ResetAudio()
  .text          0x080035ac        0x4 ..\obj\u8g_com_null.o
                 0x080035ac                u8g_com_null_fn
- .text          0x080035b0      0x5d8 ..\obj\EntController.o
+ .text          0x080035b0      0x5d0 ..\obj\EntController.o
                 0x080035b0                EntController::RdsReceiveTime(unsigned char, unsigned char)
                 0x080035b4                non-virtual thunk to EntController::RdsReceiveTime(unsigned char, unsigned char)
                 0x080035bc                EntController::RdsReceiveText(char*)
@@ -2495,67 +2511,67 @@ Linker script and memory map
                 0x080036d4                EntController::RotateAudioOutput()
                 0x080036e0                EntController::MoveTV(bool)
                 0x0800373c                EntController::Init()
-                0x080037b0                EntController::ChangeChannel(bool, bool)
-                0x080037f4                EntController::SetAudioOut(EntController::AudioOutput)
-                0x08003930                EntController::Monitor()
-                0x08003a50                EntController::TogglePower()
-                0x08003a74                EntController::ToggleTV()
-                0x08003a80                EntController::ChangeVolume(bool)
-                0x08003ad4                EntController::KeypadKeysPressed(unsigned short, bool)
- .text          0x08003b88      0x15c ..\obj\delay.o
-                0x08003b88                TimerInit
-                0x08003bec                SysTick_Handler
-                0x08003bfc                SetSysTick
-                0x08003c08                GetSysTick
-                0x08003c14                SysTickDelay1ms
-                0x08003c24                SysTickDelayMs
-                0x08003c40                DwtDelayUs
-                0x08003c70                DwtDelay1ms
-                0x08003ca0                DwtDelayMs
- .text          0x08003ce4      0x150 ..\obj\u8g_arm_uart.o
-                0x08003ce4                u8g_Delay
-                0x08003ce8                u8g_MicroDelay
-                0x08003cf0                u8g_10MicroDelay
-                0x08003cf8                init_UART3
-                0x08003d80                UART_write_byte
-                0x08003d9c                u8g_com_uart_fn
- .text          0x08003e34      0x108 ..\obj\u8g_line.o
-                0x08003e34                u8g_DrawLine
- .text          0x08003f3c      0x1a4 ..\obj\usart.o
-                0x08003f3c                USART1_Init
-                0x08003ff0                USART2_Init
-                0x08004074                USART2_SetTX
-                0x080040a4                usart_string_append
-                0x080040c0                usart_clear_string
-                0x080040cc                usart_get_string
-                0x080040d4                usart_get_string_length
- .text          0x080040e0      0x20c ..\obj\u8g_pb32h1.o
-                0x080040e0                u8g_pb32h1_Clear
-                0x080040f4                u8g_pb32h1_Init
-                0x08004108                u8g_pb32h1_set_pixel
-                0x08004140                u8g_pb32h1_SetPixel
-                0x08004168                u8g_pb32h1_Set8PixelStd
-                0x080041b4                u8g_pb32h1_Set8PixelOpt2
-                0x08004218                u8g_dev_pb32h1_base_fn
- .text          0x080042ec      0x1d4 ..\obj\u8g_pb8h1.o
-                0x080042ec                u8g_pb8h1_Init
-                0x080042f4                u8g_pb8h1_set_pixel
-                0x0800432c                u8g_pb8h1_SetPixel
-                0x08004354                u8g_pb8h1_Set8PixelStd
-                0x080043a0                u8g_pb8h1_Set8PixelOpt2
-                0x08004404                u8g_dev_pb8h1_base_fn
- .text          0x080044c0       0x30 ..\obj\main.o
-                0x080044c0                USART1_IRQHandler
- .text.startup  0x080044f0      0x104 ..\obj\main.o
-                0x080044f0                main
- .text          0x080045f4      0x744 ..\obj\SpaController.o
-                0x080045f4                SpaController::SpaController()
-                0x080045f4                SpaController::SpaController()
-                0x08004648                SpaController::SwitchHeater(bool)
-                0x0800469c                SpaController::CheckTemp(float)
-                0x08004718                SpaController::IsWater()
-                0x08004730                SpaController::WriteFloatToDisplay(float, char)
-                0x08004780                SpaController::Init()
+                0x080037a8                EntController::ChangeChannel(bool, bool)
+                0x080037ec                EntController::SetAudioOut(EntController::AudioOutput)
+                0x08003928                EntController::Monitor()
+                0x08003a48                EntController::TogglePower()
+                0x08003a6c                EntController::ToggleTV()
+                0x08003a78                EntController::ChangeVolume(bool)
+                0x08003acc                EntController::KeyDataReceived(unsigned short, bool)
+ .text          0x08003b80      0x15c ..\obj\delay.o
+                0x08003b80                TimerInit
+                0x08003be4                SysTick_Handler
+                0x08003bf4                SetSysTick
+                0x08003c00                GetSysTick
+                0x08003c0c                SysTickDelay1ms
+                0x08003c1c                SysTickDelayMs
+                0x08003c38                DwtDelayUs
+                0x08003c68                DwtDelay1ms
+                0x08003c98                DwtDelayMs
+ .text          0x08003cdc      0x150 ..\obj\u8g_arm_uart.o
+                0x08003cdc                u8g_Delay
+                0x08003ce0                u8g_MicroDelay
+                0x08003ce8                u8g_10MicroDelay
+                0x08003cf0                init_UART3
+                0x08003d78                UART_write_byte
+                0x08003d94                u8g_com_uart_fn
+ .text          0x08003e2c      0x108 ..\obj\u8g_line.o
+                0x08003e2c                u8g_DrawLine
+ .text          0x08003f34      0x1a4 ..\obj\usart.o
+                0x08003f34                USART1_Init
+                0x08003fe8                USART2_Init
+                0x0800406c                USART2_SetTX
+                0x0800409c                usart_string_append
+                0x080040b8                usart_clear_string
+                0x080040c4                usart_get_string
+                0x080040cc                usart_get_string_length
+ .text          0x080040d8      0x20c ..\obj\u8g_pb32h1.o
+                0x080040d8                u8g_pb32h1_Clear
+                0x080040ec                u8g_pb32h1_Init
+                0x08004100                u8g_pb32h1_set_pixel
+                0x08004138                u8g_pb32h1_SetPixel
+                0x08004160                u8g_pb32h1_Set8PixelStd
+                0x080041ac                u8g_pb32h1_Set8PixelOpt2
+                0x08004210                u8g_dev_pb32h1_base_fn
+ .text          0x080042e4      0x1d4 ..\obj\u8g_pb8h1.o
+                0x080042e4                u8g_pb8h1_Init
+                0x080042ec                u8g_pb8h1_set_pixel
+                0x08004324                u8g_pb8h1_SetPixel
+                0x0800434c                u8g_pb8h1_Set8PixelStd
+                0x08004398                u8g_pb8h1_Set8PixelOpt2
+                0x080043fc                u8g_dev_pb8h1_base_fn
+ .text          0x080044b8       0x30 ..\obj\main.o
+                0x080044b8                USART1_IRQHandler
+ .text.startup  0x080044e8      0x114 ..\obj\main.o
+                0x080044e8                main
+ .text          0x080045fc      0x73c ..\obj\SpaController.o
+                0x080045fc                SpaController::SpaController()
+                0x080045fc                SpaController::SpaController()
+                0x08004650                SpaController::SwitchHeater(bool)
+                0x080046a4                SpaController::CheckTemp(float)
+                0x08004720                SpaController::IsWater()
+                0x08004738                SpaController::WriteFloatToDisplay(float, char)
+                0x08004788                SpaController::Init()
                 0x08004848                SpaController::IncrementTemp()
                 0x08004878                SpaController::DecrementTemp()
                 0x080048a8                SpaController::ToggleJets()
@@ -2567,7 +2583,7 @@ Linker script and memory map
                 0x080049e4                SpaController::SwitchOff()
                 0x08004a44                SpaController::Monitor()
                 0x08004b60                SpaController::TogglePower()
-                0x08004c20                SpaController::KeypadKeysPressed(unsigned short, bool)
+                0x08004c20                SpaController::KeyDataReceived(unsigned short, bool)
  .text          0x08004d38      0x40c ..\obj\stm32f10x_usart.o
                 0x08004d38                USART_DeInit
                 0x08004de8                USART_Init
@@ -3020,158 +3036,158 @@ Linker script and memory map
                 0x0800bf84                u8g_font_6x10
                 0x0800c6d0                u8g_font_5x8
  *fill*         0x0800cd6d        0x3 
- .rodata._ZTS15KeypadInterrupt
-                0x0800cd70       0x12 ..\obj\EntController.o
-                0x0800cd70                typeinfo name for KeypadInterrupt
- *fill*         0x0800cd82        0x2 
- .rodata._ZTI15KeypadInterrupt
-                0x0800cd84        0x8 ..\obj\EntController.o
-                0x0800cd84                typeinfo for KeypadInterrupt
+ .rodata._ZTS4Keys
+                0x0800cd70        0x6 ..\obj\EntController.o
+                0x0800cd70                typeinfo name for Keys
+ *fill*         0x0800cd76        0x2 
+ .rodata._ZTI4Keys
+                0x0800cd78        0x8 ..\obj\EntController.o
+                0x0800cd78                typeinfo for Keys
  .rodata._ZTS18RDSParserInterrupt
-                0x0800cd8c       0x15 ..\obj\EntController.o
-                0x0800cd8c                typeinfo name for RDSParserInterrupt
- *fill*         0x0800cda1        0x3 
+                0x0800cd80       0x15 ..\obj\EntController.o
+                0x0800cd80                typeinfo name for RDSParserInterrupt
+ *fill*         0x0800cd95        0x3 
  .rodata._ZTI18RDSParserInterrupt
-                0x0800cda4        0x8 ..\obj\EntController.o
-                0x0800cda4                typeinfo for RDSParserInterrupt
- .rodata        0x0800cdac       0x5c ..\obj\EntController.o
-                0x0800cdac                vtable for EntController
-                0x0800cdd8                typeinfo name for EntController
-                0x0800cde8                typeinfo for EntController
+                0x0800cd98        0x8 ..\obj\EntController.o
+                0x0800cd98                typeinfo for RDSParserInterrupt
+ .rodata        0x0800cda0       0x5c ..\obj\EntController.o
+                0x0800cda0                vtable for EntController
+                0x0800cdcc                typeinfo name for EntController
+                0x0800cddc                typeinfo for EntController
  .rodata.str1.4
-                0x0800ce08       0x56 ..\obj\EntController.o
- *fill*         0x0800ce5e        0x2 
+                0x0800cdfc       0x56 ..\obj\EntController.o
+ *fill*         0x0800ce52        0x2 
  .rodata.str1.4
-                0x0800ce60       0x5e ..\obj\main.o
- *fill*         0x0800cebe        0x2 
- .rodata        0x0800cec0       0x28 ..\obj\SpaController.o
-                0x0800cec0                vtable for SpaController
-                0x0800cecc                typeinfo name for SpaController
-                0x0800cedc                typeinfo for SpaController
+                0x0800ce54       0x5e ..\obj\main.o
+ *fill*         0x0800ceb2        0x2 
+ .rodata        0x0800ceb4       0x28 ..\obj\SpaController.o
+                0x0800ceb4                vtable for SpaController
+                0x0800cec0                typeinfo name for SpaController
+                0x0800ced0                typeinfo for SpaController
  .rodata.str1.4
-                0x0800cee8       0x9a ..\obj\SpaController.o
+                0x0800cedc       0x9a ..\obj\SpaController.o
                                  0xa2 (size before relaxing)
- *fill*         0x0800cf82        0x2 
+ *fill*         0x0800cf76        0x2 
  .rodata.str1.4
-                0x0800cf84       0x69 ..\obj\LEDS.o
+                0x0800cf78       0x69 ..\obj\LEDS.o
                                  0x99 (size before relaxing)
- *fill*         0x0800cfed        0x3 
- .rodata        0x0800cff0       0x2c ..\obj\OVC3860.o
-                0x0800cff0                OVC3860::STARTUP_BYTES
-                0x0800cff4                OVC3860::ENTERCONFIG_BYTES
-                0x0800d000                OVC3860::CONFIGMODE_BYTES
-                0x0800d004                OVC3860::EXITCONFIG_BYTES
-                0x0800d008                OVC3860::EXITCONFIG_RESPONSE_BYTES
-                0x0800d00c                OVC3860::SEND_BLUETOOTH_NAME
-                0x0800d010                OVC3860::SEND_RESPONSE_BLUETOOTH_NAME
-                0x0800d014                OVC3860::REQUEST_BLUETOOTH_NAME
-                0x0800d018                OVC3860::RESPONSE_BLUETOOTH_NAME
+ *fill*         0x0800cfe1        0x3 
+ .rodata        0x0800cfe4       0x2c ..\obj\OVC3860.o
+                0x0800cfe4                OVC3860::STARTUP_BYTES
+                0x0800cfe8                OVC3860::ENTERCONFIG_BYTES
+                0x0800cff4                OVC3860::CONFIGMODE_BYTES
+                0x0800cff8                OVC3860::EXITCONFIG_BYTES
+                0x0800cffc                OVC3860::EXITCONFIG_RESPONSE_BYTES
+                0x0800d000                OVC3860::SEND_BLUETOOTH_NAME
+                0x0800d004                OVC3860::SEND_RESPONSE_BLUETOOTH_NAME
+                0x0800d008                OVC3860::REQUEST_BLUETOOTH_NAME
+                0x0800d00c                OVC3860::RESPONSE_BLUETOOTH_NAME
  .rodata.str1.4
-                0x0800d01c       0xd0 ..\obj\OVC3860.o
+                0x0800d010       0xd0 ..\obj\OVC3860.o
  .rodata.str1.4
-                0x0800d0ec       0x18 ..\obj\RDSParser.o
+                0x0800d0e0       0x18 ..\obj\RDSParser.o
                                  0x19 (size before relaxing)
  .rodata._ZTVN10__cxxabiv120__si_class_type_infoE
-                0x0800d104       0x2c ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
-                0x0800d104                vtable for __cxxabiv1::__si_class_type_info
+                0x0800d0f8       0x2c ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
+                0x0800d0f8                vtable for __cxxabiv1::__si_class_type_info
  .rodata._ZTIN10__cxxabiv120__si_class_type_infoE
-                0x0800d130        0xc ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
-                0x0800d130                typeinfo for __cxxabiv1::__si_class_type_info
+                0x0800d124        0xc ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
+                0x0800d124                typeinfo for __cxxabiv1::__si_class_type_info
  .rodata._ZTSN10__cxxabiv120__si_class_type_infoE
-                0x0800d13c       0x25 ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
-                0x0800d13c                typeinfo name for __cxxabiv1::__si_class_type_info
- *fill*         0x0800d161        0x3 
+                0x0800d130       0x25 ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(si_class_type_info.o)
+                0x0800d130                typeinfo name for __cxxabiv1::__si_class_type_info
+ *fill*         0x0800d155        0x3 
  .rodata._ZTIN10__cxxabiv121__vmi_class_type_infoE
-                0x0800d164        0xc ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(vmi_class_type_info.o)
-                0x0800d164                typeinfo for __cxxabiv1::__vmi_class_type_info
+                0x0800d158        0xc ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(vmi_class_type_info.o)
+                0x0800d158                typeinfo for __cxxabiv1::__vmi_class_type_info
  .rodata._ZTSN10__cxxabiv121__vmi_class_type_infoE
-                0x0800d170       0x26 ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(vmi_class_type_info.o)
-                0x0800d170                typeinfo name for __cxxabiv1::__vmi_class_type_info
- *fill*         0x0800d196        0x2 
+                0x0800d164       0x26 ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(vmi_class_type_info.o)
+                0x0800d164                typeinfo name for __cxxabiv1::__vmi_class_type_info
+ *fill*         0x0800d18a        0x2 
  .rodata._ZTVN10__cxxabiv121__vmi_class_type_infoE
-                0x0800d198       0x2c ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(vmi_class_type_info.o)
-                0x0800d198                vtable for __cxxabiv1::__vmi_class_type_info
+                0x0800d18c       0x2c ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(vmi_class_type_info.o)
+                0x0800d18c                vtable for __cxxabiv1::__vmi_class_type_info
  .rodata._ZTISt9type_info
-                0x0800d1c4        0x8 ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
-                0x0800d1c4                typeinfo for std::type_info
+                0x0800d1b8        0x8 ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
+                0x0800d1b8                typeinfo for std::type_info
  .rodata._ZTSSt9type_info
-                0x0800d1cc        0xd ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
-                0x0800d1cc                typeinfo name for std::type_info
- *fill*         0x0800d1d9        0x3 
+                0x0800d1c0        0xd ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(tinfo.o)
+                0x0800d1c0                typeinfo name for std::type_info
+ *fill*         0x0800d1cd        0x3 
  .rodata._ZTVN10__cxxabiv117__class_type_infoE
-                0x0800d1dc       0x2c ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x0800d1dc                vtable for __cxxabiv1::__class_type_info
+                0x0800d1d0       0x2c ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x0800d1d0                vtable for __cxxabiv1::__class_type_info
  .rodata._ZTIN10__cxxabiv117__class_type_infoE
-                0x0800d208        0xc ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x0800d208                typeinfo for __cxxabiv1::__class_type_info
+                0x0800d1fc        0xc ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x0800d1fc                typeinfo for __cxxabiv1::__class_type_info
  .rodata._ZTSN10__cxxabiv117__class_type_infoE
-                0x0800d214       0x22 ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x0800d214                typeinfo name for __cxxabiv1::__class_type_info
+                0x0800d208       0x22 ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x0800d208                typeinfo name for __cxxabiv1::__class_type_info
  *(.eh_fram e*)
 
-.glue_7         0x0800d238        0x0
- .glue_7        0x0800d238        0x0 linker stubs
+.glue_7         0x0800d22c        0x0
+ .glue_7        0x0800d22c        0x0 linker stubs
 
-.glue_7t        0x0800d238        0x0
- .glue_7t       0x0800d238        0x0 linker stubs
+.glue_7t        0x0800d22c        0x0
+ .glue_7t       0x0800d22c        0x0 linker stubs
 
-.vfp11_veneer   0x0800d238        0x0
- .vfp11_veneer  0x0800d238        0x0 linker stubs
+.vfp11_veneer   0x0800d22c        0x0
+ .vfp11_veneer  0x0800d22c        0x0 linker stubs
 
-.v4_bx          0x0800d238        0x0
- .v4_bx         0x0800d238        0x0 linker stubs
+.v4_bx          0x0800d22c        0x0
+ .v4_bx         0x0800d22c        0x0 linker stubs
 
-.iplt           0x0800d238        0x0
- .iplt          0x0800d238        0x0 ..\obj\stm32f10x_fsmc.o
+.iplt           0x0800d22c        0x0
+ .iplt          0x0800d22c        0x0 ..\obj\Computer.o
 
-.ARM.extab      0x0800d238       0x84
+.ARM.extab      0x0800d22c       0x84
  *(.ARM.extab* .gnu.linkonce.armextab.*)
- .ARM.extab     0x0800d238        0xc ..\obj\main.o
- .ARM.extab     0x0800d244        0xc ..\obj\SpaController.o
- .ARM.extab     0x0800d250       0x54 ..\obj\OVC3860.o
- .ARM.extab     0x0800d2a4       0x18 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(pr-support.o)
-                0x0800d2bc                __exidx_start = .
+ .ARM.extab     0x0800d22c        0xc ..\obj\main.o
+ .ARM.extab     0x0800d238        0xc ..\obj\SpaController.o
+ .ARM.extab     0x0800d244       0x54 ..\obj\OVC3860.o
+ .ARM.extab     0x0800d298       0x18 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(pr-support.o)
+                0x0800d2b0                __exidx_start = .
 
-.ARM.exidx      0x0800d2bc      0x450
+.ARM.exidx      0x0800d2b0      0x450
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x0800d2bc       0x28 ..\obj\TemperatureSensor.o
+ .ARM.exidx     0x0800d2b0       0x28 ..\obj\TemperatureSensor.o
                                  0x40 (size before relaxing)
- .ARM.exidx     0x0800d2e4       0x10 ..\obj\radio.o
+ .ARM.exidx     0x0800d2d8       0x10 ..\obj\radio.o
                                  0xd0 (size before relaxing)
- .ARM.exidx     0x0800d2f4       0x78 ..\obj\DS18B20.o
+ .ARM.exidx     0x0800d2e8       0x78 ..\obj\DS18B20.o
                                  0x98 (size before relaxing)
- .ARM.exidx     0x0800d36c       0x58 ..\obj\Display.o
+ .ARM.exidx     0x0800d360       0x58 ..\obj\Display.o
                                  0xd8 (size before relaxing)
- .ARM.exidx     0x0800d3c4       0x30 ..\obj\Keypad.o
+ .ARM.exidx     0x0800d3b8       0x30 ..\obj\Keypad.o
                                  0x38 (size before relaxing)
- .ARM.exidx     0x0800d3f4       0x48 ..\obj\mcp23017.o
+ .ARM.exidx     0x0800d3e8       0x48 ..\obj\mcp23017.o
                                  0x78 (size before relaxing)
- .ARM.exidx     0x0800d43c       0x70 ..\obj\SI4703.o
+ .ARM.exidx     0x0800d430       0x70 ..\obj\SI4703.o
                                  0x98 (size before relaxing)
- .ARM.exidx     0x0800d4ac       0x20 ..\obj\RelayBoard.o
- .ARM.exidx     0x0800d4cc       0x78 ..\obj\EntController.o
+ .ARM.exidx     0x0800d4a0       0x20 ..\obj\RelayBoard.o
+ .ARM.exidx     0x0800d4c0       0x78 ..\obj\EntController.o
                                  0x98 (size before relaxing)
  .ARM.exidx.text.startup
-                0x0800d54c        0x8 ..\obj\main.o
- .ARM.exidx     0x0800d544        0x8 ..\obj\main.o
- .ARM.exidx     0x0800d554       0x58 ..\obj\SpaController.o
+                0x0800d540        0x8 ..\obj\main.o
+ .ARM.exidx     0x0800d538        0x8 ..\obj\main.o
+ .ARM.exidx     0x0800d548       0x58 ..\obj\SpaController.o
                                  0x90 (size before relaxing)
- .ARM.exidx     0x0800d5ac       0x10 ..\obj\LEDS.o
- .ARM.exidx     0x0800d5bc       0x88 ..\obj\OVC3860.o
- .ARM.exidx     0x0800d644       0x18 ..\obj\RDSParser.o
+ .ARM.exidx     0x0800d5a0       0x10 ..\obj\LEDS.o
+ .ARM.exidx     0x0800d5b0       0x88 ..\obj\OVC3860.o
+ .ARM.exidx     0x0800d638       0x18 ..\obj\RDSParser.o
                                  0x20 (size before relaxing)
- .ARM.exidx     0x0800d65c       0x78 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(unwind-arm.o)
+ .ARM.exidx     0x0800d650       0x78 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(unwind-arm.o)
                                  0xd8 (size before relaxing)
- .ARM.exidx     0x0800d6d4       0x38 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(pr-support.o)
+ .ARM.exidx     0x0800d6c8       0x38 c:/program files (x86)/gnu tools arm embedded/5.3 2016q1/bin/../lib/gcc/arm-none-eabi/5.3.1/armv7-m\libgcc.a(pr-support.o)
                                  0x48 (size before relaxing)
-                0x0800d70c                __exidx_end = .
-                0x0800d70c                __etext = .
-                0x0800d70c                _sidata = __etext
+                0x0800d700                __exidx_end = .
+                0x0800d700                __etext = .
+                0x0800d700                _sidata = __etext
 
-.rel.dyn        0x0800d70c        0x0
- .rel.iplt      0x0800d70c        0x0 ..\obj\stm32f10x_fsmc.o
+.rel.dyn        0x0800d700        0x0
+ .rel.iplt      0x0800d700        0x0 ..\obj\Computer.o
 
-.data           0x20000000      0x924 load address 0x0800d70c
+.data           0x20000000      0x924 load address 0x0800d700
                 0x20000000                __data_start__ = .
                 0x20000000                _sdata = __data_start__
  *(vtable)
@@ -3235,10 +3251,10 @@ Linker script and memory map
                 0x20000924                __data_end__ = .
                 0x20000924                _edata = __data_end__
 
-.igot.plt       0x20000924        0x0 load address 0x0800e030
- .igot.plt      0x20000924        0x0 ..\obj\stm32f10x_fsmc.o
+.igot.plt       0x20000924        0x0 load address 0x0800e024
+ .igot.plt      0x20000924        0x0 ..\obj\Computer.o
 
-.bss            0x20000924      0x7e8 load address 0x0800e030
+.bss            0x20000924      0x7e8 load address 0x0800e024
                 0x20000924                . = ALIGN (0x4)
                 0x20000924                __bss_start__ = .
                 0x20000924                _sbss = __bss_start__
@@ -3292,7 +3308,7 @@ Linker script and memory map
  *(.heap*)
                 0x2000110c                __HeapLimit = .
 
-.co_stack       0x2000110c        0x4 load address 0x0800e818
+.co_stack       0x2000110c        0x4 load address 0x0800e80c
                 0x20001110                . = ALIGN (0x8)
  *fill*         0x2000110c        0x4 
  *(.co_stack .co_stack.*)
@@ -3300,6 +3316,7 @@ Linker script and memory map
                 0x20004ffc                __StackLimit = (__StackTop - SIZEOF (.co_stack))
                 [!provide]                PROVIDE (__stack, __StackTop)
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region ram  overflowed with stack)
+LOAD ..\obj\Computer.o
 LOAD ..\obj\stm32f10x_fsmc.o
 LOAD ..\obj\u8g_dev_uc1611_dogxl240.o
 LOAD ..\obj\u8g_com_arduino_hw_usart_spi.o
@@ -3312,8 +3329,8 @@ LOAD ..\obj\u8g_com_arduino_common.o
 LOAD ..\obj\u8g_dev_ili9325d_320x240.o
 LOAD ..\obj\stm32f10x_pwr.o
 LOAD ..\obj\u8g_com_i2c.o
-LOAD ..\obj\printf.o
 LOAD ..\obj\u8g_com_raspberrypi_hw_spi.o
+LOAD ..\obj\printf.o
 LOAD ..\obj\stm32f10x_cec.o
 LOAD ..\obj\u8g_dev_pcf8812_96x65.o
 LOAD ..\obj\syscalls.o
@@ -3327,34 +3344,34 @@ LOAD ..\obj\TemperatureSensor.o
 LOAD ..\obj\u8g_dev_tls8204_84x48.o
 LOAD ..\obj\u8g_ellipse.o
 LOAD ..\obj\u8g_bitmap.o
-LOAD ..\obj\radio.o
 LOAD ..\obj\stm32f10x_crc.o
+LOAD ..\obj\radio.o
 LOAD ..\obj\stm32f10x_dac.o
 LOAD ..\obj\DS18B20.o
 LOAD ..\obj\u8g_dev_t6963_240x128.o
-LOAD ..\obj\u8g_dev_st7565_lm6059.o
 LOAD ..\obj\u8g_state.o
-LOAD ..\obj\u8g_dev_pcd8544_84x48.o
+LOAD ..\obj\u8g_dev_st7565_lm6059.o
 LOAD ..\obj\u8g_com_io.o
+LOAD ..\obj\u8g_dev_pcd8544_84x48.o
 LOAD ..\obj\Display.o
 LOAD ..\obj\u8g_ll_api.o
 LOAD ..\obj\u8g_dev_st7565_dogm132.o
-LOAD ..\obj\u8g_page.o
 LOAD ..\obj\stm32f10x_gpio.o
+LOAD ..\obj\u8g_page.o
 LOAD ..\obj\stm32f10x_rcc.o
 LOAD ..\obj\Keypad.o
 LOAD ..\obj\u8g_pb16v2.o
 LOAD ..\obj\u8g_com_arduino_attiny85_hw_spi.o
-LOAD ..\obj\stm32f10x_sdio.o
 LOAD ..\obj\u8g_dev_uc1601_c128032.o
+LOAD ..\obj\stm32f10x_sdio.o
 LOAD ..\obj\mcp23017.o
 LOAD ..\obj\u8g_dev_ssd1353_160x128.o
 LOAD ..\obj\startup_stm32f10x_md.o
 LOAD ..\obj\u8g_pbxh24.o
 LOAD ..\obj\SI4703.o
 LOAD ..\obj\u8g_com_arduino_std_sw_spi.o
-LOAD ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
 LOAD ..\obj\u8g_dev_ssd1306_128x64.o
+LOAD ..\obj\u8g_dev_ssd1325_nhd27oled_gr.o
 LOAD ..\obj\stm32f10x_can.o
 LOAD ..\obj\u8g_pb14v1.o
 LOAD ..\obj\u8g_rect.o
@@ -3387,10 +3404,10 @@ LOAD ..\obj\stm32f10x_dma.o
 LOAD ..\obj\u8g_dev_ld7032_60x32.o
 LOAD ..\obj\u8g_com_api_16gr.o
 LOAD ..\obj\u8g_dev_ssd1322_nhd31oled_gr.o
-LOAD ..\obj\u8g_com_atmega_parallel.o
 LOAD ..\obj\u8g_dev_ssd1325_nhd27oled_gr_new.o
-LOAD ..\obj\stm32f10x_dbgmcu.o
+LOAD ..\obj\u8g_com_atmega_parallel.o
 LOAD ..\obj\u8g_line.o
+LOAD ..\obj\stm32f10x_dbgmcu.o
 LOAD ..\obj\chessengine.o
 LOAD ..\obj\u8g_com_arduino_t6963.o
 LOAD ..\obj\u8g_dev_uc1611_dogm240.o
@@ -3405,8 +3422,8 @@ LOAD ..\obj\u8g_dev_lc7981_240x128.o
 LOAD ..\obj\u8g_dev_ht1632.o
 LOAD ..\obj\u8g_com_atmega_st7920_hw_spi.o
 LOAD ..\obj\u8g_u8toa.o
-LOAD ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
 LOAD ..\obj\u8g_dev_sbn1661_122x32.o
+LOAD ..\obj\u8g_dev_ssd1325_nhd27oled_bw.o
 LOAD ..\obj\u8g_dev_st7565_64128n.o
 LOAD ..\obj\u8g_pb32h1.o
 LOAD ..\obj\u8g_pb8h1.o
@@ -3458,8 +3475,8 @@ LOAD ..\obj\u8g_com_arduino_parallel.o
 LOAD ..\obj\u8g_rot.o
 LOAD ..\obj\u8g_dev_ssd1322_nhd31oled_bw.o
 LOAD ..\obj\u8g_scale.o
-LOAD ..\obj\u8g_dev_st7565_nhd_c12832.o
 LOAD ..\obj\u8g_dev_ssd1325_nhd27oled_bw_new.o
+LOAD ..\obj\u8g_dev_st7565_nhd_c12832.o
 LOAD ..\obj\u8g_dev_t6963_128x128.o
 LOAD ..\obj\u8g_com_arduino_sw_spi.o
 LOAD ..\obj\stm32f10x_exti.o
@@ -3474,7 +3491,7 @@ LOAD ..\..\..\..\..\..\..\..\Program Files (x86)\GNU Tools ARM Embedded\5.3 2016
 END GROUP
 OUTPUT(JacuzziV2.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x2577d
+.debug_info     0x00000000    0x257a1
  .debug_info    0x00000000      0x878 ..\obj\u8g_pb.o
  .debug_info    0x00000878      0x43b ..\obj\u8g_com_arduino_st7920_custom.o
  .debug_info    0x00000cb3     0x154a ..\obj\printf.o
@@ -3487,8 +3504,8 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_info    0x0000681e      0x45c ..\obj\u8g_state.o
  .debug_info    0x00006c7a     0x1c12 ..\obj\Display.o
  .debug_info    0x0000888c     0x1afe ..\obj\u8g_ll_api.o
- .debug_info    0x0000a38a      0x19c ..\obj\u8g_page.o
- .debug_info    0x0000a526      0x88f ..\obj\stm32f10x_gpio.o
+ .debug_info    0x0000a38a      0x88f ..\obj\stm32f10x_gpio.o
+ .debug_info    0x0000ac19      0x19c ..\obj\u8g_page.o
  .debug_info    0x0000adb5      0x942 ..\obj\stm32f10x_rcc.o
  .debug_info    0x0000b6f7     0x1283 ..\obj\Keypad.o
  .debug_info    0x0000c97a     0x15de ..\obj\mcp23017.o
@@ -3498,27 +3515,27 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_info    0x000104a7      0xff3 ..\obj\RelayBoard.o
  .debug_info    0x0001149a      0x159 ..\obj\u8g_fonts.o
  .debug_info    0x000115f3      0x436 ..\obj\u8g_com_null.o
- .debug_info    0x00011a29     0x333b ..\obj\EntController.o
- .debug_info    0x00014d64      0x9ed ..\obj\delay.o
- .debug_info    0x00015751      0xa00 ..\obj\u8g_arm_uart.o
- .debug_info    0x00016151      0x505 ..\obj\u8g_line.o
- .debug_info    0x00016656      0x846 ..\obj\usart.o
- .debug_info    0x00016e9c      0x8a0 ..\obj\u8g_pb32h1.o
- .debug_info    0x0001773c      0x7d6 ..\obj\u8g_pb8h1.o
- .debug_info    0x00017f12     0x1f7d ..\obj\main.o
- .debug_info    0x00019e8f     0x318e ..\obj\SpaController.o
- .debug_info    0x0001d01d      0xb26 ..\obj\stm32f10x_usart.o
- .debug_info    0x0001db43     0x2adf ..\obj\u8g_font.o
- .debug_info    0x00020622      0x4f5 ..\obj\u8g_clip.o
- .debug_info    0x00020b17      0xd3a ..\obj\LEDS.o
- .debug_info    0x00021851     0x15a5 ..\obj\OVC3860.o
- .debug_info    0x00022df6      0x950 ..\obj\RDSParser.o
- .debug_info    0x00023746      0x55c ..\obj\misc.o
- .debug_info    0x00023ca2      0xb2b ..\obj\stm32f10x_i2c.o
- .debug_info    0x000247cd      0x4c4 ..\obj\system_stm32f10x.o
- .debug_info    0x00024c91      0xaec ..\obj\u8g_circle.o
+ .debug_info    0x00011a29     0x3327 ..\obj\EntController.o
+ .debug_info    0x00014d50      0x9ed ..\obj\delay.o
+ .debug_info    0x0001573d      0xa00 ..\obj\u8g_arm_uart.o
+ .debug_info    0x0001613d      0x505 ..\obj\u8g_line.o
+ .debug_info    0x00016642      0x846 ..\obj\usart.o
+ .debug_info    0x00016e88      0x8a0 ..\obj\u8g_pb32h1.o
+ .debug_info    0x00017728      0x7d6 ..\obj\u8g_pb8h1.o
+ .debug_info    0x00017efe     0x1fc9 ..\obj\main.o
+ .debug_info    0x00019ec7     0x317a ..\obj\SpaController.o
+ .debug_info    0x0001d041      0xb26 ..\obj\stm32f10x_usart.o
+ .debug_info    0x0001db67     0x2adf ..\obj\u8g_font.o
+ .debug_info    0x00020646      0x4f5 ..\obj\u8g_clip.o
+ .debug_info    0x00020b3b      0xd3a ..\obj\LEDS.o
+ .debug_info    0x00021875     0x15a5 ..\obj\OVC3860.o
+ .debug_info    0x00022e1a      0x950 ..\obj\RDSParser.o
+ .debug_info    0x0002376a      0x55c ..\obj\misc.o
+ .debug_info    0x00023cc6      0xb2b ..\obj\stm32f10x_i2c.o
+ .debug_info    0x000247f1      0x4c4 ..\obj\system_stm32f10x.o
+ .debug_info    0x00024cb5      0xaec ..\obj\u8g_circle.o
 
-.debug_abbrev   0x00000000     0x68e8
+.debug_abbrev   0x00000000     0x690e
  .debug_abbrev  0x00000000      0x216 ..\obj\u8g_pb.o
  .debug_abbrev  0x00000216      0x106 ..\obj\u8g_com_arduino_st7920_custom.o
  .debug_abbrev  0x0000031c      0x434 ..\obj\printf.o
@@ -3531,8 +3548,8 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_abbrev  0x00001572      0x14b ..\obj\u8g_state.o
  .debug_abbrev  0x000016bd      0x41c ..\obj\Display.o
  .debug_abbrev  0x00001ad9      0x37b ..\obj\u8g_ll_api.o
- .debug_abbrev  0x00001e54       0xf3 ..\obj\u8g_page.o
- .debug_abbrev  0x00001f47      0x200 ..\obj\stm32f10x_gpio.o
+ .debug_abbrev  0x00001e54      0x200 ..\obj\stm32f10x_gpio.o
+ .debug_abbrev  0x00002054       0xf3 ..\obj\u8g_page.o
  .debug_abbrev  0x00002147      0x26e ..\obj\stm32f10x_rcc.o
  .debug_abbrev  0x000023b5      0x39c ..\obj\Keypad.o
  .debug_abbrev  0x00002751      0x332 ..\obj\mcp23017.o
@@ -3542,27 +3559,27 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_abbrev  0x00003077      0x2fe ..\obj\RelayBoard.o
  .debug_abbrev  0x00003375       0x6c ..\obj\u8g_fonts.o
  .debug_abbrev  0x000033e1      0x106 ..\obj\u8g_com_null.o
- .debug_abbrev  0x000034e7      0x5f0 ..\obj\EntController.o
- .debug_abbrev  0x00003ad7      0x2bc ..\obj\delay.o
- .debug_abbrev  0x00003d93      0x275 ..\obj\u8g_arm_uart.o
- .debug_abbrev  0x00004008      0x157 ..\obj\u8g_line.o
- .debug_abbrev  0x0000415f      0x1d6 ..\obj\usart.o
- .debug_abbrev  0x00004335      0x222 ..\obj\u8g_pb32h1.o
- .debug_abbrev  0x00004557      0x1bc ..\obj\u8g_pb8h1.o
- .debug_abbrev  0x00004713      0x4ce ..\obj\main.o
- .debug_abbrev  0x00004be1      0x5f5 ..\obj\SpaController.o
- .debug_abbrev  0x000051d6      0x1e4 ..\obj\stm32f10x_usart.o
- .debug_abbrev  0x000053ba      0x3fd ..\obj\u8g_font.o
- .debug_abbrev  0x000057b7      0x14f ..\obj\u8g_clip.o
- .debug_abbrev  0x00005906      0x2be ..\obj\LEDS.o
- .debug_abbrev  0x00005bc4      0x37a ..\obj\OVC3860.o
- .debug_abbrev  0x00005f3e      0x291 ..\obj\RDSParser.o
- .debug_abbrev  0x000061cf      0x156 ..\obj\misc.o
- .debug_abbrev  0x00006325      0x240 ..\obj\stm32f10x_i2c.o
- .debug_abbrev  0x00006565      0x16e ..\obj\system_stm32f10x.o
- .debug_abbrev  0x000066d3      0x215 ..\obj\u8g_circle.o
+ .debug_abbrev  0x000034e7      0x603 ..\obj\EntController.o
+ .debug_abbrev  0x00003aea      0x2bc ..\obj\delay.o
+ .debug_abbrev  0x00003da6      0x275 ..\obj\u8g_arm_uart.o
+ .debug_abbrev  0x0000401b      0x157 ..\obj\u8g_line.o
+ .debug_abbrev  0x00004172      0x1d6 ..\obj\usart.o
+ .debug_abbrev  0x00004348      0x222 ..\obj\u8g_pb32h1.o
+ .debug_abbrev  0x0000456a      0x1bc ..\obj\u8g_pb8h1.o
+ .debug_abbrev  0x00004726      0x4ce ..\obj\main.o
+ .debug_abbrev  0x00004bf4      0x608 ..\obj\SpaController.o
+ .debug_abbrev  0x000051fc      0x1e4 ..\obj\stm32f10x_usart.o
+ .debug_abbrev  0x000053e0      0x3fd ..\obj\u8g_font.o
+ .debug_abbrev  0x000057dd      0x14f ..\obj\u8g_clip.o
+ .debug_abbrev  0x0000592c      0x2be ..\obj\LEDS.o
+ .debug_abbrev  0x00005bea      0x37a ..\obj\OVC3860.o
+ .debug_abbrev  0x00005f64      0x291 ..\obj\RDSParser.o
+ .debug_abbrev  0x000061f5      0x156 ..\obj\misc.o
+ .debug_abbrev  0x0000634b      0x240 ..\obj\stm32f10x_i2c.o
+ .debug_abbrev  0x0000658b      0x16e ..\obj\system_stm32f10x.o
+ .debug_abbrev  0x000066f9      0x215 ..\obj\u8g_circle.o
 
-.debug_loc      0x00000000    0x10284
+.debug_loc      0x00000000    0x10279
  .debug_loc     0x00000000      0x7bf ..\obj\u8g_pb.o
  .debug_loc     0x000007bf       0x21 ..\obj\u8g_com_arduino_st7920_custom.o
  .debug_loc     0x000007e0      0xf60 ..\obj\printf.o
@@ -3575,8 +3592,8 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_loc     0x000033b3       0x42 ..\obj\u8g_state.o
  .debug_loc     0x000033f5      0x65d ..\obj\Display.o
  .debug_loc     0x00003a52     0x1c60 ..\obj\u8g_ll_api.o
- .debug_loc     0x000056b2       0xd1 ..\obj\u8g_page.o
- .debug_loc     0x00005783      0x5d7 ..\obj\stm32f10x_gpio.o
+ .debug_loc     0x000056b2      0x5d7 ..\obj\stm32f10x_gpio.o
+ .debug_loc     0x00005c89       0xd1 ..\obj\u8g_page.o
  .debug_loc     0x00005d5a      0x739 ..\obj\stm32f10x_rcc.o
  .debug_loc     0x00006493      0x2a5 ..\obj\Keypad.o
  .debug_loc     0x00006738      0x773 ..\obj\mcp23017.o
@@ -3584,25 +3601,25 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_loc     0x00007729      0xafc ..\obj\u8g_rect.o
  .debug_loc     0x00008225      0x15b ..\obj\RelayBoard.o
  .debug_loc     0x00008380       0x21 ..\obj\u8g_com_null.o
- .debug_loc     0x000083a1      0x91d ..\obj\EntController.o
- .debug_loc     0x00008cbe      0x12f ..\obj\delay.o
- .debug_loc     0x00008ded      0x1c9 ..\obj\u8g_arm_uart.o
- .debug_loc     0x00008fb6      0x33e ..\obj\u8g_line.o
- .debug_loc     0x000092f4       0x79 ..\obj\usart.o
- .debug_loc     0x0000936d      0x678 ..\obj\u8g_pb32h1.o
- .debug_loc     0x000099e5      0x4d8 ..\obj\u8g_pb8h1.o
- .debug_loc     0x00009ebd       0x24 ..\obj\main.o
- .debug_loc     0x00009ee1      0xbd6 ..\obj\SpaController.o
- .debug_loc     0x0000aab7      0x84f ..\obj\stm32f10x_usart.o
- .debug_loc     0x0000b306     0x2d15 ..\obj\u8g_font.o
- .debug_loc     0x0000e01b      0x2b0 ..\obj\u8g_clip.o
- .debug_loc     0x0000e2cb       0xed ..\obj\LEDS.o
- .debug_loc     0x0000e3b8      0x782 ..\obj\OVC3860.o
- .debug_loc     0x0000eb3a      0x635 ..\obj\RDSParser.o
- .debug_loc     0x0000f16f      0x193 ..\obj\misc.o
- .debug_loc     0x0000f302      0x6a0 ..\obj\stm32f10x_i2c.o
- .debug_loc     0x0000f9a2       0xbc ..\obj\system_stm32f10x.o
- .debug_loc     0x0000fa5e      0x826 ..\obj\u8g_circle.o
+ .debug_loc     0x000083a1      0x912 ..\obj\EntController.o
+ .debug_loc     0x00008cb3      0x12f ..\obj\delay.o
+ .debug_loc     0x00008de2      0x1c9 ..\obj\u8g_arm_uart.o
+ .debug_loc     0x00008fab      0x33e ..\obj\u8g_line.o
+ .debug_loc     0x000092e9       0x79 ..\obj\usart.o
+ .debug_loc     0x00009362      0x678 ..\obj\u8g_pb32h1.o
+ .debug_loc     0x000099da      0x4d8 ..\obj\u8g_pb8h1.o
+ .debug_loc     0x00009eb2       0x24 ..\obj\main.o
+ .debug_loc     0x00009ed6      0xbd6 ..\obj\SpaController.o
+ .debug_loc     0x0000aaac      0x84f ..\obj\stm32f10x_usart.o
+ .debug_loc     0x0000b2fb     0x2d15 ..\obj\u8g_font.o
+ .debug_loc     0x0000e010      0x2b0 ..\obj\u8g_clip.o
+ .debug_loc     0x0000e2c0       0xed ..\obj\LEDS.o
+ .debug_loc     0x0000e3ad      0x782 ..\obj\OVC3860.o
+ .debug_loc     0x0000eb2f      0x635 ..\obj\RDSParser.o
+ .debug_loc     0x0000f164      0x193 ..\obj\misc.o
+ .debug_loc     0x0000f2f7      0x6a0 ..\obj\stm32f10x_i2c.o
+ .debug_loc     0x0000f997       0xbc ..\obj\system_stm32f10x.o
+ .debug_loc     0x0000fa53      0x826 ..\obj\u8g_circle.o
 
 .debug_aranges  0x00000000      0x548
  .debug_aranges
@@ -3630,9 +3647,9 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_aranges
                 0x00000160       0x20 ..\obj\u8g_ll_api.o
  .debug_aranges
-                0x00000180       0x20 ..\obj\u8g_page.o
+                0x00000180       0x20 ..\obj\stm32f10x_gpio.o
  .debug_aranges
-                0x000001a0       0x20 ..\obj\stm32f10x_gpio.o
+                0x000001a0       0x20 ..\obj\u8g_page.o
  .debug_aranges
                 0x000001c0       0x20 ..\obj\stm32f10x_rcc.o
  .debug_aranges
@@ -3714,7 +3731,7 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_ranges  0x00000b18       0x28 ..\obj\system_stm32f10x.o
  .debug_ranges  0x00000b40       0x50 ..\obj\u8g_circle.o
 
-.debug_line     0x00000000     0x7f03
+.debug_line     0x00000000     0x7eed
  .debug_line    0x00000000      0x1bd ..\obj\u8g_pb.o
  .debug_line    0x000001bd      0x156 ..\obj\u8g_com_arduino_st7920_custom.o
  .debug_line    0x00000313      0x4c7 ..\obj\printf.o
@@ -3727,8 +3744,8 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_line    0x000016a7      0x146 ..\obj\u8g_state.o
  .debug_line    0x000017ed      0x588 ..\obj\Display.o
  .debug_line    0x00001d75      0x355 ..\obj\u8g_ll_api.o
- .debug_line    0x000020ca      0x16b ..\obj\u8g_page.o
- .debug_line    0x00002235      0x305 ..\obj\stm32f10x_gpio.o
+ .debug_line    0x000020ca      0x305 ..\obj\stm32f10x_gpio.o
+ .debug_line    0x000023cf      0x16b ..\obj\u8g_page.o
  .debug_line    0x0000253a      0x336 ..\obj\stm32f10x_rcc.o
  .debug_line    0x00002870      0x3be ..\obj\Keypad.o
  .debug_line    0x00002c2e      0x344 ..\obj\mcp23017.o
@@ -3738,27 +3755,27 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_line    0x000036a4      0x345 ..\obj\RelayBoard.o
  .debug_line    0x000039e9      0x163 ..\obj\u8g_fonts.o
  .debug_line    0x00003b4c      0x146 ..\obj\u8g_com_null.o
- .debug_line    0x00003c92      0x6f1 ..\obj\EntController.o
- .debug_line    0x00004383      0x2ed ..\obj\delay.o
- .debug_line    0x00004670      0x31a ..\obj\u8g_arm_uart.o
- .debug_line    0x0000498a      0x1ba ..\obj\u8g_line.o
- .debug_line    0x00004b44      0x2b4 ..\obj\usart.o
- .debug_line    0x00004df8      0x20e ..\obj\u8g_pb32h1.o
- .debug_line    0x00005006      0x1eb ..\obj\u8g_pb8h1.o
- .debug_line    0x000051f1      0x570 ..\obj\main.o
- .debug_line    0x00005761      0x72b ..\obj\SpaController.o
- .debug_line    0x00005e8c      0x34c ..\obj\stm32f10x_usart.o
- .debug_line    0x000061d8      0x723 ..\obj\u8g_font.o
- .debug_line    0x000068fb      0x17f ..\obj\u8g_clip.o
- .debug_line    0x00006a7a      0x2f1 ..\obj\LEDS.o
- .debug_line    0x00006d6b      0x464 ..\obj\OVC3860.o
- .debug_line    0x000071cf      0x375 ..\obj\RDSParser.o
- .debug_line    0x00007544      0x213 ..\obj\misc.o
- .debug_line    0x00007757      0x35a ..\obj\stm32f10x_i2c.o
- .debug_line    0x00007ab1      0x24c ..\obj\system_stm32f10x.o
- .debug_line    0x00007cfd      0x206 ..\obj\u8g_circle.o
+ .debug_line    0x00003c92      0x6e4 ..\obj\EntController.o
+ .debug_line    0x00004376      0x2ed ..\obj\delay.o
+ .debug_line    0x00004663      0x31a ..\obj\u8g_arm_uart.o
+ .debug_line    0x0000497d      0x1ba ..\obj\u8g_line.o
+ .debug_line    0x00004b37      0x2b4 ..\obj\usart.o
+ .debug_line    0x00004deb      0x20e ..\obj\u8g_pb32h1.o
+ .debug_line    0x00004ff9      0x1eb ..\obj\u8g_pb8h1.o
+ .debug_line    0x000051e4      0x573 ..\obj\main.o
+ .debug_line    0x00005757      0x71f ..\obj\SpaController.o
+ .debug_line    0x00005e76      0x34c ..\obj\stm32f10x_usart.o
+ .debug_line    0x000061c2      0x723 ..\obj\u8g_font.o
+ .debug_line    0x000068e5      0x17f ..\obj\u8g_clip.o
+ .debug_line    0x00006a64      0x2f1 ..\obj\LEDS.o
+ .debug_line    0x00006d55      0x464 ..\obj\OVC3860.o
+ .debug_line    0x000071b9      0x375 ..\obj\RDSParser.o
+ .debug_line    0x0000752e      0x213 ..\obj\misc.o
+ .debug_line    0x00007741      0x35a ..\obj\stm32f10x_i2c.o
+ .debug_line    0x00007a9b      0x24c ..\obj\system_stm32f10x.o
+ .debug_line    0x00007ce7      0x206 ..\obj\u8g_circle.o
 
-.debug_str      0x00000000     0x729a
+.debug_str      0x00000000     0x71f9
  .debug_str     0x00000000      0x3d1 ..\obj\u8g_pb.o
                                 0x4aa (size before relaxing)
  .debug_str     0x000003d1       0x82 ..\obj\u8g_com_arduino_st7920_custom.o
@@ -3783,63 +3800,63 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
                                 0xdcd (size before relaxing)
  .debug_str     0x000025e3      0x2d5 ..\obj\u8g_ll_api.o
                                 0x671 (size before relaxing)
- .debug_str     0x000028b8       0x67 ..\obj\u8g_page.o
-                                0x1cb (size before relaxing)
- .debug_str     0x0000291f      0x258 ..\obj\stm32f10x_gpio.o
+ .debug_str     0x000028b8      0x258 ..\obj\stm32f10x_gpio.o
                                 0x54e (size before relaxing)
+ .debug_str     0x00002b10       0x67 ..\obj\u8g_page.o
+                                0x1cb (size before relaxing)
  .debug_str     0x00002b77      0x433 ..\obj\stm32f10x_rcc.o
                                 0x638 (size before relaxing)
- .debug_str     0x00002faa      0x989 ..\obj\Keypad.o
-                                0xccf (size before relaxing)
- .debug_str     0x00003933      0x328 ..\obj\mcp23017.o
+ .debug_str     0x00002faa      0x942 ..\obj\Keypad.o
+                                0xc7d (size before relaxing)
+ .debug_str     0x000038ec      0x328 ..\obj\mcp23017.o
                                 0xd18 (size before relaxing)
- .debug_str     0x00003c5b      0x2c7 ..\obj\SI4703.o
+ .debug_str     0x00003c14      0x2c7 ..\obj\SI4703.o
                                 0xb1f (size before relaxing)
- .debug_str     0x00003f22       0xd6 ..\obj\u8g_rect.o
+ .debug_str     0x00003edb       0xd6 ..\obj\u8g_rect.o
                                 0x44d (size before relaxing)
- .debug_str     0x00003ff8      0x1a8 ..\obj\RelayBoard.o
+ .debug_str     0x00003fb1      0x1a8 ..\obj\RelayBoard.o
                                 0xbf3 (size before relaxing)
- .debug_str     0x000041a0       0x6f ..\obj\u8g_fonts.o
+ .debug_str     0x00004159       0x6f ..\obj\u8g_fonts.o
                                 0x1b1 (size before relaxing)
- .debug_str     0x0000420f       0x50 ..\obj\u8g_com_null.o
+ .debug_str     0x000041c8       0x50 ..\obj\u8g_com_null.o
                                 0x3ac (size before relaxing)
- .debug_str     0x0000425f      0xecc ..\obj\EntController.o
-                               0x2788 (size before relaxing)
- .debug_str     0x0000512b      0x4e9 ..\obj\delay.o
+ .debug_str     0x00004218      0xe74 ..\obj\EntController.o
+                               0x26d9 (size before relaxing)
+ .debug_str     0x0000508c      0x4e9 ..\obj\delay.o
                                 0x6c2 (size before relaxing)
- .debug_str     0x00005614      0x130 ..\obj\u8g_arm_uart.o
+ .debug_str     0x00005575      0x130 ..\obj\u8g_arm_uart.o
                                 0x700 (size before relaxing)
- .debug_str     0x00005744       0x53 ..\obj\u8g_line.o
+ .debug_str     0x000056a5       0x53 ..\obj\u8g_line.o
                                 0x3ba (size before relaxing)
- .debug_str     0x00005797      0x18f ..\obj\usart.o
+ .debug_str     0x000056f8      0x18f ..\obj\usart.o
                                 0x829 (size before relaxing)
- .debug_str     0x00005926       0xc5 ..\obj\u8g_pb32h1.o
+ .debug_str     0x00005887       0xc5 ..\obj\u8g_pb32h1.o
                                 0x4ec (size before relaxing)
- .debug_str     0x000059eb       0xa2 ..\obj\u8g_pb8h1.o
+ .debug_str     0x0000594c       0xa2 ..\obj\u8g_pb8h1.o
                                 0x4c5 (size before relaxing)
- .debug_str     0x00005a8d       0xe5 ..\obj\main.o
-                               0x195c (size before relaxing)
- .debug_str     0x00005b72      0x416 ..\obj\SpaController.o
-                               0x249f (size before relaxing)
- .debug_str     0x00005f88      0x367 ..\obj\stm32f10x_usart.o
+ .debug_str     0x000059ee       0xe5 ..\obj\main.o
+                               0x1911 (size before relaxing)
+ .debug_str     0x00005ad3      0x414 ..\obj\SpaController.o
+                               0x23f0 (size before relaxing)
+ .debug_str     0x00005ee7      0x367 ..\obj\stm32f10x_usart.o
                                 0x6ee (size before relaxing)
- .debug_str     0x000062ef      0x6f6 ..\obj\u8g_font.o
+ .debug_str     0x0000624e      0x6f6 ..\obj\u8g_font.o
                                 0xb04 (size before relaxing)
- .debug_str     0x000069e5       0x5e ..\obj\u8g_clip.o
+ .debug_str     0x00006944       0x5e ..\obj\u8g_clip.o
                                 0x3c0 (size before relaxing)
- .debug_str     0x00006a43       0x3f ..\obj\LEDS.o
+ .debug_str     0x000069a2       0x3f ..\obj\LEDS.o
                                 0x982 (size before relaxing)
- .debug_str     0x00006a82      0x296 ..\obj\OVC3860.o
+ .debug_str     0x000069e1      0x296 ..\obj\OVC3860.o
                                 0xbd4 (size before relaxing)
- .debug_str     0x00006d18       0x76 ..\obj\RDSParser.o
+ .debug_str     0x00006c77       0x76 ..\obj\RDSParser.o
                                 0x6db (size before relaxing)
- .debug_str     0x00006d8e      0x111 ..\obj\misc.o
+ .debug_str     0x00006ced      0x111 ..\obj\misc.o
                                 0x3dc (size before relaxing)
- .debug_str     0x00006e9f      0x287 ..\obj\stm32f10x_i2c.o
+ .debug_str     0x00006dfe      0x287 ..\obj\stm32f10x_i2c.o
                                 0x677 (size before relaxing)
- .debug_str     0x00007126       0xce ..\obj\system_stm32f10x.o
+ .debug_str     0x00007085       0xce ..\obj\system_stm32f10x.o
                                 0x30e (size before relaxing)
- .debug_str     0x000071f4       0xa6 ..\obj\u8g_circle.o
+ .debug_str     0x00007153       0xa6 ..\obj\u8g_circle.o
                                 0x44c (size before relaxing)
 
 .comment        0x00000000       0x6e
@@ -3856,8 +3873,8 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .comment       0x0000006e       0x6f ..\obj\u8g_state.o
  .comment       0x0000006e       0x6f ..\obj\Display.o
  .comment       0x0000006e       0x6f ..\obj\u8g_ll_api.o
- .comment       0x0000006e       0x6f ..\obj\u8g_page.o
  .comment       0x0000006e       0x6f ..\obj\stm32f10x_gpio.o
+ .comment       0x0000006e       0x6f ..\obj\u8g_page.o
  .comment       0x0000006e       0x6f ..\obj\stm32f10x_rcc.o
  .comment       0x0000006e       0x6f ..\obj\Keypad.o
  .comment       0x0000006e       0x6f ..\obj\mcp23017.o
@@ -3913,9 +3930,9 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .ARM.attributes
                 0x00000231       0x33 ..\obj\u8g_ll_api.o
  .ARM.attributes
-                0x00000264       0x33 ..\obj\u8g_page.o
+                0x00000264       0x33 ..\obj\stm32f10x_gpio.o
  .ARM.attributes
-                0x00000297       0x33 ..\obj\stm32f10x_gpio.o
+                0x00000297       0x33 ..\obj\u8g_page.o
  .ARM.attributes
                 0x000002ca       0x33 ..\obj\stm32f10x_rcc.o
  .ARM.attributes
@@ -4038,8 +4055,8 @@ OUTPUT(JacuzziV2.elf elf32-littlearm)
  .debug_frame   0x00000abc       0x40 ..\obj\u8g_state.o
  .debug_frame   0x00000afc      0x2c8 ..\obj\Display.o
  .debug_frame   0x00000dc4      0x3e4 ..\obj\u8g_ll_api.o
- .debug_frame   0x000011a8       0x60 ..\obj\u8g_page.o
- .debug_frame   0x00001208      0x1b0 ..\obj\stm32f10x_gpio.o
+ .debug_frame   0x000011a8      0x1b0 ..\obj\stm32f10x_gpio.o
+ .debug_frame   0x00001358       0x60 ..\obj\u8g_page.o
  .debug_frame   0x000013b8      0x224 ..\obj\stm32f10x_rcc.o
  .debug_frame   0x000015dc       0xcc ..\obj\Keypad.o
  .debug_frame   0x000016a8      0x1e8 ..\obj\mcp23017.o

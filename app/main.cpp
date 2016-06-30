@@ -41,6 +41,7 @@ int main(void)
 
 	printf("Controllers and stuff initializing\n");
 	RelayBoard::getInstance().Init();
+	LEDS::getInstance().Init();
 	Display& display = Display::getInstance();
 	display.Init();
 	display.SetActiveScreen(Display::SECONDSCREEN);
@@ -48,12 +49,14 @@ int main(void)
 	display.Draw();
 	display.SetDisplayState(true);
 
-	Keypad::getInstance().Init();
-	LEDS::getInstance().Init();
+	Keypad& keypad = Keypad::getInstance();
+	keypad.Init();
 	EntController entertainment;
 	entertainment.Init();
+	keypad.RegisterForCallback(entertainment);
 	SpaController spa;
 	spa.Init();
+	keypad.RegisterForCallback(spa);
 
 	display.SetActiveScreen(Display::MAINSCREEN);
 	printf("Starting main loop\n");
@@ -63,7 +66,7 @@ int main(void)
 	{
 
 		//benchtest = DwtGet();
-		Keypad::getInstance().CheckKeysPressed();
+		keypad.CheckKeysPressed();
 		//result = ((DwtGet()-benchtest)/72000);
 		//printf("KP %d ms\r\n", result);
 

@@ -6,7 +6,6 @@ SpaController::SpaController() : keypad(Keypad::getInstance()), leds(LEDS::getIn
 void SpaController::Init()
 {
 	printf("SpaController: Init() ........\r\n");
-	keypad.RegisterForCallback(*this);
 	targetTemp = 35.0;
 	stateCirc = false;
 	stateHeat = false;
@@ -34,27 +33,27 @@ void SpaController::Init()
 	printf("SpaController: Init() complete\r\n");
 }
 
-void SpaController::KeypadKeysPressed(const unsigned short keys, const bool keyshold)
+void SpaController::KeyDataReceived(const unsigned short keys, const bool keyshold)
 {
 	//printf("SpaController: KeypadKeysPressed() long press: %s\r\n", keyshold ? "true" : "false");
 	//printf("SpaControler DBG: %X\r\n", keys);
-	if ((keys | Keypad::JET) == Keypad::JET)
+	if ((keys | Keys::JET) == Keys::JET)
 		ToggleJets();
-	else if ((keys | Keypad::GAS) == Keypad::GAS)
+	else if ((keys | Keys::GAS) == Keys::GAS)
 		ToggleGas();
-	else if ((keys | Keypad::HEAT) == Keypad::HEAT)
+	else if ((keys | Keys::HEAT) == Keys::HEAT)
 		ToggleHeat();
-	else if ((keys | Keypad::CIRC) == Keypad::CIRC)
+	else if ((keys | Keys::CIRC) == Keys::CIRC)
 		ToggleCirc();
-	else if ((keys | Keypad::LED1) == Keypad::LED1)
+	else if ((keys | Keys::LED1) == Keys::LED1)
 		ToggleLED1();
-	else if ((keys | Keypad::LED2) == Keypad::LED2)
+	else if ((keys | Keys::LED2) == Keys::LED2)
 		ToggleLED2();
-	else if ((keys | Keypad::TEMPP) == Keypad::TEMPP)
+	else if ((keys | Keys::TEMPP) == Keys::TEMPP)
 		IncrementTemp();
-	else if ((keys | Keypad::TEMPM) == Keypad::TEMPM)
+	else if ((keys | Keys::TEMPM) == Keys::TEMPM)
 		DecrementTemp();
-	else if ((keys | Keypad::POWER) == Keypad::POWER)
+	else if ((keys | Keys::POWER) == Keys::POWER)
 		TogglePower();
 }
 

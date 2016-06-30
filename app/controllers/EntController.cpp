@@ -6,7 +6,6 @@ EntController::EntController() : keypad(Keypad::getInstance()), leds(LEDS::getIn
 
 void EntController::Init()
 {
-	keypad.RegisterForCallback(*this);
 	stateTV = false;
 	tvMoving = false;
 	stateAudio = AUDOFF;
@@ -41,22 +40,22 @@ void EntController::RdsReceiveTime(uint8_t hour, uint8_t minute)
 
 }
 
-void EntController::KeypadKeysPressed(const unsigned short keys, const bool keyshold)
+void EntController::KeyDataReceived(const unsigned short keys, const bool keyshold)
 {
 	//printf("Hello from EntController, long press: %s\r\n", keyshold ? "true" : "false");
-	if ((keys | Keypad::SOURCE) == Keypad::SOURCE)
+	if ((keys | Keys::SOURCE) == Keys::SOURCE)
 		RotateAudioOutput();
-	else if ((keys | Keypad::CHP) == Keypad::CHP)
+	else if ((keys | Keys::CHP) == Keys::CHP)
 		ChangeChannel(true, keyshold);
-	else if ((keys | Keypad::CHM) == Keypad::CHM)
+	else if ((keys | Keys::CHM) == Keys::CHM)
 		ChangeChannel(false, keyshold);
-	else if ((keys | Keypad::TV) == Keypad::TV)
+	else if ((keys | Keys::TV) == Keys::TV)
 		ToggleTV();
-	else if ((keys | Keypad::VOLP) == Keypad::VOLP)
+	else if ((keys | Keys::VOLP) == Keys::VOLP)
 		ChangeVolume(true);
-	else if ((keys | Keypad::VOLM) == Keypad::VOLM)
+	else if ((keys | Keys::VOLM) == Keys::VOLM)
 		ChangeVolume(false);
-	else if ((keys | Keypad::POWER) == Keypad::POWER)
+	else if ((keys | Keys::POWER) == Keys::POWER)
 		TogglePower();
 }
 

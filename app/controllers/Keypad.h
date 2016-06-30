@@ -2,11 +2,10 @@
 #define __KEYPAD_H__
 
 #include "VariableCallBack.h"
-#include "KeypadInterrupt.h"
+#include "Keys.h"
 #include "mcp23017.h"
 
-//#include "KeypadInterrupt.h"
-class KeypadInterrupt; //forward declare otherwise circuit-include issue
+class Keys; //forward declare otherwise circuit-include issue
 
 class Keypad
 {
@@ -15,10 +14,7 @@ private:
 	bool keypadWorking;
 	void McpInit();
 public:
-	typedef enum Keys : unsigned short { JET=0xFEFF, GAS=0xFDFF, HEAT=0xFBFF, CIRC=0xF7FF, POWER=0xEFFF, LED1=0xDFFF, LED2=0xBFFF, NC=0x7FFF,
-										TEMPP=0xFF7F, TEMPM=0xFFBF, SOURCE=0xFFDF, CHP=0xFFEF, CHM=0xFFF7, TV=0xFFFB, VOLP=0xFFFD, VOLM=0xFFFE} Keys;
-
-	typedef CallBack <KeypadInterrupt, void, const unsigned short, const bool> InterruptCallback;
+	typedef CallBack <Keys, void, const unsigned short, const bool> InterruptCallback;
 
 	static Keypad& getInstance()
 	{
@@ -26,7 +22,7 @@ public:
 		return instance;
 	}
 	void Init();
-	bool RegisterForCallback(KeypadInterrupt& callback);
+	bool RegisterForCallback(Keys& callback);
 	unsigned short ReadKeys();
 	void SetKeyCheckEnabled(bool enabled);
 	bool CheckKeysPressed();

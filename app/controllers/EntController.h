@@ -2,7 +2,7 @@
 #define __ENTCONTROLLER_H__
 
 #include "Keypad.h"
-#include "KeypadInterrupt.h"
+#include "Keys.h"
 #include "LEDS.h"
 #include "RelayBoard.h"
 #include "Display.h"
@@ -12,7 +12,7 @@
 #include "RDSParserInterrupt.h"
 #include "OVC3860.h"
 
-class EntController : public KeypadInterrupt, public RDSParserInterrupt
+class EntController : public Keys, public RDSParserInterrupt
 {
 private:
 	Keypad& keypad;
@@ -43,7 +43,7 @@ public:
 	void RdsReceiveServiceName(char *name);
 	void RdsReceiveText(char *name);
 	void RdsReceiveTime(uint8_t hour, uint8_t minute);
-	void KeypadKeysPressed(const unsigned short keys, const bool keyshold);
+	void KeyDataReceived(const unsigned short keys, const bool keyshold);
 	void Monitor();
 	void ChangeChannel(const bool up, const bool keyHold);
 	void ChangeVolume(const bool up);

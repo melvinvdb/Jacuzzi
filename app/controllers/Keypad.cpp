@@ -44,13 +44,13 @@ bool Keypad::IsKeypadWorking()
 	return keypadWorking;
 }
 
-bool Keypad::RegisterForCallback(KeypadInterrupt& callback)
+bool Keypad::RegisterForCallback(Keys& callback)
 {
 	if (interruptListIndex > INTERRUPT_LIST_LENGTH)
 	{
 		return false;
 	}
-	interruptList[interruptListIndex] = InterruptCallback(&callback, &KeypadInterrupt::KeypadKeysPressed);
+	interruptList[interruptListIndex] = InterruptCallback(&callback, &Keys::KeyDataReceived);
 	++interruptListIndex;
 	return true;
 }

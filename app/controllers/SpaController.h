@@ -2,13 +2,13 @@
 #define __SPACONTROLLER_H__
 
 #include "Keypad.h"
-#include "KeypadInterrupt.h"
+#include "Keys.h"
 #include "LEDS.h"
 #include "RelayBoard.h"
 #include "Display.h"
 #include "TemperatureSensor.h"
 
-class SpaController : public KeypadInterrupt
+class SpaController : public Keys
 {
 private:
 #define SPA_MIN_TEMP 10
@@ -44,7 +44,7 @@ private:
 public:
 	SpaController();
 	void Init();
-	void KeypadKeysPressed(const unsigned short keys, const bool keyshold);
+	void KeyDataReceived(const unsigned short keys, const bool keyshold);
 	void Monitor();
 	void IncrementTemp();
 	void DecrementTemp();

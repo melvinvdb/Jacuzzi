@@ -6,7 +6,7 @@
       <Compile>
         <Option name="OptimizationLevel" value="2"/>
         <Option name="UseFPU" value="0"/>
-        <Option name="UserEditCompiler" value=""/>
+        <Option name="UserEditCompiler" value="-ffunction-sections;-fdata-sections;;"/>
         <Option name="SupportCPlusplus" value="0"/>
         <Option name="DEBUG" value="2"/>
         <Option name="WARNING" value="1"/>
@@ -30,6 +30,7 @@
         <Option name="DiscardUnusedSections" value="1"/>
         <Option name="Library" value="Not use C Library"/>
         <Option name="Printf" value="0"/>
+        <Option name="UserEditLinker" value="-Wl,--gc-sections;"/>
         <LinkedLibraries>
           <Libset dir="c:\program files (x86)\gnu tools arm embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\" libs="stdc++_nano"/>
           <Libset dir="c:\program files (x86)\gnu tools arm embedded\5.3 2016q1\arm-none-eabi\lib\armv7-m\" libs="supc++_nano"/>

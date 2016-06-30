@@ -79,7 +79,8 @@ bool TemperatureSensor::ReadTemperature()
 		available = sensor.Reset();
 		if (available == false || prevAvailable == false) //conversion needs to be succeeded and now available
 		{
-			prevAvailable = available;
+			if (prevAvailable == true)
+				prevAvailable = available; //may set to false only when previous was true
 			return false;
 		}
 		sensor.Reset();

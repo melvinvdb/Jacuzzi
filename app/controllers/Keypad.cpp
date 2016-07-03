@@ -9,6 +9,7 @@ void Keypad::Init()
 	lastRead = 0xFFFF;
 	solidTickCount = 0;
 	enableKeyCheck = true;
+	onlyCallFirstCallback = false;
 }
 
 void Keypad::McpInit()
@@ -53,6 +54,11 @@ bool Keypad::RegisterForCallback(Keys& callback)
 	interruptList[interruptListIndex] = InterruptCallback(&callback, &Keys::KeyDataReceived);
 	++interruptListIndex;
 	return true;
+}
+
+void Keypad::OnlyCallFirstCallback(bool enabled)
+{
+	onlyCallFirstCallback = enabled;
 }
 
 unsigned short Keypad::ReadKeys()
@@ -109,6 +115,8 @@ bool Keypad::CheckKeysPressed()
 		{
 			//printf("Keypad DBG: Calling interrupt for INDEX  %i\r\n", i);
 			interruptList[i].execute(readed, true);
+			if (onlyCallFirstCallback == true)
+				break;
 		}
 		while (ReadKeys() != 0xFFFF)
 		{}
@@ -122,6 +130,8 @@ bool Keypad::CheckKeysPressed()
 		{
 			//printf("Keypad DBG: Calling interrupt for CHANGE %i\r\n", i);
 			interruptList[i].execute(lastRead, false);
+			if (onlyCallFirstCallback == true)
+				break;
 		}
 		solidTickCount = 0;
 	}

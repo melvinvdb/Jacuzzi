@@ -20,26 +20,40 @@ extern bool responseAvailable;
  }
 #endif
 
-class Keys; //forward declare otherwise circuit-include issue
+class Keypad;  //forward declare otherwise circuit-include issue
+class Display;
 
-class Computer
+class Computer : public Keys
 {
 public:
-	typedef CallBack <Keys, void, const unsigned short, const bool> InterruptCallback;
+	typedef CallBack <Keys, void, const unsigned short, const bool> keyDataReceivedCallback;
+	typedef CallBack <Keys, void, const unsigned short> AudioStateChangedCallback;
 
 	static Computer& getInstance()
 	{
 		static Computer instance;
 		return instance;
 	}
+	Computer();
 	void Init();
 	bool RegisterForCallback(Keys& callback);
-
 	void CheckIncomingData();
+	void SendMessage();
+	void KeyDataReceived(const unsigned short keys, const bool keyshold);
+	void AudioStateChanged(const unsigned short newState);
 
 private:
+	Keypad& keypad;
+	Display& display;
+	static const char PROTOCOL_VERSION = 0x01;
 	static const char INTERRUPT_LIST_LENGTH = 5;
-	InterruptCallback interruptList[INTERRUPT_LIST_LENGTH];
+	keyDataReceivedCallback keyDataInterruptList[INTERRUPT_LIST_LENGTH];
+	AudioStateChangedCallback audioStateInterruptList[INTERRUPT_LIST_LENGTH];
 	int interruptListIndex;
+	void ParseMessageStateMain();
+	void ParseMessageStateSecond();
+	int SearchCharacter(const unsigned int index, const char c);
+	void SendMessageStateMain();
+	void SendMessageStateSecond(unsigned short key);
 };
 

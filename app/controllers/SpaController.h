@@ -46,6 +46,7 @@ public:
 	SpaController();
 	void Init();
 	void KeyDataReceived(const unsigned short keys, const bool keyshold);
+	void AudioStateChanged(const unsigned short newState);
 	void Monitor();
 	void IncrementTemp();
 	void DecrementTemp();

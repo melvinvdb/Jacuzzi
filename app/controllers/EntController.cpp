@@ -64,6 +64,34 @@ void EntController::KeyDataReceived(const unsigned short keys, const bool keysho
 		TogglePower();
 }
 
+void EntController::AudioStateChanged(const unsigned short newState)
+{
+	if (statePower ==  false)
+		return;
+	if (stateAudio == newState)
+		return;
+	switch (newState)
+	{
+	case AUDOFF:
+		stateAudio = AUDOFF;
+		break;
+	case AUDIPTV:
+		stateAudio = AUDIPTV;
+		break;
+	case AUDBT:
+		stateAudio = AUDBT;
+		break;
+	case AUDFM:
+		stateAudio = AUDFM;
+		break;
+	case AUDJACK:
+		stateAudio = AUDJACK;
+		break;
+	}
+	audioRotateTime = GetSysTick();
+	audioRotating = true;
+}
+
 void EntController::Monitor()
 {
 	if (tvMoving)

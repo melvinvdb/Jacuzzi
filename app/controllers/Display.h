@@ -68,6 +68,7 @@ public:
 	void SetDisplayState(const bool enable);
 	void Draw();
 	void SetActiveScreen(const Screens s);
+	Screens GetActiveScreen();
 	void SetTemp(const unsigned char tempNr, const char * text);
 	void SetHeatingState(const bool state);
 	void SetErrorText(const char * text);

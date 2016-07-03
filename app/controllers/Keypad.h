@@ -23,6 +23,7 @@ public:
 	}
 	void Init();
 	bool RegisterForCallback(Keys& callback);
+	void OnlyCallFirstCallback(bool enabled);
 	unsigned short ReadKeys();
 	void SetKeyCheckEnabled(bool enabled);
 	bool CheckKeysPressed();
@@ -35,6 +36,7 @@ private:
 	unsigned short lastRead;
 	unsigned char solidTickCount; //counter how many CheckKeysPressed() received a key press state
 	bool enableKeyCheck;
+	bool onlyCallFirstCallback;
 };
 
 

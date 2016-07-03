@@ -42,6 +42,7 @@ public:
 	void RdsReceiveText(char *name);
 	void RdsReceiveTime(uint8_t hour, uint8_t minute);
 	void KeyDataReceived(const unsigned short keys, const bool keyshold);
+	void AudioStateChanged(const unsigned short newState);
 	void Monitor();
 	void ChangeChannel(const bool up, const bool keyHold);
 	void ChangeVolume(const bool up);

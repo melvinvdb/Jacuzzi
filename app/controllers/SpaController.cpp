@@ -61,13 +61,17 @@ void SpaController::KeyDataReceived(const unsigned short keys, const bool keysho
 		TogglePower();
 }
 
+void SpaController::AudioStateChanged(const unsigned short newState)
+{
+}
+
 void SpaController::Monitor()
 {
 	bool water = IsWater();
 	//check temperature
 	if ((unsigned long)(GetSysTick() - tempReadTime) >= SysTickFormatMs(tempReadInterval))
 	{
-		printf("Checking temperature\r\n");
+		//printf("Checking temperature\r\n");
 		bool tempBathFound = tempBath.ReadTemperature();
 		bool tempOutFound = tempOut.ReadTemperature();
 		char cTemp[7];

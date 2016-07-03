@@ -54,6 +54,7 @@ int main(void)
 	keypad.Init();
 	Computer& computer = Computer::getInstance();
 	computer.Init();
+	keypad.RegisterForCallback(computer); //needs to be the first one to register
 	EntController entertainment;
 	entertainment.Init();
 	keypad.RegisterForCallback(entertainment);
@@ -86,10 +87,10 @@ int main(void)
 		//result = ((DwtGet()-benchtest)/72000);
 		//printf("ENT %d ms\r\n", result);
 
-		benchtest = DwtGet();
+		//benchtest = DwtGet();
 		Display::getInstance().Draw();
-		result = ((DwtGet()-benchtest)/72000);
-		printf("DISPLAY %d ms\r\n", result);
+		//result = ((DwtGet()-benchtest)/72000);
+		//printf("DISPLAY %d ms\r\n", result);
 
 	}
 }

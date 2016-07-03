@@ -100,7 +100,7 @@ void Display::DrawSecondScreen()
 		}
 		if (screenVLinesWidth[i] > 0)
 		{
-			u8g_DrawHLine(&u8g, screenVLinesX[i], screenVLinesY[i], screenVLinesWidth[i]);
+			u8g_DrawVLine(&u8g, screenVLinesX[i], screenVLinesY[i], screenVLinesWidth[i]);
 		}
 	}
 	u8g_SetFont(&u8g, u8g_font_7x13);
@@ -113,6 +113,11 @@ void Display::DrawSecondScreen()
 void Display::SetActiveScreen(const Screens s)
 {
 	activeScreen = s;
+}
+
+Display::Screens Display::GetActiveScreen()
+{
+	return (Screens)activeScreen;
 }
 
 void Display::SetTemp(const unsigned char tempNr, const char * text)

@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "Display.h"
 #include "Keypad.h"
+#include "Computer.h"
 #include "RelayBoard.h"
 #include "LEDS.h"
 #include "EntController.h"
@@ -51,12 +52,16 @@ int main(void)
 
 	Keypad& keypad = Keypad::getInstance();
 	keypad.Init();
+	Computer& computer = Computer::getInstance();
+	computer.Init();
 	EntController entertainment;
 	entertainment.Init();
 	keypad.RegisterForCallback(entertainment);
+	computer.RegisterForCallback(entertainment);
 	SpaController spa;
 	spa.Init();
 	keypad.RegisterForCallback(spa);
+	computer.RegisterForCallback(spa);
 
 	display.SetActiveScreen(Display::MAINSCREEN);
 	printf("Starting main loop\n");
@@ -67,6 +72,7 @@ int main(void)
 
 		//benchtest = DwtGet();
 		keypad.CheckKeysPressed();
+		computer.CheckIncomingData();
 		//result = ((DwtGet()-benchtest)/72000);
 		//printf("KP %d ms\r\n", result);
 
@@ -87,64 +93,3 @@ int main(void)
 
 	}
 }
-
-/**********************************************************
- * USART1 interrupt request handler: on reception of a
- * character 't', toggle LED and transmit a character 'T'
- *********************************************************/
-void USART1_IRQHandler(void)
-{
-    /* RXNE handler */
-    if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
-    {
-        /* If received 't', toggle LED and transmit 'T' */
-        if((char)USART_ReceiveData(USART1) == 't')
-        {
-        	printf("Test 123\r\n");
-            /* Wait until Tx data register is empty, not really
-             * required for this example but put in here anyway.
-             */
-            /*
-            while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET)
-            {
-            }*/
-        }
-    }
-
-    /* ------------------------------------------------------------ */
-    /* Other USART1 interrupts handler can go here ...             */
-}
-
-/**********************************************************
- * USART1 interrupt request handler: on reception of a
- * character 't', toggle LED and transmit a character 'T'
- *********************************************************/
-/*void USART2_IRQHandler(void)
-{
-    if(USART_GetITStatus(USART2, USART_IT_RXNE) != RESET)
-    {
-        char byte = (char)USART_ReceiveData(USART2);
-        printf("IT %02x\r\n", byte);
-    }
-}
-*/
-/*
-void EXTI0_IRQHandler(void)
-{
-	static u8 i = 0;
-
-    if (EXTI_GetITStatus(EXTI_Line0) != RESET)
-    {
-        unsigned int j = 0;
-        while (j != 200000) ++j;
-		if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0) != Bit_RESET) {
-			return;
-		}
-
-    	i = (i + 1) % 4;
-		ds18b20_set_precission(i);
-        EXTI_ClearITPendingBit(EXTI_Line0);
-    }
-}
-
-*/

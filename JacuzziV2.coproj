@@ -95,18 +95,18 @@
     <File name="drivers/mcp23017.h" path="app/drivers/mcp23017.h" type="1"/>
     <File name="u8glib/u8g_com_atxmega_st7920_hw_spi.c" path="app/u8glib/u8g_com_atxmega_st7920_hw_spi.c" type="1"/>
     <File name="u8glib/u8g_com_msp430_hw_spi.c" path="app/u8glib/u8g_com_msp430_hw_spi.c" type="1"/>
+    <File name="u8glib/u8g_com_arduino_st7920_custom.c" path="app/u8glib/u8g_com_arduino_st7920_custom.c" type="1"/>
     <File name="drivers/RDSParserInterrupt.h" path="app/drivers/RDSParserInterrupt.h" type="1"/>
     <File name="u8glib/u8g_pb8v1.c" path="app/u8glib/u8g_pb8v1.c" type="1"/>
-    <File name="u8glib/u8g_com_arduino_st7920_custom.c" path="app/u8glib/u8g_com_arduino_st7920_custom.c" type="1"/>
     <File name="u8glib/u8g_com_arduino_common.c" path="app/u8glib/u8g_com_arduino_common.c" type="1"/>
-    <File name="components/cmsis_core/core_cm4_simd.h" path="components/coocox-master/cmsis_core/source/core_cm4_simd.h" type="1"/>
     <File name="u8glib/u8g_dev_ili9325d_320x240.c" path="app/u8glib/u8g_dev_ili9325d_320x240.c" type="1"/>
+    <File name="components/cmsis_core/core_cm4_simd.h" path="components/coocox-master/cmsis_core/source/core_cm4_simd.h" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_pwr.c" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_pwr.c" type="1"/>
     <File name="u8glib/u8g_com_i2c.c" path="app/u8glib/u8g_com_i2c.c" type="1"/>
-    <File name="u8glib/u8g_com_raspberrypi_hw_spi.c" path="app/u8glib/u8g_com_raspberrypi_hw_spi.c" type="1"/>
     <File name="stdio/printf.c" path="app/stdio/printf.c" type="1"/>
-    <File name="components/STM32F10x_MD_STDLIB/stm32f10x_cec.c" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_cec.c" type="1"/>
+    <File name="u8glib/u8g_com_raspberrypi_hw_spi.c" path="app/u8glib/u8g_com_raspberrypi_hw_spi.c" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_tim.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_tim.h" type="1"/>
+    <File name="components/STM32F10x_MD_STDLIB/stm32f10x_cec.c" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_cec.c" type="1"/>
     <File name="u8glib/u8g_dev_pcf8812_96x65.c" path="app/u8glib/u8g_dev_pcf8812_96x65.c" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_fsmc.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_fsmc.h" type="1"/>
     <File name="components/cmsis_core/core_sc000.h" path="components/coocox-master/cmsis_core/source/core_sc000.h" type="1"/>
@@ -118,8 +118,8 @@
     <File name="u8glib/u8g_pb16h2.c" path="app/u8glib/u8g_pb16h2.c" type="1"/>
     <File name="u8glib/u8g_cursor.c" path="app/u8glib/u8g_cursor.c" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_dac.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_dac.h" type="1"/>
-    <File name="u8glib/u8g_com_arduino_st7920_spi.c" path="app/u8glib/u8g_com_arduino_st7920_spi.c" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_sdio.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_sdio.h" type="1"/>
+    <File name="u8glib/u8g_com_arduino_st7920_spi.c" path="app/u8glib/u8g_com_arduino_st7920_spi.c" type="1"/>
     <File name="u8glib/u8g_com_api.c" path="app/u8glib/u8g_com_api.c" type="1"/>
     <File name="u8glib/u8g_com_arduino_port_d_wr.c" path="app/u8glib/u8g_com_arduino_port_d_wr.c" type="1"/>
     <File name="drivers" path="" type="2"/>
@@ -128,17 +128,17 @@
     <File name="stdio/printf.h" path="app/stdio/printf.h" type="1"/>
     <File name="u8glib/u8g_ellipse.c" path="app/u8glib/u8g_ellipse.c" type="1"/>
     <File name="u8glib/u8g_bitmap.c" path="app/u8glib/u8g_bitmap.c" type="1"/>
-    <File name="components/STM32F10x_MD_STDLIB/stm32f10x_crc.c" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_crc.c" type="1"/>
     <File name="drivers/radio.cpp" path="app/drivers/radio.cpp" type="1"/>
+    <File name="components/STM32F10x_MD_STDLIB/stm32f10x_crc.c" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_crc.c" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_exti.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_exti.h" type="1"/>
     <File name="u8glib/u8g.h" path="app/u8glib/u8g.h" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_dac.c" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_dac.c" type="1"/>
     <File name="drivers/DS18B20.cpp" path="app/drivers/DS18B20.cpp" type="1"/>
     <File name="u8glib/u8g_dev_t6963_240x128.c" path="app/u8glib/u8g_dev_t6963_240x128.c" type="1"/>
-    <File name="u8glib/u8g_state.c" path="app/u8glib/u8g_state.c" type="1"/>
     <File name="u8glib/u8g_dev_st7565_lm6059.c" path="app/u8glib/u8g_dev_st7565_lm6059.c" type="1"/>
-    <File name="u8glib/u8g_com_io.c" path="app/u8glib/u8g_com_io.c" type="1"/>
+    <File name="u8glib/u8g_state.c" path="app/u8glib/u8g_state.c" type="1"/>
     <File name="u8glib/u8g_dev_pcd8544_84x48.c" path="app/u8glib/u8g_dev_pcd8544_84x48.c" type="1"/>
+    <File name="u8glib/u8g_com_io.c" path="app/u8glib/u8g_com_io.c" type="1"/>
     <File name="controllers/Display.cpp" path="app/controllers/Display.cpp" type="1"/>
     <File name="components/cmsis_core/core_cmInstr.h" path="components/coocox-master/cmsis_core/source/core_cmInstr.h" type="1"/>
     <File name="u8glib/u8g_ll_api.c" path="app/u8glib/u8g_ll_api.c" type="1"/>
@@ -146,8 +146,8 @@
     <File name="u8glib/u8g_dev_st7565_dogm132.c" path="app/u8glib/u8g_dev_st7565_dogm132.c" type="1"/>
     <File name="components/cmsis_core/core_cmFunc.h" path="components/coocox-master/cmsis_core/source/core_cmFunc.h" type="1"/>
     <File name="components/cmsis_core" path="" type="2"/>
-    <File name="components/STM32F10x_MD_STDLIB/stm32f10x_gpio.c" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_gpio.c" type="1"/>
     <File name="u8glib/u8g_page.c" path="app/u8glib/u8g_page.c" type="1"/>
+    <File name="components/STM32F10x_MD_STDLIB/stm32f10x_gpio.c" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_gpio.c" type="1"/>
     <File name="components/cmsis_core/arm_common_tables.h" path="components/coocox-master/cmsis_core/source/arm_common_tables.h" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_rcc.c" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_rcc.c" type="1"/>
     <File name="controllers/Keypad.cpp" path="app/controllers/Keypad.cpp" type="1"/>
@@ -173,16 +173,16 @@
     <File name="u8glib/u8g_dev_st7565_nhd_c12864.c" path="app/u8glib/u8g_dev_st7565_nhd_c12864.c" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_iwdg.c" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_iwdg.c" type="1"/>
     <File name="controllers/RelayBoard.cpp" path="app/controllers/RelayBoard.cpp" type="1"/>
-    <File name="u8glib/u8g_dev_lc7981_320x64.c" path="app/u8glib/u8g_dev_lc7981_320x64.c" type="1"/>
     <File name="u8glib/u8g_dev_lc7981_160x80.c" path="app/u8glib/u8g_dev_lc7981_160x80.c" type="1"/>
+    <File name="u8glib/u8g_dev_lc7981_320x64.c" path="app/u8glib/u8g_dev_lc7981_320x64.c" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_tim.c" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_tim.c" type="1"/>
-    <File name="controllers/RelayBoard.h" path="app/controllers/RelayBoard.h" type="1"/>
     <File name="u8glib/u8g_com_arduino_fast_parallel.c" path="app/u8glib/u8g_com_arduino_fast_parallel.c" type="1"/>
+    <File name="controllers/RelayBoard.h" path="app/controllers/RelayBoard.h" type="1"/>
     <File name="drivers/u8g_fonts.c" path="app/drivers/u8g_fonts.c" type="1"/>
     <File name="u8glib/u8g_com_null.c" path="app/u8glib/u8g_com_null.c" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_gpio.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_gpio.h" type="1"/>
-    <File name="u8glib/u8g_com_arduino_ssd_i2c.c" path="app/u8glib/u8g_com_arduino_ssd_i2c.c" type="1"/>
     <File name="u8glib/u8g_dev_flipdisc_2x7.c" path="app/u8glib/u8g_dev_flipdisc_2x7.c" type="1"/>
+    <File name="u8glib/u8g_com_arduino_ssd_i2c.c" path="app/u8glib/u8g_com_arduino_ssd_i2c.c" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_pwr.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_pwr.h" type="1"/>
     <File name="u8glib/u8g_com_atmega_sw_spi.c" path="app/u8glib/u8g_com_atmega_sw_spi.c" type="1"/>
     <File name="controllers/EntController.cpp" path="app/controllers/EntController.cpp" type="1"/>
@@ -193,16 +193,16 @@
     <File name="delay.c" path="app/delay.c" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_bkp.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_bkp.h" type="1"/>
     <File name="drivers/OVC3860.h" path="app/drivers/OVC3860.h" type="1"/>
-    <File name="controllers/Keys.h" path="app/controllers/Keys.h" type="1"/>
     <File name="u8glib/u8g_dev_st7920_202x32.c" path="app/u8glib/u8g_dev_st7920_202x32.c" type="1"/>
+    <File name="controllers/Keys.h" path="app/controllers/Keys.h" type="1"/>
     <File name="u8glib/u8g_dev_ks0108_128x64.c" path="app/u8glib/u8g_dev_ks0108_128x64.c" type="1"/>
     <File name="u8glib/u8g_dev_lc7981_240x64.c" path="app/u8glib/u8g_dev_lc7981_240x64.c" type="1"/>
     <File name="u8glib/u8g_com_atmega_st7920_spi.c" path="app/u8glib/u8g_com_atmega_st7920_spi.c" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_rtc.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_rtc.h" type="1"/>
     <File name="u8glib/u8g_dev_st7920_192x32.c" path="app/u8glib/u8g_dev_st7920_192x32.c" type="1"/>
     <File name="components/cmsis_core/arm_const_structs.h" path="components/coocox-master/cmsis_core/source/arm_const_structs.h" type="1"/>
-    <File name="components/STM32F10x_MD_STDLIB/stm32f10x_conf.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_conf.h" type="1"/>
     <File name="u8glib/u8g_delay.c" path="app/u8glib/u8g_delay.c" type="1"/>
+    <File name="components/STM32F10x_MD_STDLIB/stm32f10x_conf.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_conf.h" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_adc.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_adc.h" type="1"/>
     <File name="components/cmsis_core/core_sc300.h" path="components/coocox-master/cmsis_core/source/core_sc300.h" type="1"/>
     <File name="drivers/u8g_arm_uart.c" path="app/drivers/u8g_arm_uart.c" type="1"/>
@@ -213,10 +213,10 @@
     <File name="u8glib/u8g_dev_ld7032_60x32.c" path="app/u8glib/u8g_dev_ld7032_60x32.c" type="1"/>
     <File name="u8glib/u8g_com_api_16gr.c" path="app/u8glib/u8g_com_api_16gr.c" type="1"/>
     <File name="u8glib/u8g_dev_ssd1322_nhd31oled_gr.c" path="app/u8glib/u8g_dev_ssd1322_nhd31oled_gr.c" type="1"/>
-    <File name="u8glib/u8g_dev_ssd1325_nhd27oled_gr_new.c" path="app/u8glib/u8g_dev_ssd1325_nhd27oled_gr_new.c" type="1"/>
     <File name="u8glib/u8g_com_atmega_parallel.c" path="app/u8glib/u8g_com_atmega_parallel.c" type="1"/>
-    <File name="u8glib/u8g_line.c" path="app/u8glib/u8g_line.c" type="1"/>
+    <File name="u8glib/u8g_dev_ssd1325_nhd27oled_gr_new.c" path="app/u8glib/u8g_dev_ssd1325_nhd27oled_gr_new.c" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_dbgmcu.c" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_dbgmcu.c" type="1"/>
+    <File name="u8glib/u8g_line.c" path="app/u8glib/u8g_line.c" type="1"/>
     <File name="u8glib/chessengine.c" path="app/u8glib/chessengine.c" type="1"/>
     <File name="u8glib/u8g_com_arduino_t6963.c" path="app/u8glib/u8g_com_arduino_t6963.c" type="1"/>
     <File name="components/cmsis_core/core_cm0plus.h" path="components/coocox-master/cmsis_core/source/core_cm0plus.h" type="1"/>
@@ -231,18 +231,18 @@
     <File name="u8glib/u8g_dev_lc7981_240x128.c" path="app/u8glib/u8g_dev_lc7981_240x128.c" type="1"/>
     <File name="u8glib/u8g_dev_ht1632.c" path="app/u8glib/u8g_dev_ht1632.c" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_i2c.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_i2c.h" type="1"/>
-    <File name="components/STM32F10x_MD_STDLIB/stm32f10x_usart.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_usart.h" type="1"/>
     <File name="u8glib/u8g_com_atmega_st7920_hw_spi.c" path="app/u8glib/u8g_com_atmega_st7920_hw_spi.c" type="1"/>
+    <File name="components/STM32F10x_MD_STDLIB/stm32f10x_usart.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_usart.h" type="1"/>
     <File name="u8glib/u8g_u8toa.c" path="app/u8glib/u8g_u8toa.c" type="1"/>
     <File name="components/cmsis_core/core_cm3.h" path="components/coocox-master/cmsis_core/source/core_cm3.h" type="1"/>
-    <File name="u8glib/u8g_dev_sbn1661_122x32.c" path="app/u8glib/u8g_dev_sbn1661_122x32.c" type="1"/>
     <File name="u8glib/u8g_dev_ssd1325_nhd27oled_bw.c" path="app/u8glib/u8g_dev_ssd1325_nhd27oled_bw.c" type="1"/>
+    <File name="u8glib/u8g_dev_sbn1661_122x32.c" path="app/u8glib/u8g_dev_sbn1661_122x32.c" type="1"/>
     <File name="drivers/radio.h" path="app/drivers/radio.h" type="1"/>
     <File name="u8glib/u8g_dev_st7565_64128n.c" path="app/u8glib/u8g_dev_st7565_64128n.c" type="1"/>
     <File name="u8glib/u8g_pb32h1.c" path="app/u8glib/u8g_pb32h1.c" type="1"/>
     <File name="u8glib/u8g_pb8h1.c" path="app/u8glib/u8g_pb8h1.c" type="1"/>
-    <File name="components/STM32F10x_MD_STDLIB/stm32f10x_wwdg.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_wwdg.h" type="1"/>
     <File name="main.cpp" path="app/main.cpp" type="1"/>
+    <File name="components/STM32F10x_MD_STDLIB/stm32f10x_wwdg.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_wwdg.h" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_rtc.c" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_rtc.c" type="1"/>
     <File name="u8glib/u8g_dev_uc1701_mini12864.c" path="app/u8glib/u8g_dev_uc1701_mini12864.c" type="1"/>
     <File name="controllers/SpaController.cpp" path="app/controllers/SpaController.cpp" type="1"/>
@@ -255,8 +255,8 @@
     <File name="u8glib/u8g_com_arduino_st7920_hw_spi.c" path="app/u8glib/u8g_com_arduino_st7920_hw_spi.c" type="1"/>
     <File name="u8glib/u8g_font.c" path="app/u8glib/u8g_font.c" type="1"/>
     <File name="components/STM32F10x_MD_STDLIB/stm32f10x_spi.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/stm32f10x_spi.h" type="1"/>
-    <File name="u8glib/u8g_clip.c" path="app/u8glib/u8g_clip.c" type="1"/>
     <File name="drivers/usart.h" path="app/drivers/usart.h" type="1"/>
+    <File name="u8glib/u8g_clip.c" path="app/u8glib/u8g_clip.c" type="1"/>
     <File name="u8glib/u8g_pb8h2.c" path="app/u8glib/u8g_pb8h2.c" type="1"/>
     <File name="u8glib/u8g_dev_null.c" path="app/u8glib/u8g_dev_null.c" type="1"/>
     <File name="u8glib/u8g_com_arduino_uc_i2c.c" path="app/u8glib/u8g_com_arduino_uc_i2c.c" type="1"/>
@@ -301,16 +301,16 @@
     <File name="u8glib/u8g_dev_t6963_240x64.c" path="app/u8glib/u8g_dev_t6963_240x64.c" type="1"/>
     <File name="u8glib/u8g_dev_uc1608_240x64.c" path="app/u8glib/u8g_dev_uc1608_240x64.c" type="1"/>
     <File name="u8glib/u8g_circle.c" path="app/u8glib/u8g_circle.c" type="1"/>
-    <File name="components/STM32F10x_MD_STDLIB/system_stm32f10x.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/system_stm32f10x.h" type="1"/>
     <File name="u8glib/u8g_dev_gprof.c" path="app/u8glib/u8g_dev_gprof.c" type="1"/>
+    <File name="components/STM32F10x_MD_STDLIB/system_stm32f10x.h" path="components/coocox-master/STM32F10x_MD_STDLIB/source/system_stm32f10x.h" type="1"/>
     <File name="u8glib/u8g_u16toa.c" path="app/u8glib/u8g_u16toa.c" type="1"/>
     <File name="u8glib/u8g_com_arduino_parallel.c" path="app/u8glib/u8g_com_arduino_parallel.c" type="1"/>
     <File name="controllers/LEDS.h" path="app/controllers/LEDS.h" type="1"/>
     <File name="u8glib/u8g_rot.c" path="app/u8glib/u8g_rot.c" type="1"/>
     <File name="u8glib/u8g_dev_ssd1322_nhd31oled_bw.c" path="app/u8glib/u8g_dev_ssd1322_nhd31oled_bw.c" type="1"/>
     <File name="u8glib/u8g_scale.c" path="app/u8glib/u8g_scale.c" type="1"/>
-    <File name="u8glib/u8g_dev_ssd1325_nhd27oled_bw_new.c" path="app/u8glib/u8g_dev_ssd1325_nhd27oled_bw_new.c" type="1"/>
     <File name="u8glib/u8g_dev_st7565_nhd_c12832.c" path="app/u8glib/u8g_dev_st7565_nhd_c12832.c" type="1"/>
+    <File name="u8glib/u8g_dev_ssd1325_nhd27oled_bw_new.c" path="app/u8glib/u8g_dev_ssd1325_nhd27oled_bw_new.c" type="1"/>
     <File name="u8glib/u8g_dev_t6963_128x128.c" path="app/u8glib/u8g_dev_t6963_128x128.c" type="1"/>
     <File name="u8glib/u8g_com_arduino_sw_spi.c" path="app/u8glib/u8g_com_arduino_sw_spi.c" type="1"/>
     <File name="components" path="" type="2"/>
